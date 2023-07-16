@@ -30,6 +30,10 @@ doi:10.1016/B978-0-08-102908-4.00111-9
 # An introduction to variational autoencoders (quite advanced)
 doi:10.1561/2200000056
 
+# Seminal paper in which the ML architecture of Convolutional 
+# AutoEncoders (ConvAE) was proposed
+doi:10.1007/978-3-642-21735-7_7
+
 ###################################################
 
 # (some) State of the art references on ML-based approaches for Mantle convection
