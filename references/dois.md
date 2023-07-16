@@ -34,6 +34,14 @@ doi:10.1561/2200000056
 # AutoEncoders (ConvAE) was proposed
 doi:10.1007/978-3-642-21735-7_7
 
+# Seminal paper in which the ML architecture of Convolutional 
+# LSTM networks was proposed
+# Note: there is also a DOI, but when I put it here as 
+# doi:10.5555/2969239.2969329
+# then the julia script generates an error when processing it
+# not sure why ... to investigate
+arxiv:1506.04214
+
 ###################################################
 
 # (some) State of the art references on ML-based approaches for Mantle convection
