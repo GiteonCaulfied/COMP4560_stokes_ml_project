@@ -15,6 +15,11 @@
 # PDF available for FREE here:
 # https://www.deeplearningbook.org/
 
+# Bishop's book on ML and pattern recognition
+doi: 10.1117/1.2819119
+
+# PDF available for free here
+# https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf
 
 # ML for computational fluid dynamics Steve Brunton YouTube video series
 # https://www.youtube.com/playlist?list=PLMrJAkhIeNNQWO3ESiccZmPssvUDFHL4M
