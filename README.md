@@ -3,6 +3,11 @@ A repository that we are going to use to keep track of project evolution, notes,
 
 I am going to use this repository as a sort of research diary with my own notes on the project
 
+## Geoid Inversion For Mantle Viscosity With Convolutional Neural Networks
+
+Highly related master thesis from Uni Houston
+
+https://uh-ir.tdl.org/bitstream/handle/10657/13138/KERL-THESIS-2022.pdf?sequence=1&isAllowed=y
 
 ## Very illustrative/intuitive blog posts on VAEs
 
