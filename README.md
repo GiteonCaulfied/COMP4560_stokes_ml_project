@@ -26,3 +26,4 @@ Not sure if this can be exploited in the geoid problem, though ...
 * https://github.com/agsiddhant/ForwardSurrogate_Mars_1D
 * https://github.com/agsiddhant/ForwardSurrogate_Mars_2D
 * https://github.com/jaanli/variational-autoencoder
+* https://github.com/amartinhuertas/BiotBrinkmanWithVorticityPaper.jl (actually not related  to the project, but illustrates the concept of DrWatson.jl + Pluto.jl notebooks in Julia to automate parametric studies in a reproducible way)
