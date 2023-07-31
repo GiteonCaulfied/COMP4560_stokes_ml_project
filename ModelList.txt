@@ -1,4 +1,2 @@
-# Hyperparameters are: hidden layers neurons (list), activation function, Loss function type, epoch, batch size, learning rate
-10/10,ReLU,MSELoss,20,16,0.001
-40/40,ReLU,MSELoss,20,16,0.0001
-10/10/10,ReLU,MSELoss,20,16,0.001
+# Hyperparameters are: Input path, Output path, hidden layers neurons (list), activation function, Loss function type, epoch, batch size, learning rate, accurate loss baseline, scaler for the output data, name of this model
+Data/Reduced/small_8_1k-inv.npy,Data/Reduced/small_8_1k-geoid.npy,20/30,ReLU,MSELoss,200,16,0.0001,0.01,MinMax,invGeoid
