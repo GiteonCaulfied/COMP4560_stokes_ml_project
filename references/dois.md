@@ -74,3 +74,9 @@ arxiv:2108.10105
 # Note: there is also a PhD thesis form which this paper stems. I have added
 # the PDF of the thesis to the git repo.
 doi:10.1016/j.pepi.2016.05.016
+
+#
+# Auto-encoders for advancing physical problems through time (from students I 
+# saw give a talk last year).
+#
+arxiv:2212.12086

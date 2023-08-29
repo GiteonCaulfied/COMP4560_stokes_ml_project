@@ -31,7 +31,7 @@ for file in os.listdir(path):
   
     # call read text file function
     read_text_file(file_path)
-    print(f"{file_path} is finished reading")
+    #print(f"{file_path} is finished reading")
     file_count = file_count + 1
 
 timestamps_number = temperature_fields[0].shape[0]
@@ -39,7 +39,7 @@ temperature_fields = np.asarray(temperature_fields).reshape(file_count*timestamp
 
 
 #Parameters
-n_epoch = 200
+n_epoch = 300
 batch_size = 16
 lr = 5e-5
 accurate_loss_baseline = 0.005

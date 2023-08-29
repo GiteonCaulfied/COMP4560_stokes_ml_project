@@ -1,8 +1,8 @@
 #!/bin/bash
  
-#PBS -l ncpus=12
-#PBS -l ngpus=1
-#PBS -l mem=40GB
+#PBS -l ncpus=24
+#PBS -l ngpus=2
+#PBS -l mem=20GB
 #PBS -l jobfs=10GB
 #PBS -q gpuvolta
 #PBS -P kr97
