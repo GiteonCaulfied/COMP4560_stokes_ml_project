@@ -1,0 +1,1992 @@
+Current device is  cuda
+1 epochs have finished
+Current training loss is  73.86727996915579
+Validation loss for this epoch is 5.842710420489311
+Validation Accuracy for this epoch is 0
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+2 epochs have finished
+Current training loss is  33.35517258942127
+Validation loss for this epoch is 2.9064827747642994
+Validation Accuracy for this epoch is 0
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+3 epochs have finished
+Current training loss is  16.946798438206315
+Validation loss for this epoch is 1.5969271697103977
+Validation Accuracy for this epoch is 0
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+4 epochs have finished
+Current training loss is  10.089005319401622
+Validation loss for this epoch is 1.0239809406921268
+Validation Accuracy for this epoch is 0
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+5 epochs have finished
+Current training loss is  6.702782763168216
+Validation loss for this epoch is 0.7035059127956629
+Validation Accuracy for this epoch is 0
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+6 epochs have finished
+Current training loss is  4.703244847245514
+Validation loss for this epoch is 0.5038513094186783
+Validation Accuracy for this epoch is 0
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+7 epochs have finished
+Current training loss is  3.4117360739037395
+Validation loss for this epoch is 0.36928207287564874
+Validation Accuracy for this epoch is 3
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+8 epochs have finished
+Current training loss is  2.522774638608098
+Validation loss for this epoch is 0.27487312629818916
+Validation Accuracy for this epoch is 85
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+9 epochs have finished
+Current training loss is  1.8901193146593869
+Validation loss for this epoch is 0.20743177132681012
+Validation Accuracy for this epoch is 98
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+10 epochs have finished
+Current training loss is  1.4443348702043295
+Validation loss for this epoch is 0.1606632391922176
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+11 epochs have finished
+Current training loss is  1.143884761375375
+Validation loss for this epoch is 0.13008508319035172
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+12 epochs have finished
+Current training loss is  0.9493212313391268
+Validation loss for this epoch is 0.1101729063084349
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+13 epochs have finished
+Current training loss is  0.8190033915452659
+Validation loss for this epoch is 0.09622197551652789
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+14 epochs have finished
+Current training loss is  0.7168882772093639
+Validation loss for this epoch is 0.08378940809052438
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+15 epochs have finished
+Current training loss is  0.6178396373288706
+Validation loss for this epoch is 0.0708814519457519
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+16 epochs have finished
+Current training loss is  0.5113521455205046
+Validation loss for this epoch is 0.05742985423421487
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+17 epochs have finished
+Current training loss is  0.41648372740019113
+Validation loss for this epoch is 0.04756093834294006
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+18 epochs have finished
+Current training loss is  0.3531181361177005
+Validation loss for this epoch is 0.04125921765808016
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+19 epochs have finished
+Current training loss is  0.31106186215765774
+Validation loss for this epoch is 0.0368590634316206
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+20 epochs have finished
+Current training loss is  0.2797294838819653
+Validation loss for this epoch is 0.03332512080669403
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+21 epochs have finished
+Current training loss is  0.2541869354026858
+Validation loss for this epoch is 0.030333048023749143
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+22 epochs have finished
+Current training loss is  0.23225648447987624
+Validation loss for this epoch is 0.027776431787060574
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+23 epochs have finished
+Current training loss is  0.21318999369395897
+Validation loss for this epoch is 0.025520284340018407
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+24 epochs have finished
+Current training loss is  0.19673883134964854
+Validation loss for this epoch is 0.02359404176240787
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+25 epochs have finished
+Current training loss is  0.1827792719413992
+Validation loss for this epoch is 0.02194267068989575
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+26 epochs have finished
+Current training loss is  0.17098963106400333
+Validation loss for this epoch is 0.020578663476044312
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+27 epochs have finished
+Current training loss is  0.16089108301093802
+Validation loss for this epoch is 0.019412807218031958
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+28 epochs have finished
+Current training loss is  0.15206056013994385
+Validation loss for this epoch is 0.0183467018941883
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+29 epochs have finished
+Current training loss is  0.14419064694084227
+Validation loss for this epoch is 0.017409601307008415
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+30 epochs have finished
+Current training loss is  0.1370365359034622
+Validation loss for this epoch is 0.016549154766835272
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+31 epochs have finished
+Current training loss is  0.1304895849316381
+Validation loss for this epoch is 0.015715654139057733
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+32 epochs have finished
+Current training loss is  0.12429683360096533
+Validation loss for this epoch is 0.01492649361898657
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+33 epochs have finished
+Current training loss is  0.11783345862932038
+Validation loss for this epoch is 0.014061096182558686
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+34 epochs have finished
+Current training loss is  0.11022910609608516
+Validation loss for this epoch is 0.013007251371163875
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+35 epochs have finished
+Current training loss is  0.10115161421708763
+Validation loss for this epoch is 0.011843677697470412
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+36 epochs have finished
+Current training loss is  0.09139165302622132
+Validation loss for this epoch is 0.010599558474496007
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+37 epochs have finished
+Current training loss is  0.08193141622177791
+Validation loss for this epoch is 0.009483172703767195
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+38 epochs have finished
+Current training loss is  0.07307681057864102
+Validation loss for this epoch is 0.008432040325715207
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+39 epochs have finished
+Current training loss is  0.06451464301062515
+Validation loss for this epoch is 0.0073524558247299865
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+40 epochs have finished
+Current training loss is  0.055943014660442714
+Validation loss for this epoch is 0.006311427081527654
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+41 epochs have finished
+Current training loss is  0.04769807023694739
+Validation loss for this epoch is 0.00532801390363602
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+42 epochs have finished
+Current training loss is  0.040504080712707946
+Validation loss for this epoch is 0.004535491611022735
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+43 epochs have finished
+Current training loss is  0.03484100167406723
+Validation loss for this epoch is 0.0039345493642031215
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+44 epochs have finished
+Current training loss is  0.03066883087376482
+Validation loss for this epoch is 0.0035031156985496636
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+45 epochs have finished
+Current training loss is  0.02759078156668693
+Validation loss for this epoch is 0.0031821412812860217
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+46 epochs have finished
+Current training loss is  0.025215189081791323
+Validation loss for this epoch is 0.0029167149841669016
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+47 epochs have finished
+Current training loss is  0.023303117752220714
+Validation loss for this epoch is 0.0027152489419677295
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+48 epochs have finished
+Current training loss is  0.02172412678010005
+Validation loss for this epoch is 0.002537346876124502
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+49 epochs have finished
+Current training loss is  0.020375990183310932
+Validation loss for this epoch is 0.002374525065533817
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+50 epochs have finished
+Current training loss is  0.01918718971501221
+Validation loss for this epoch is 0.002239769630250521
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+51 epochs have finished
+Current training loss is  0.018147925549783395
+Validation loss for this epoch is 0.002119759794368292
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+52 epochs have finished
+Current training loss is  0.01724021212066873
+Validation loss for this epoch is 0.002021558220803854
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+53 epochs have finished
+Current training loss is  0.01646433541282022
+Validation loss for this epoch is 0.0019345076816534856
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+54 epochs have finished
+Current training loss is  0.015768044908327283
+Validation loss for this epoch is 0.001857459828897845
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+55 epochs have finished
+Current training loss is  0.01514582936943043
+Validation loss for this epoch is 0.0017832221237767953
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+56 epochs have finished
+Current training loss is  0.014572647280147066
+Validation loss for this epoch is 0.0017127178725786507
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+57 epochs have finished
+Current training loss is  0.014051071344511001
+Validation loss for this epoch is 0.0016526797589904163
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+58 epochs have finished
+Current training loss is  0.013564245024099364
+Validation loss for this epoch is 0.0016009014652809128
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+59 epochs have finished
+Current training loss is  0.013136513180143083
+Validation loss for this epoch is 0.0015404192236019298
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+60 epochs have finished
+Current training loss is  0.01273021913584671
+Validation loss for this epoch is 0.0014899033249093918
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+61 epochs have finished
+Current training loss is  0.012354234573649592
+Validation loss for this epoch is 0.0014529632189805852
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+62 epochs have finished
+Current training loss is  0.012001260125543922
+Validation loss for this epoch is 0.001407189106430451
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+63 epochs have finished
+Current training loss is  0.011667381042570923
+Validation loss for this epoch is 0.0013657228319061687
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+64 epochs have finished
+Current training loss is  0.011345049144438235
+Validation loss for this epoch is 0.0013321908409125172
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+65 epochs have finished
+Current training loss is  0.011037999252039299
+Validation loss for this epoch is 0.001299535638281668
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+66 epochs have finished
+Current training loss is  0.010749320797003747
+Validation loss for this epoch is 0.0012554386748888646
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+67 epochs have finished
+Current training loss is  0.01047706988902064
+Validation loss for this epoch is 0.0012275387734916876
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+68 epochs have finished
+Current training loss is  0.010217730900876631
+Validation loss for this epoch is 0.0011979283272012253
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+69 epochs have finished
+Current training loss is  0.009971658619178925
+Validation loss for this epoch is 0.001166180060863553
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+70 epochs have finished
+Current training loss is  0.009745293295964075
+Validation loss for this epoch is 0.001140556797508907
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+71 epochs have finished
+Current training loss is  0.009522429536445998
+Validation loss for this epoch is 0.001114643232540402
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+72 epochs have finished
+Current training loss is  0.009320491617472726
+Validation loss for this epoch is 0.0010911879853665596
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+73 epochs have finished
+Current training loss is  0.009121321817474382
+Validation loss for this epoch is 0.0010707888659453602
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+74 epochs have finished
+Current training loss is  0.00893506725969928
+Validation loss for this epoch is 0.0010436969241709448
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+75 epochs have finished
+Current training loss is  0.008766946610194282
+Validation loss for this epoch is 0.00102256801983458
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+76 epochs have finished
+Current training loss is  0.008593478149123257
+Validation loss for this epoch is 0.0010054231188405538
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+77 epochs have finished
+Current training loss is  0.008444880122624454
+Validation loss for this epoch is 0.000984008569503203
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+78 epochs have finished
+Current training loss is  0.008290498813948943
+Validation loss for this epoch is 0.0009680654975454672
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+79 epochs have finished
+Current training loss is  0.008155954234098317
+Validation loss for this epoch is 0.0009504630997980712
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+80 epochs have finished
+Current training loss is  0.008019821181733278
+Validation loss for this epoch is 0.0009352602683065925
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+81 epochs have finished
+Current training loss is  0.007897462356595497
+Validation loss for this epoch is 0.0009182133371723467
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+82 epochs have finished
+Current training loss is  0.0077806767276342725
+Validation loss for this epoch is 0.0009065784970516688
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+83 epochs have finished
+Current training loss is  0.007669219203307875
+Validation loss for this epoch is 0.0008984489868453238
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+84 epochs have finished
+Current training loss is  0.007562486184724548
+Validation loss for this epoch is 0.0008796318684289872
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+85 epochs have finished
+Current training loss is  0.007461939814675134
+Validation loss for this epoch is 0.0008726731448405189
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+86 epochs have finished
+Current training loss is  0.007371507261268562
+Validation loss for this epoch is 0.0008637642094981857
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+87 epochs have finished
+Current training loss is  0.0072790880121829105
+Validation loss for this epoch is 0.000845233801555878
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+88 epochs have finished
+Current training loss is  0.007193089694737864
+Validation loss for this epoch is 0.0008384625807593693
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+89 epochs have finished
+Current training loss is  0.007108860087100766
+Validation loss for this epoch is 0.0008304369275720092
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+90 epochs have finished
+Current training loss is  0.007028704163531074
+Validation loss for this epoch is 0.0008206021057048929
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+91 epochs have finished
+Current training loss is  0.006955747514439281
+Validation loss for this epoch is 0.0008078735058916209
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+92 epochs have finished
+Current training loss is  0.006885568532197794
+Validation loss for this epoch is 0.0007995229334483156
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+93 epochs have finished
+Current training loss is  0.006813289237470599
+Validation loss for this epoch is 0.0007934189065963437
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+94 epochs have finished
+Current training loss is  0.006747728255504626
+Validation loss for this epoch is 0.0007851741811464308
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+95 epochs have finished
+Current training loss is  0.006681021131953457
+Validation loss for this epoch is 0.0007808690215824754
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+96 epochs have finished
+Current training loss is  0.0066180386425003235
+Validation loss for this epoch is 0.0007773427778374753
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+97 epochs have finished
+Current training loss is  0.006558666544151492
+Validation loss for this epoch is 0.0007678538486288744
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+98 epochs have finished
+Current training loss is  0.006504384912204841
+Validation loss for this epoch is 0.0007557631070085336
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+99 epochs have finished
+Current training loss is  0.00644785795293501
+Validation loss for this epoch is 0.0007526511039941397
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+100 epochs have finished
+Current training loss is  0.006394128552528855
+Validation loss for this epoch is 0.0007446854006047943
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+101 epochs have finished
+Current training loss is  0.006347484993057151
+Validation loss for this epoch is 0.000735328120754275
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+102 epochs have finished
+Current training loss is  0.0062920415575717925
+Validation loss for this epoch is 0.0007370768703367503
+Validation Accuracy for this epoch is 100
+
+103 epochs have finished
+Current training loss is  0.00624697949115216
+Validation loss for this epoch is 0.0007341799491769052
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+104 epochs have finished
+Current training loss is  0.00620499579645184
+Validation loss for this epoch is 0.0007230603723655804
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+105 epochs have finished
+Current training loss is  0.006156805844966584
+Validation loss for this epoch is 0.0007144789633457549
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+106 epochs have finished
+Current training loss is  0.006110792124218278
+Validation loss for this epoch is 0.0007107118321982853
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+107 epochs have finished
+Current training loss is  0.006072076034797647
+Validation loss for this epoch is 0.0007074790692058741
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+108 epochs have finished
+Current training loss is  0.006026286640008038
+Validation loss for this epoch is 0.0006975901346777391
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+109 epochs have finished
+Current training loss is  0.005985576563489303
+Validation loss for this epoch is 0.0006967476078898471
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+110 epochs have finished
+Current training loss is  0.005946324489286781
+Validation loss for this epoch is 0.0006980211737754871
+Validation Accuracy for this epoch is 100
+
+111 epochs have finished
+Current training loss is  0.005909322844217968
+Validation loss for this epoch is 0.0006852001492916315
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+112 epochs have finished
+Current training loss is  0.005867411930921662
+Validation loss for this epoch is 0.0006793004481551179
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+113 epochs have finished
+Current training loss is  0.0058312260180173325
+Validation loss for this epoch is 0.0006789050439692801
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+114 epochs have finished
+Current training loss is  0.005793716369680624
+Validation loss for this epoch is 0.000673163491228479
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+115 epochs have finished
+Current training loss is  0.005755198140832363
+Validation loss for this epoch is 0.0006688783255413
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+116 epochs have finished
+Current training loss is  0.005721024675949593
+Validation loss for this epoch is 0.0006657219614680798
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+117 epochs have finished
+Current training loss is  0.005686831333605369
+Validation loss for this epoch is 0.0006647135037383123
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+118 epochs have finished
+Current training loss is  0.0056528833683842095
+Validation loss for this epoch is 0.0006549211825586099
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+119 epochs have finished
+Current training loss is  0.0056194824978774705
+Validation loss for this epoch is 0.0006502988198917592
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+120 epochs have finished
+Current training loss is  0.005582379579664121
+Validation loss for this epoch is 0.0006477008832916908
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+121 epochs have finished
+Current training loss is  0.0055519286006529
+Validation loss for this epoch is 0.0006434043580156867
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+122 epochs have finished
+Current training loss is  0.0055215581755874155
+Validation loss for this epoch is 0.0006445496105698112
+Validation Accuracy for this epoch is 100
+
+123 epochs have finished
+Current training loss is  0.005486821925842378
+Validation loss for this epoch is 0.0006346653485707066
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+124 epochs have finished
+Current training loss is  0.0054554392804675444
+Validation loss for this epoch is 0.0006351106935653661
+Validation Accuracy for this epoch is 100
+
+125 epochs have finished
+Current training loss is  0.005426348028322536
+Validation loss for this epoch is 0.0006328461022349074
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+126 epochs have finished
+Current training loss is  0.005392589050643437
+Validation loss for this epoch is 0.0006271953538998787
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+127 epochs have finished
+Current training loss is  0.00536185011105772
+Validation loss for this epoch is 0.0006211230243025057
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+128 epochs have finished
+Current training loss is  0.005331830511750013
+Validation loss for this epoch is 0.0006196705157890392
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+129 epochs have finished
+Current training loss is  0.005302111786477326
+Validation loss for this epoch is 0.0006130673673396814
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+130 epochs have finished
+Current training loss is  0.005273385800592223
+Validation loss for this epoch is 0.000611474343259033
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+131 epochs have finished
+Current training loss is  0.0052434422391343105
+Validation loss for this epoch is 0.0006082375248297467
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+132 epochs have finished
+Current training loss is  0.005210637374148064
+Validation loss for this epoch is 0.0006064368094484962
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+133 epochs have finished
+Current training loss is  0.005182072218758549
+Validation loss for this epoch is 0.0006009090402585571
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+134 epochs have finished
+Current training loss is  0.005156810791959288
+Validation loss for this epoch is 0.0005966663707113185
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+135 epochs have finished
+Current training loss is  0.005125741223309888
+Validation loss for this epoch is 0.0005943364644735993
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+136 epochs have finished
+Current training loss is  0.005097224741348327
+Validation loss for this epoch is 0.0005907960244257993
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+137 epochs have finished
+Current training loss is  0.0050716556897896226
+Validation loss for this epoch is 0.0005884585189050995
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+138 epochs have finished
+Current training loss is  0.005040003087287914
+Validation loss for this epoch is 0.0005823366445838474
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+139 epochs have finished
+Current training loss is  0.005018568677769508
+Validation loss for this epoch is 0.0005826846595482493
+Validation Accuracy for this epoch is 100
+
+140 epochs have finished
+Current training loss is  0.004985375237538392
+Validation loss for this epoch is 0.000577369677102979
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+141 epochs have finished
+Current training loss is  0.004956571417551459
+Validation loss for this epoch is 0.0005740211931879458
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+142 epochs have finished
+Current training loss is  0.004931129296437575
+Validation loss for this epoch is 0.0005716758178095915
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+143 epochs have finished
+Current training loss is  0.004905272599899035
+Validation loss for this epoch is 0.0005692236081813462
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+144 epochs have finished
+Current training loss is  0.004875774908668973
+Validation loss for this epoch is 0.0005691973269676964
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+145 epochs have finished
+Current training loss is  0.004850606409490865
+Validation loss for this epoch is 0.0005647086977660365
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+146 epochs have finished
+Current training loss is  0.004822177841560915
+Validation loss for this epoch is 0.0005592850657194504
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+147 epochs have finished
+Current training loss is  0.0047941540824467666
+Validation loss for this epoch is 0.0005563254585467803
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+148 epochs have finished
+Current training loss is  0.004764674909438327
+Validation loss for this epoch is 0.0005524460684682708
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+149 epochs have finished
+Current training loss is  0.0047482377553933475
+Validation loss for this epoch is 0.0005525852179744106
+Validation Accuracy for this epoch is 100
+
+150 epochs have finished
+Current training loss is  0.0047144552777353965
+Validation loss for this epoch is 0.0005498144710145425
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+151 epochs have finished
+Current training loss is  0.004690471689173137
+Validation loss for this epoch is 0.000545155772670114
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+152 epochs have finished
+Current training loss is  0.004665721037781623
+Validation loss for this epoch is 0.0005407571406976786
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+153 epochs have finished
+Current training loss is  0.004635692546798964
+Validation loss for this epoch is 0.0005385188692343945
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+154 epochs have finished
+Current training loss is  0.004616122762399755
+Validation loss for this epoch is 0.0005342080944501504
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+155 epochs have finished
+Current training loss is  0.004588787716784282
+Validation loss for this epoch is 0.0005338023083822918
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+156 epochs have finished
+Current training loss is  0.004564586164633511
+Validation loss for this epoch is 0.0005322555757629743
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+157 epochs have finished
+Current training loss is  0.004541388405414182
+Validation loss for this epoch is 0.0005278784515212465
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+158 epochs have finished
+Current training loss is  0.004511917041781999
+Validation loss for this epoch is 0.0005209660785112646
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+159 epochs have finished
+Current training loss is  0.004497570606417867
+Validation loss for this epoch is 0.0005224049250500684
+Validation Accuracy for this epoch is 100
+
+160 epochs have finished
+Current training loss is  0.004464875153644243
+Validation loss for this epoch is 0.000518211025337223
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+161 epochs have finished
+Current training loss is  0.004447078785233316
+Validation loss for this epoch is 0.0005151711034159234
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+162 epochs have finished
+Current training loss is  0.0044188784363541345
+Validation loss for this epoch is 0.0005114595419399848
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+163 epochs have finished
+Current training loss is  0.0044030492213096295
+Validation loss for this epoch is 0.0005171373372832022
+Validation Accuracy for this epoch is 100
+
+164 epochs have finished
+Current training loss is  0.004377509712412575
+Validation loss for this epoch is 0.000506928844970389
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+165 epochs have finished
+Current training loss is  0.0043532372933441366
+Validation loss for this epoch is 0.0005061065826339473
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+166 epochs have finished
+Current training loss is  0.004335509110660496
+Validation loss for this epoch is 0.0005022286468374659
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+167 epochs have finished
+Current training loss is  0.004306967572119902
+Validation loss for this epoch is 0.0004981546471753973
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+168 epochs have finished
+Current training loss is  0.0042881818144451245
+Validation loss for this epoch is 0.0004982248374290066
+Validation Accuracy for this epoch is 100
+
+169 epochs have finished
+Current training loss is  0.00426741175533607
+Validation loss for this epoch is 0.0005104625497551751
+Validation Accuracy for this epoch is 100
+
+170 epochs have finished
+Current training loss is  0.0042475953282519185
+Validation loss for this epoch is 0.0004923761953250505
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+171 epochs have finished
+Current training loss is  0.0042252672765243915
+Validation loss for this epoch is 0.0004959496650371875
+Validation Accuracy for this epoch is 100
+
+172 epochs have finished
+Current training loss is  0.004207897961350682
+Validation loss for this epoch is 0.0004855142046835681
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+173 epochs have finished
+Current training loss is  0.004184353139407904
+Validation loss for this epoch is 0.00048374773268733406
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+174 epochs have finished
+Current training loss is  0.0041654883211776905
+Validation loss for this epoch is 0.00048296372006007005
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+175 epochs have finished
+Current training loss is  0.004146757123635325
+Validation loss for this epoch is 0.0004841752947868372
+Validation Accuracy for this epoch is 100
+
+176 epochs have finished
+Current training loss is  0.004127181021203796
+Validation loss for this epoch is 0.00047664027215432725
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+177 epochs have finished
+Current training loss is  0.0041073281240642245
+Validation loss for this epoch is 0.0004768130502270651
+Validation Accuracy for this epoch is 100
+
+178 epochs have finished
+Current training loss is  0.00408980646989221
+Validation loss for this epoch is 0.00047528892082482344
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+179 epochs have finished
+Current training loss is  0.004071721089530911
+Validation loss for this epoch is 0.0004784426239439199
+Validation Accuracy for this epoch is 100
+
+180 epochs have finished
+Current training loss is  0.004055439143485273
+Validation loss for this epoch is 0.00047388844768647687
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+181 epochs have finished
+Current training loss is  0.004035219154047809
+Validation loss for this epoch is 0.000469637887817953
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+182 epochs have finished
+Current training loss is  0.004018960264602356
+Validation loss for this epoch is 0.00046649470777992974
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+183 epochs have finished
+Current training loss is  0.004000854842615809
+Validation loss for this epoch is 0.0004641200412152102
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+184 epochs have finished
+Current training loss is  0.003982095588980883
+Validation loss for this epoch is 0.00046414419603024726
+Validation Accuracy for this epoch is 100
+
+185 epochs have finished
+Current training loss is  0.003972567781147518
+Validation loss for this epoch is 0.00045929027282909374
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+186 epochs have finished
+Current training loss is  0.00395100355217437
+Validation loss for this epoch is 0.00046191712590371026
+Validation Accuracy for this epoch is 100
+
+187 epochs have finished
+Current training loss is  0.0039345786913145275
+Validation loss for this epoch is 0.0004582209844556928
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+188 epochs have finished
+Current training loss is  0.003922228273495421
+Validation loss for this epoch is 0.00045481265988200903
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+189 epochs have finished
+Current training loss is  0.003902702819686965
+Validation loss for this epoch is 0.0004548707038338762
+Validation Accuracy for this epoch is 100
+
+190 epochs have finished
+Current training loss is  0.0038883664265085827
+Validation loss for this epoch is 0.0004513144676820957
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+191 epochs have finished
+Current training loss is  0.0038769819907429337
+Validation loss for this epoch is 0.0004508907527451811
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+192 epochs have finished
+Current training loss is  0.003861465209411108
+Validation loss for this epoch is 0.0004476023068491486
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+193 epochs have finished
+Current training loss is  0.003847141683763766
+Validation loss for this epoch is 0.0004462478264031233
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+194 epochs have finished
+Current training loss is  0.003831964396567855
+Validation loss for this epoch is 0.00044311815918263164
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+195 epochs have finished
+Current training loss is  0.003816023938725266
+Validation loss for this epoch is 0.0004456655826743372
+Validation Accuracy for this epoch is 100
+
+196 epochs have finished
+Current training loss is  0.0038052036379667697
+Validation loss for this epoch is 0.00044274288484302815
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+197 epochs have finished
+Current training loss is  0.0037909100738033885
+Validation loss for this epoch is 0.00044206326401763363
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+198 epochs have finished
+Current training loss is  0.003777068693352703
+Validation loss for this epoch is 0.0004403769876262231
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+199 epochs have finished
+Current training loss is  0.003763979647828819
+Validation loss for this epoch is 0.00043737499709095573
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+200 epochs have finished
+Current training loss is  0.0037480755468095595
+Validation loss for this epoch is 0.0004408072177284339
+Validation Accuracy for this epoch is 100
+
+201 epochs have finished
+Current training loss is  0.003737611759788706
+Validation loss for this epoch is 0.000432966105563537
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+202 epochs have finished
+Current training loss is  0.0037252880254072807
+Validation loss for this epoch is 0.0004319615536587662
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+203 epochs have finished
+Current training loss is  0.003715030975854461
+Validation loss for this epoch is 0.0004301962212593935
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+204 epochs have finished
+Current training loss is  0.0037007628213814314
+Validation loss for this epoch is 0.00042866029070864897
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+205 epochs have finished
+Current training loss is  0.0036872895484520996
+Validation loss for this epoch is 0.00042833259931285284
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+206 epochs have finished
+Current training loss is  0.003675031027341902
+Validation loss for this epoch is 0.000426645027800987
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+207 epochs have finished
+Current training loss is  0.0036640889989030256
+Validation loss for this epoch is 0.00042268097445230524
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+208 epochs have finished
+Current training loss is  0.0036507703280221904
+Validation loss for this epoch is 0.0004217009864078136
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+209 epochs have finished
+Current training loss is  0.003640741856315799
+Validation loss for this epoch is 0.0004221089716338611
+Validation Accuracy for this epoch is 100
+
+210 epochs have finished
+Current training loss is  0.003626330596034677
+Validation loss for this epoch is 0.00042018745398308965
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+211 epochs have finished
+Current training loss is  0.0036197595115936565
+Validation loss for this epoch is 0.000418255938711809
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+212 epochs have finished
+Current training loss is  0.0036045673134594836
+Validation loss for this epoch is 0.0004177655782768852
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+213 epochs have finished
+Current training loss is  0.0035937409770667728
+Validation loss for this epoch is 0.00041769367453525774
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+214 epochs have finished
+Current training loss is  0.003583470884223061
+Validation loss for this epoch is 0.00041492651780572487
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+215 epochs have finished
+Current training loss is  0.0035733065117256047
+Validation loss for this epoch is 0.0004189484939161048
+Validation Accuracy for this epoch is 100
+
+216 epochs have finished
+Current training loss is  0.0035602480943452974
+Validation loss for this epoch is 0.000412686471008783
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+217 epochs have finished
+Current training loss is  0.003552486515673081
+Validation loss for this epoch is 0.0004160913535997679
+Validation Accuracy for this epoch is 100
+
+218 epochs have finished
+Current training loss is  0.0035397557899159438
+Validation loss for this epoch is 0.00041063790013140533
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+219 epochs have finished
+Current training loss is  0.0035307803141222394
+Validation loss for this epoch is 0.0004088540099473903
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+220 epochs have finished
+Current training loss is  0.0035198415898776148
+Validation loss for this epoch is 0.00040597595580038615
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+221 epochs have finished
+Current training loss is  0.0035071087054348027
+Validation loss for this epoch is 0.0004066565049924975
+Validation Accuracy for this epoch is 100
+
+222 epochs have finished
+Current training loss is  0.003500353275967427
+Validation loss for this epoch is 0.00040414107434116886
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+223 epochs have finished
+Current training loss is  0.0034880191847150854
+Validation loss for this epoch is 0.0004054349105899746
+Validation Accuracy for this epoch is 100
+
+224 epochs have finished
+Current training loss is  0.0034778268695845327
+Validation loss for this epoch is 0.0004017144710815046
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+225 epochs have finished
+Current training loss is  0.0034650662014428235
+Validation loss for this epoch is 0.000400963802348997
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+226 epochs have finished
+Current training loss is  0.003461605659822453
+Validation loss for this epoch is 0.0004027358622806787
+Validation Accuracy for this epoch is 100
+
+227 epochs have finished
+Current training loss is  0.003446622020419454
+Validation loss for this epoch is 0.0003987484269600827
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+228 epochs have finished
+Current training loss is  0.00343822814647865
+Validation loss for this epoch is 0.00039742828789712803
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+229 epochs have finished
+Current training loss is  0.003429675802408383
+Validation loss for this epoch is 0.0003961049637837277
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+230 epochs have finished
+Current training loss is  0.003419487032260804
+Validation loss for this epoch is 0.00039992254596654675
+Validation Accuracy for this epoch is 100
+
+231 epochs have finished
+Current training loss is  0.003410530291375835
+Validation loss for this epoch is 0.00039526492855657125
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+232 epochs have finished
+Current training loss is  0.0033974098644193873
+Validation loss for this epoch is 0.0003933393288662046
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+233 epochs have finished
+Current training loss is  0.0033975832586747856
+Validation loss for this epoch is 0.00039310839429163025
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+234 epochs have finished
+Current training loss is  0.003380826573447848
+Validation loss for this epoch is 0.0003920006743101112
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+235 epochs have finished
+Current training loss is  0.0033725087434959278
+Validation loss for this epoch is 0.00039336942768386507
+Validation Accuracy for this epoch is 100
+
+236 epochs have finished
+Current training loss is  0.003361891953545637
+Validation loss for this epoch is 0.00038942309652156837
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+237 epochs have finished
+Current training loss is  0.0033544773384619475
+Validation loss for this epoch is 0.0003874481665206986
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+238 epochs have finished
+Current training loss is  0.003345991367041279
+Validation loss for this epoch is 0.00038810255841781327
+Validation Accuracy for this epoch is 100
+
+239 epochs have finished
+Current training loss is  0.0033383553375188058
+Validation loss for this epoch is 0.00038973207028902834
+Validation Accuracy for this epoch is 100
+
+240 epochs have finished
+Current training loss is  0.003328186150156398
+Validation loss for this epoch is 0.0003915820989277563
+Validation Accuracy for this epoch is 100
+
+241 epochs have finished
+Current training loss is  0.0033170226734000607
+Validation loss for this epoch is 0.0003834980695955892
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+242 epochs have finished
+Current training loss is  0.003308516712877463
+Validation loss for this epoch is 0.00038337516934916493
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+243 epochs have finished
+Current training loss is  0.0033038596907317697
+Validation loss for this epoch is 0.00038132581721583847
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+244 epochs have finished
+Current training loss is  0.003292390239721499
+Validation loss for this epoch is 0.00038442039453912
+Validation Accuracy for this epoch is 100
+
+245 epochs have finished
+Current training loss is  0.003283668144604235
+Validation loss for this epoch is 0.0003833923358342872
+Validation Accuracy for this epoch is 100
+
+246 epochs have finished
+Current training loss is  0.003276680977023716
+Validation loss for this epoch is 0.00038518017026945017
+Validation Accuracy for this epoch is 100
+
+247 epochs have finished
+Current training loss is  0.0032666403849361814
+Validation loss for this epoch is 0.0003816219991676917
+Validation Accuracy for this epoch is 100
+
+248 epochs have finished
+Current training loss is  0.003256302011095613
+Validation loss for this epoch is 0.0003757341894470301
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+249 epochs have finished
+Current training loss is  0.0032530557871268684
+Validation loss for this epoch is 0.00037461589818121865
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+250 epochs have finished
+Current training loss is  0.0032373472531617153
+Validation loss for this epoch is 0.00037433877878356725
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+251 epochs have finished
+Current training loss is  0.00323678408244632
+Validation loss for this epoch is 0.00037434602586472465
+Validation Accuracy for this epoch is 100
+
+252 epochs have finished
+Current training loss is  0.003223147255994263
+Validation loss for this epoch is 0.0003730514802100515
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+253 epochs have finished
+Current training loss is  0.003216208045841995
+Validation loss for this epoch is 0.0003735633636097191
+Validation Accuracy for this epoch is 100
+
+254 epochs have finished
+Current training loss is  0.003205888983757177
+Validation loss for this epoch is 0.0003784416708185745
+Validation Accuracy for this epoch is 100
+
+255 epochs have finished
+Current training loss is  0.003202548511808345
+Validation loss for this epoch is 0.0003713566911756061
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+256 epochs have finished
+Current training loss is  0.0031901495478905417
+Validation loss for this epoch is 0.00037374784051280585
+Validation Accuracy for this epoch is 100
+
+257 epochs have finished
+Current training loss is  0.0031815715728953364
+Validation loss for this epoch is 0.0003680357090161124
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+258 epochs have finished
+Current training loss is  0.003176142804477422
+Validation loss for this epoch is 0.0003672710408864077
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+259 epochs have finished
+Current training loss is  0.0031680046370183845
+Validation loss for this epoch is 0.00037148490991967265
+Validation Accuracy for this epoch is 100
+
+260 epochs have finished
+Current training loss is  0.0031582589485879
+Validation loss for this epoch is 0.0003683762038235727
+Validation Accuracy for this epoch is 100
+
+261 epochs have finished
+Current training loss is  0.0031524859173259756
+Validation loss for this epoch is 0.00036683252392322174
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+262 epochs have finished
+Current training loss is  0.0031407885194312257
+Validation loss for this epoch is 0.0003635497487266548
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+263 epochs have finished
+Current training loss is  0.003133498905981469
+Validation loss for this epoch is 0.000364923805136641
+Validation Accuracy for this epoch is 100
+
+264 epochs have finished
+Current training loss is  0.0031290166032249545
+Validation loss for this epoch is 0.0003641600487753749
+Validation Accuracy for this epoch is 100
+
+265 epochs have finished
+Current training loss is  0.0031175087619885744
+Validation loss for this epoch is 0.00036171539090901206
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+266 epochs have finished
+Current training loss is  0.0031122313107516675
+Validation loss for this epoch is 0.0003623477780365647
+Validation Accuracy for this epoch is 100
+
+267 epochs have finished
+Current training loss is  0.003105101603523508
+Validation loss for this epoch is 0.0003578000914785662
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+268 epochs have finished
+Current training loss is  0.003096171541074
+Validation loss for this epoch is 0.00035778075675807486
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+269 epochs have finished
+Current training loss is  0.003086393056264569
+Validation loss for this epoch is 0.0003622868762249709
+Validation Accuracy for this epoch is 100
+
+270 epochs have finished
+Current training loss is  0.0030783784716277296
+Validation loss for this epoch is 0.00035834882623930753
+Validation Accuracy for this epoch is 100
+
+271 epochs have finished
+Current training loss is  0.003071406029675927
+Validation loss for this epoch is 0.0003558626719950553
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+272 epochs have finished
+Current training loss is  0.003067547327873399
+Validation loss for this epoch is 0.00035784215970124933
+Validation Accuracy for this epoch is 100
+
+273 epochs have finished
+Current training loss is  0.003055483956586613
+Validation loss for this epoch is 0.00035265189922029094
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+274 epochs have finished
+Current training loss is  0.0030510089945892105
+Validation loss for this epoch is 0.0003533083711317886
+Validation Accuracy for this epoch is 100
+
+275 epochs have finished
+Current training loss is  0.0030411794134579395
+Validation loss for this epoch is 0.00035632083222481015
+Validation Accuracy for this epoch is 100
+
+276 epochs have finished
+Current training loss is  0.00303508085357862
+Validation loss for this epoch is 0.00035554146666072484
+Validation Accuracy for this epoch is 100
+
+277 epochs have finished
+Current training loss is  0.003026071582098666
+Validation loss for this epoch is 0.0003496302213079616
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+278 epochs have finished
+Current training loss is  0.0030201984177438135
+Validation loss for this epoch is 0.00034920696612061874
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+279 epochs have finished
+Current training loss is  0.0030128000646527653
+Validation loss for this epoch is 0.0003496987212656677
+Validation Accuracy for this epoch is 100
+
+280 epochs have finished
+Current training loss is  0.00300704544929431
+Validation loss for this epoch is 0.00034757408798213874
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+281 epochs have finished
+Current training loss is  0.002995048234879505
+Validation loss for this epoch is 0.0003466127727733692
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+282 epochs have finished
+Current training loss is  0.0029898599827902217
+Validation loss for this epoch is 0.0003610379603742331
+Validation Accuracy for this epoch is 100
+
+283 epochs have finished
+Current training loss is  0.0029846593354250217
+Validation loss for this epoch is 0.0003441557216774527
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+284 epochs have finished
+Current training loss is  0.0029753325884485093
+Validation loss for this epoch is 0.00034410653756822285
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+285 epochs have finished
+Current training loss is  0.0029686773989396897
+Validation loss for this epoch is 0.00034314215349695587
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+286 epochs have finished
+Current training loss is  0.0029614301029141643
+Validation loss for this epoch is 0.0003495655612368864
+Validation Accuracy for this epoch is 100
+
+287 epochs have finished
+Current training loss is  0.002954516633053572
+Validation loss for this epoch is 0.00034095980981874163
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+288 epochs have finished
+Current training loss is  0.002945332891158614
+Validation loss for this epoch is 0.0003403397361125826
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+289 epochs have finished
+Current training loss is  0.002940400722081904
+Validation loss for this epoch is 0.0003396305974092684
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+290 epochs have finished
+Current training loss is  0.0029302436214493355
+Validation loss for this epoch is 0.0003403993889605772
+Validation Accuracy for this epoch is 100
+
+291 epochs have finished
+Current training loss is  0.0029259569880650815
+Validation loss for this epoch is 0.0003385417478511954
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+292 epochs have finished
+Current training loss is  0.0029196837492690975
+Validation loss for this epoch is 0.0003383525454410119
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+293 epochs have finished
+Current training loss is  0.0029093551424921316
+Validation loss for this epoch is 0.0003366259677477501
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+294 epochs have finished
+Current training loss is  0.002905417187093917
+Validation loss for this epoch is 0.0003450696785876062
+Validation Accuracy for this epoch is 100
+
+295 epochs have finished
+Current training loss is  0.0028962504848095705
+Validation loss for this epoch is 0.00033526334777889133
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+296 epochs have finished
+Current training loss is  0.0028909338916491834
+Validation loss for this epoch is 0.0003355954340804601
+Validation Accuracy for this epoch is 100
+
+297 epochs have finished
+Current training loss is  0.0028824030407577084
+Validation loss for this epoch is 0.0003365299016877543
+Validation Accuracy for this epoch is 100
+
+298 epochs have finished
+Current training loss is  0.0028783212608232134
+Validation loss for this epoch is 0.0003346138162214629
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+299 epochs have finished
+Current training loss is  0.002867938122335545
+Validation loss for this epoch is 0.00033188107158821367
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+300 epochs have finished
+Current training loss is  0.002863639946326657
+Validation loss for this epoch is 0.00033181142202920455
+Validation Accuracy for this epoch is 100
+Encoder is now saved to Path: Conv2D_encoder_best_Gadi.pth
+Decoder is now saved to Path: Conv2D_decoder_best_Gadi.pth
+
+Training Finished
+Best model has a validation loss of 0.00033181142202920455 and it's in epoch 300
+Training Data saved! The path is ConvAE_trainingData_Gadi.txt
