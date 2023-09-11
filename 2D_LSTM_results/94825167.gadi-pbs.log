@@ -1,0 +1,853 @@
+Current device is  cuda
+Encoder and Decoder loaded!
+1 epochs have finished
+Current training loss is  1.9441942926496267
+Validation loss for this epoch is 0.05033077416010201
+This model is now saved to Path: lstm_best.pth
+
+2 epochs have finished
+Current training loss is  0.4174541914835572
+Validation loss for this epoch is 0.04441087692975998
+This model is now saved to Path: lstm_best.pth
+
+3 epochs have finished
+Current training loss is  0.344829993089661
+Validation loss for this epoch is 0.04633613023906946
+
+4 epochs have finished
+Current training loss is  0.34615771914832294
+Validation loss for this epoch is 0.03714477247558534
+This model is now saved to Path: lstm_best.pth
+
+5 epochs have finished
+Current training loss is  0.32309794682078063
+Validation loss for this epoch is 0.03940386860631406
+
+6 epochs have finished
+Current training loss is  0.3212896466720849
+Validation loss for this epoch is 0.040157995419576764
+
+7 epochs have finished
+Current training loss is  0.32143478910438716
+Validation loss for this epoch is 0.04768934263847768
+
+8 epochs have finished
+Current training loss is  0.31355837429873645
+Validation loss for this epoch is 0.034272440476343036
+This model is now saved to Path: lstm_best.pth
+
+9 epochs have finished
+Current training loss is  0.29749228223226964
+Validation loss for this epoch is 0.033647150034084916
+This model is now saved to Path: lstm_best.pth
+
+10 epochs have finished
+Current training loss is  0.2986644982593134
+Validation loss for this epoch is 0.033841947093605995
+
+11 epochs have finished
+Current training loss is  0.29573876434005797
+Validation loss for this epoch is 0.03542306006420404
+
+12 epochs have finished
+Current training loss is  0.2551391777815297
+Validation loss for this epoch is 0.03604852734133601
+
+13 epochs have finished
+Current training loss is  0.22356514766579494
+Validation loss for this epoch is 0.03134893532842398
+This model is now saved to Path: lstm_best.pth
+
+14 epochs have finished
+Current training loss is  0.21575589559506625
+Validation loss for this epoch is 0.028222706401720643
+This model is now saved to Path: lstm_best.pth
+
+15 epochs have finished
+Current training loss is  0.1816804934060201
+Validation loss for this epoch is 0.02924864285159856
+
+16 epochs have finished
+Current training loss is  0.1823906436911784
+Validation loss for this epoch is 0.02353185403626412
+This model is now saved to Path: lstm_best.pth
+
+17 epochs have finished
+Current training loss is  0.17802442639367655
+Validation loss for this epoch is 0.023186585633084178
+This model is now saved to Path: lstm_best.pth
+
+18 epochs have finished
+Current training loss is  0.17677619640016928
+Validation loss for this epoch is 0.026064609992317855
+
+19 epochs have finished
+Current training loss is  0.17403210728662089
+Validation loss for this epoch is 0.0224652246106416
+This model is now saved to Path: lstm_best.pth
+
+20 epochs have finished
+Current training loss is  0.1785150877549313
+Validation loss for this epoch is 0.023427741311024874
+
+21 epochs have finished
+Current training loss is  0.17030410055303946
+Validation loss for this epoch is 0.02555838495027274
+
+22 epochs have finished
+Current training loss is  0.16923363273963332
+Validation loss for this epoch is 0.026559298392385244
+
+23 epochs have finished
+Current training loss is  0.18042643467197195
+Validation loss for this epoch is 0.02198720711749047
+This model is now saved to Path: lstm_best.pth
+
+24 epochs have finished
+Current training loss is  0.1711430656723678
+Validation loss for this epoch is 0.02041239821119234
+This model is now saved to Path: lstm_best.pth
+
+25 epochs have finished
+Current training loss is  0.15454881777986884
+Validation loss for this epoch is 0.019471669860649854
+This model is now saved to Path: lstm_best.pth
+
+26 epochs have finished
+Current training loss is  0.1570770553080365
+Validation loss for this epoch is 0.019720358424820006
+
+27 epochs have finished
+Current training loss is  0.14750744868069887
+Validation loss for this epoch is 0.022304614656604826
+
+28 epochs have finished
+Current training loss is  0.14128291202359833
+Validation loss for this epoch is 0.019435855268966407
+This model is now saved to Path: lstm_best.pth
+
+29 epochs have finished
+Current training loss is  0.13079239596845582
+Validation loss for this epoch is 0.015823906869627535
+This model is now saved to Path: lstm_best.pth
+
+30 epochs have finished
+Current training loss is  0.13336156535660848
+Validation loss for this epoch is 0.017384373932145536
+
+31 epochs have finished
+Current training loss is  0.14550853107357398
+Validation loss for this epoch is 0.016130176547449082
+
+32 epochs have finished
+Current training loss is  0.11890925868647173
+Validation loss for this epoch is 0.014181757695041597
+This model is now saved to Path: lstm_best.pth
+
+33 epochs have finished
+Current training loss is  0.11805586790433154
+Validation loss for this epoch is 0.013600878766737878
+This model is now saved to Path: lstm_best.pth
+
+34 epochs have finished
+Current training loss is  0.11329490347998217
+Validation loss for this epoch is 0.013644041260704398
+
+35 epochs have finished
+Current training loss is  0.1233041618252173
+Validation loss for this epoch is 0.01678135135443881
+
+36 epochs have finished
+Current training loss is  0.11773113097297028
+Validation loss for this epoch is 0.014128818002063781
+
+37 epochs have finished
+Current training loss is  0.11434581002686173
+Validation loss for this epoch is 0.014217563031706959
+
+38 epochs have finished
+Current training loss is  0.11024082830408588
+Validation loss for this epoch is 0.012312311155255884
+This model is now saved to Path: lstm_best.pth
+
+39 epochs have finished
+Current training loss is  0.1058847425156273
+Validation loss for this epoch is 0.01184890788863413
+This model is now saved to Path: lstm_best.pth
+
+40 epochs have finished
+Current training loss is  0.10943495720857754
+Validation loss for this epoch is 0.012346457981038839
+
+41 epochs have finished
+Current training loss is  0.10642474063206464
+Validation loss for this epoch is 0.012124979810323566
+
+42 epochs have finished
+Current training loss is  0.0998888548638206
+Validation loss for this epoch is 0.011870930844452232
+
+43 epochs have finished
+Current training loss is  0.10871140786912292
+Validation loss for this epoch is 0.013769769109785557
+
+44 epochs have finished
+Current training loss is  0.1080588162294589
+Validation loss for this epoch is 0.0147934794658795
+
+45 epochs have finished
+Current training loss is  0.10736336055560969
+Validation loss for this epoch is 0.011560972081497312
+This model is now saved to Path: lstm_best.pth
+
+46 epochs have finished
+Current training loss is  0.0969873103313148
+Validation loss for this epoch is 0.011436895816586912
+This model is now saved to Path: lstm_best.pth
+
+47 epochs have finished
+Current training loss is  0.09211181028513238
+Validation loss for this epoch is 0.011520481057232246
+
+48 epochs have finished
+Current training loss is  0.09007754616322927
+Validation loss for this epoch is 0.009364680328872055
+This model is now saved to Path: lstm_best.pth
+
+49 epochs have finished
+Current training loss is  0.09089659521123394
+Validation loss for this epoch is 0.013096049835439771
+
+50 epochs have finished
+Current training loss is  0.09214294084813446
+Validation loss for this epoch is 0.010240278614219278
+
+51 epochs have finished
+Current training loss is  0.08835211279802024
+Validation loss for this epoch is 0.009464011527597904
+
+52 epochs have finished
+Current training loss is  0.08061154908500612
+Validation loss for this epoch is 0.009922399767674506
+
+53 epochs have finished
+Current training loss is  0.08169326989445835
+Validation loss for this epoch is 0.009291055786889046
+This model is now saved to Path: lstm_best.pth
+
+54 epochs have finished
+Current training loss is  0.07901324582053348
+Validation loss for this epoch is 0.008282247872557491
+This model is now saved to Path: lstm_best.pth
+
+55 epochs have finished
+Current training loss is  0.07370926858857274
+Validation loss for this epoch is 0.00930361932842061
+
+56 epochs have finished
+Current training loss is  0.07584941142704338
+Validation loss for this epoch is 0.009770411474164575
+
+57 epochs have finished
+Current training loss is  0.07705757327494211
+Validation loss for this epoch is 0.010977869213093072
+
+58 epochs have finished
+Current training loss is  0.07600539579289034
+Validation loss for this epoch is 0.009865679283393547
+
+59 epochs have finished
+Current training loss is  0.07269297147286125
+Validation loss for this epoch is 0.00960873399162665
+
+60 epochs have finished
+Current training loss is  0.07094960389076732
+Validation loss for this epoch is 0.011655616981443018
+
+61 epochs have finished
+Current training loss is  0.07064992949017324
+Validation loss for this epoch is 0.008255779976025224
+This model is now saved to Path: lstm_best.pth
+
+62 epochs have finished
+Current training loss is  0.06632015921059065
+Validation loss for this epoch is 0.008174161310307682
+This model is now saved to Path: lstm_best.pth
+
+63 epochs have finished
+Current training loss is  0.06863156912731938
+Validation loss for this epoch is 0.008131339040119201
+This model is now saved to Path: lstm_best.pth
+
+64 epochs have finished
+Current training loss is  0.06851682713022456
+Validation loss for this epoch is 0.008665856847073883
+
+65 epochs have finished
+Current training loss is  0.06684420481906272
+Validation loss for this epoch is 0.007876025687437505
+This model is now saved to Path: lstm_best.pth
+
+66 epochs have finished
+Current training loss is  0.06791301563498564
+Validation loss for this epoch is 0.007586294435895979
+This model is now saved to Path: lstm_best.pth
+
+67 epochs have finished
+Current training loss is  0.06257845918298699
+Validation loss for this epoch is 0.008500284340698272
+
+68 epochs have finished
+Current training loss is  0.06585577139048837
+Validation loss for this epoch is 0.009563101775711402
+
+69 epochs have finished
+Current training loss is  0.06474584521492943
+Validation loss for this epoch is 0.008155600749887526
+
+70 epochs have finished
+Current training loss is  0.061712939641438425
+Validation loss for this epoch is 0.00858028736547567
+
+71 epochs have finished
+Current training loss is  0.06485843993141316
+Validation loss for this epoch is 0.008357051003258675
+
+72 epochs have finished
+Current training loss is  0.06427250048727728
+Validation loss for this epoch is 0.008676410361658782
+
+73 epochs have finished
+Current training loss is  0.06551968448911794
+Validation loss for this epoch is 0.007260523154400289
+This model is now saved to Path: lstm_best.pth
+
+74 epochs have finished
+Current training loss is  0.0589280663698446
+Validation loss for this epoch is 0.0065904041402973235
+This model is now saved to Path: lstm_best.pth
+
+75 epochs have finished
+Current training loss is  0.06860089986003004
+Validation loss for this epoch is 0.007549140544142574
+
+76 epochs have finished
+Current training loss is  0.06035994476405904
+Validation loss for this epoch is 0.007411809696350247
+
+77 epochs have finished
+Current training loss is  0.057074658339843154
+Validation loss for this epoch is 0.007457490108208731
+
+78 epochs have finished
+Current training loss is  0.06069324500276707
+Validation loss for this epoch is 0.007667992147617042
+
+79 epochs have finished
+Current training loss is  0.0624515064409934
+Validation loss for this epoch is 0.006718633900163695
+
+80 epochs have finished
+Current training loss is  0.06016215364797972
+Validation loss for this epoch is 0.006563674978679046
+This model is now saved to Path: lstm_best.pth
+
+81 epochs have finished
+Current training loss is  0.056961861468153074
+Validation loss for this epoch is 0.00916761573171243
+
+82 epochs have finished
+Current training loss is  0.059087917441502213
+Validation loss for this epoch is 0.00917251207283698
+
+83 epochs have finished
+Current training loss is  0.05675174677162431
+Validation loss for this epoch is 0.008282315160613507
+
+84 epochs have finished
+Current training loss is  0.05366322127520107
+Validation loss for this epoch is 0.007610875938553363
+
+85 epochs have finished
+Current training loss is  0.05765792814781889
+Validation loss for this epoch is 0.006714830349665135
+
+86 epochs have finished
+Current training loss is  0.058022894139867276
+Validation loss for this epoch is 0.0064297553326468915
+This model is now saved to Path: lstm_best.pth
+
+87 epochs have finished
+Current training loss is  0.057168999541318044
+Validation loss for this epoch is 0.007262450642883778
+
+88 epochs have finished
+Current training loss is  0.053498091496294364
+Validation loss for this epoch is 0.008719882986042649
+
+89 epochs have finished
+Current training loss is  0.060240168328164145
+Validation loss for this epoch is 0.008672051248140633
+
+90 epochs have finished
+Current training loss is  0.06054180013597943
+Validation loss for this epoch is 0.006466633465606719
+
+91 epochs have finished
+Current training loss is  0.053267993207555264
+Validation loss for this epoch is 0.008279957459308207
+
+92 epochs have finished
+Current training loss is  0.05643651177524589
+Validation loss for this epoch is 0.00752143922727555
+
+93 epochs have finished
+Current training loss is  0.053509073914028704
+Validation loss for this epoch is 0.007344395155087113
+
+94 epochs have finished
+Current training loss is  0.052530090761138126
+Validation loss for this epoch is 0.006688955356366932
+
+95 epochs have finished
+Current training loss is  0.05233712636982091
+Validation loss for this epoch is 0.007197802566224709
+
+96 epochs have finished
+Current training loss is  0.0505270374706015
+Validation loss for this epoch is 0.005802884959848598
+This model is now saved to Path: lstm_best.pth
+
+97 epochs have finished
+Current training loss is  0.05938153259921819
+Validation loss for this epoch is 0.0065402154577896
+
+98 epochs have finished
+Current training loss is  0.05157745094038546
+Validation loss for this epoch is 0.0067738166835624725
+
+99 epochs have finished
+Current training loss is  0.05481741239782423
+Validation loss for this epoch is 0.007984131458215415
+
+100 epochs have finished
+Current training loss is  0.050628056342247874
+Validation loss for this epoch is 0.006876351835671812
+
+101 epochs have finished
+Current training loss is  0.05033583732438274
+Validation loss for this epoch is 0.008948906499426812
+
+102 epochs have finished
+Current training loss is  0.0592205896100495
+Validation loss for this epoch is 0.006952884024940431
+
+103 epochs have finished
+Current training loss is  0.04896247389842756
+Validation loss for this epoch is 0.006244577147299424
+
+104 epochs have finished
+Current training loss is  0.053586600290145725
+Validation loss for this epoch is 0.00854985011392273
+
+105 epochs have finished
+Current training loss is  0.05675007533864118
+Validation loss for this epoch is 0.00753584285848774
+
+106 epochs have finished
+Current training loss is  0.05242522814660333
+Validation loss for this epoch is 0.00820400018710643
+
+107 epochs have finished
+Current training loss is  0.04930294124642387
+Validation loss for this epoch is 0.007234482909552753
+
+108 epochs have finished
+Current training loss is  0.05606481325230561
+Validation loss for this epoch is 0.00745239612297155
+
+109 epochs have finished
+Current training loss is  0.04973580266232602
+Validation loss for this epoch is 0.007845965737942606
+
+110 epochs have finished
+Current training loss is  0.051783474773401394
+Validation loss for this epoch is 0.006653643649769947
+
+111 epochs have finished
+Current training loss is  0.047300448117312044
+Validation loss for this epoch is 0.0064380943949799985
+
+112 epochs have finished
+Current training loss is  0.05155554332304746
+Validation loss for this epoch is 0.00835159412235953
+
+113 epochs have finished
+Current training loss is  0.054413924721302465
+Validation loss for this epoch is 0.007461917237378657
+
+114 epochs have finished
+Current training loss is  0.052245989005314186
+Validation loss for this epoch is 0.005693407205399126
+This model is now saved to Path: lstm_best.pth
+
+115 epochs have finished
+Current training loss is  0.048317396925995126
+Validation loss for this epoch is 0.006628999108215794
+
+116 epochs have finished
+Current training loss is  0.046752857306273654
+Validation loss for this epoch is 0.006660291983280331
+
+117 epochs have finished
+Current training loss is  0.04893108826945536
+Validation loss for this epoch is 0.0059356749698054045
+
+118 epochs have finished
+Current training loss is  0.04743355291429907
+Validation loss for this epoch is 0.00611385318916291
+
+119 epochs have finished
+Current training loss is  0.048052884492790326
+Validation loss for this epoch is 0.006977749842917547
+
+120 epochs have finished
+Current training loss is  0.04684330298914574
+Validation loss for this epoch is 0.007467356917914003
+
+121 epochs have finished
+Current training loss is  0.04547740065027028
+Validation loss for this epoch is 0.0062150875746738166
+
+122 epochs have finished
+Current training loss is  0.046152878494467586
+Validation loss for this epoch is 0.008144092716975138
+
+123 epochs have finished
+Current training loss is  0.04781135029043071
+Validation loss for this epoch is 0.006594428385142237
+
+124 epochs have finished
+Current training loss is  0.04664768898510374
+Validation loss for this epoch is 0.0058684785035438836
+
+125 epochs have finished
+Current training loss is  0.04542863820097409
+Validation loss for this epoch is 0.006275227962760255
+
+126 epochs have finished
+Current training loss is  0.04989655743702315
+Validation loss for this epoch is 0.007058672577841207
+
+127 epochs have finished
+Current training loss is  0.04471343752811663
+Validation loss for this epoch is 0.006302591733401641
+
+128 epochs have finished
+Current training loss is  0.04085312088136561
+Validation loss for this epoch is 0.0055407953332178295
+This model is now saved to Path: lstm_best.pth
+
+129 epochs have finished
+Current training loss is  0.04755929217208177
+Validation loss for this epoch is 0.006546735850861296
+
+130 epochs have finished
+Current training loss is  0.04497012388310395
+Validation loss for this epoch is 0.005875191098311916
+
+131 epochs have finished
+Current training loss is  0.042744949634652585
+Validation loss for this epoch is 0.006498883594758809
+
+132 epochs have finished
+Current training loss is  0.04508194187656045
+Validation loss for this epoch is 0.006073411990655586
+
+133 epochs have finished
+Current training loss is  0.04069252431509085
+Validation loss for this epoch is 0.005972897168248892
+
+134 epochs have finished
+Current training loss is  0.04183611870394088
+Validation loss for this epoch is 0.006104661704739556
+
+135 epochs have finished
+Current training loss is  0.04303596055251546
+Validation loss for this epoch is 0.007421315094688907
+
+136 epochs have finished
+Current training loss is  0.04743137303739786
+Validation loss for this epoch is 0.006594743317691609
+
+137 epochs have finished
+Current training loss is  0.04433999682078138
+Validation loss for this epoch is 0.0067625356605276465
+
+138 epochs have finished
+Current training loss is  0.04398866192786954
+Validation loss for this epoch is 0.006613160541746765
+
+139 epochs have finished
+Current training loss is  0.04474912100704387
+Validation loss for this epoch is 0.006744525831891224
+
+140 epochs have finished
+Current training loss is  0.04243848688201979
+Validation loss for this epoch is 0.006089689704822376
+
+141 epochs have finished
+Current training loss is  0.04219933523563668
+Validation loss for this epoch is 0.006510418286779895
+
+142 epochs have finished
+Current training loss is  0.042974279524059966
+Validation loss for this epoch is 0.00639640333247371
+
+143 epochs have finished
+Current training loss is  0.04204812960233539
+Validation loss for this epoch is 0.005402648501330987
+This model is now saved to Path: lstm_best.pth
+
+144 epochs have finished
+Current training loss is  0.04317056987201795
+Validation loss for this epoch is 0.006001506873872131
+
+145 epochs have finished
+Current training loss is  0.042714793933555484
+Validation loss for this epoch is 0.007149186480091885
+
+146 epochs have finished
+Current training loss is  0.04535935781314038
+Validation loss for this epoch is 0.005922801443375647
+
+147 epochs have finished
+Current training loss is  0.039528644643723965
+Validation loss for this epoch is 0.006933449563803151
+
+148 epochs have finished
+Current training loss is  0.039673060848144814
+Validation loss for this epoch is 0.005845735518960282
+
+149 epochs have finished
+Current training loss is  0.04049349730485119
+Validation loss for this epoch is 0.005919750808971003
+
+150 epochs have finished
+Current training loss is  0.041545528220012784
+Validation loss for this epoch is 0.008101184968836606
+
+151 epochs have finished
+Current training loss is  0.04276323091471568
+Validation loss for this epoch is 0.005397805129177868
+This model is now saved to Path: lstm_best.pth
+
+152 epochs have finished
+Current training loss is  0.04244539636420086
+Validation loss for this epoch is 0.006859170272946358
+
+153 epochs have finished
+Current training loss is  0.0442966774571687
+Validation loss for this epoch is 0.0053788307996001095
+This model is now saved to Path: lstm_best.pth
+
+154 epochs have finished
+Current training loss is  0.04030926164705306
+Validation loss for this epoch is 0.007115760847227648
+
+155 epochs have finished
+Current training loss is  0.038169529900187626
+Validation loss for this epoch is 0.005378182919230312
+This model is now saved to Path: lstm_best.pth
+
+156 epochs have finished
+Current training loss is  0.03798002959229052
+Validation loss for this epoch is 0.0053577150392811745
+This model is now saved to Path: lstm_best.pth
+
+157 epochs have finished
+Current training loss is  0.038294821308227256
+Validation loss for this epoch is 0.005109133926453069
+This model is now saved to Path: lstm_best.pth
+
+158 epochs have finished
+Current training loss is  0.04191346524748951
+Validation loss for this epoch is 0.0065791968372650445
+
+159 epochs have finished
+Current training loss is  0.03995901992311701
+Validation loss for this epoch is 0.010518331051571295
+
+160 epochs have finished
+Current training loss is  0.041993719147285447
+Validation loss for this epoch is 0.0068922226200811565
+
+161 epochs have finished
+Current training loss is  0.03980768681503832
+Validation loss for this epoch is 0.00614221443538554
+
+162 epochs have finished
+Current training loss is  0.036892846605041996
+Validation loss for this epoch is 0.005547390726860613
+
+163 epochs have finished
+Current training loss is  0.03582021649344824
+Validation loss for this epoch is 0.0063846240227576345
+
+164 epochs have finished
+Current training loss is  0.03958118418813683
+Validation loss for this epoch is 0.005370146449422464
+
+165 epochs have finished
+Current training loss is  0.038018076244043186
+Validation loss for this epoch is 0.005696935288142413
+
+166 epochs have finished
+Current training loss is  0.035716896352823824
+Validation loss for this epoch is 0.005041495664045215
+This model is now saved to Path: lstm_best.pth
+
+167 epochs have finished
+Current training loss is  0.034148580220062286
+Validation loss for this epoch is 0.005585417267866433
+
+168 epochs have finished
+Current training loss is  0.03591348571353592
+Validation loss for this epoch is 0.005720697081414983
+
+169 epochs have finished
+Current training loss is  0.03642119059804827
+Validation loss for this epoch is 0.005600492149824277
+
+170 epochs have finished
+Current training loss is  0.036957466654712334
+Validation loss for this epoch is 0.005433574871858582
+
+171 epochs have finished
+Current training loss is  0.03442015379550867
+Validation loss for this epoch is 0.006268393830396235
+
+172 epochs have finished
+Current training loss is  0.03607449965784326
+Validation loss for this epoch is 0.005144581344211474
+
+173 epochs have finished
+Current training loss is  0.037194733653450385
+Validation loss for this epoch is 0.005686093063559383
+
+174 epochs have finished
+Current training loss is  0.034068328415742144
+Validation loss for this epoch is 0.00859871887951158
+
+175 epochs have finished
+Current training loss is  0.03991028369637206
+Validation loss for this epoch is 0.005057633155956864
+
+176 epochs have finished
+Current training loss is  0.03743023960851133
+Validation loss for this epoch is 0.008134924166370183
+
+177 epochs have finished
+Current training loss is  0.03772813524119556
+Validation loss for this epoch is 0.005252558854408562
+
+178 epochs have finished
+Current training loss is  0.03493569215061143
+Validation loss for this epoch is 0.005710010736947879
+
+179 epochs have finished
+Current training loss is  0.035405772301601246
+Validation loss for this epoch is 0.005738556297728792
+
+180 epochs have finished
+Current training loss is  0.0351717148150783
+Validation loss for this epoch is 0.005026877566706389
+This model is now saved to Path: lstm_best.pth
+
+181 epochs have finished
+Current training loss is  0.034364014252787456
+Validation loss for this epoch is 0.005366501543903723
+
+182 epochs have finished
+Current training loss is  0.03312742194975726
+Validation loss for this epoch is 0.005094636755529791
+
+183 epochs have finished
+Current training loss is  0.03152176085859537
+Validation loss for this epoch is 0.005751027609221637
+
+184 epochs have finished
+Current training loss is  0.036598561477148905
+Validation loss for this epoch is 0.00622763711726293
+
+185 epochs have finished
+Current training loss is  0.03343483729986474
+Validation loss for this epoch is 0.004842633148655295
+This model is now saved to Path: lstm_best.pth
+
+186 epochs have finished
+Current training loss is  0.031798721582163125
+Validation loss for this epoch is 0.004721731733297929
+This model is now saved to Path: lstm_best.pth
+
+187 epochs have finished
+Current training loss is  0.031551496154861525
+Validation loss for this epoch is 0.0054592646192759275
+
+188 epochs have finished
+Current training loss is  0.03338565933518112
+Validation loss for this epoch is 0.005142003152286634
+
+189 epochs have finished
+Current training loss is  0.032062123966170475
+Validation loss for this epoch is 0.005669083591783419
+
+190 epochs have finished
+Current training loss is  0.034578463004436344
+Validation loss for this epoch is 0.005789310205727816
+
+191 epochs have finished
+Current training loss is  0.033534430200234056
+Validation loss for this epoch is 0.00524727744050324
+
+192 epochs have finished
+Current training loss is  0.032733441272284836
+Validation loss for this epoch is 0.006551859463797882
+
+193 epochs have finished
+Current training loss is  0.035459661594359204
+Validation loss for this epoch is 0.0056022848875727504
+
+194 epochs have finished
+Current training loss is  0.03441767775802873
+Validation loss for this epoch is 0.005543577775824815
+
+195 epochs have finished
+Current training loss is  0.03432863502530381
+Validation loss for this epoch is 0.006060431216610596
+
+196 epochs have finished
+Current training loss is  0.03369350516004488
+Validation loss for this epoch is 0.004953047609888017
+
+197 epochs have finished
+Current training loss is  0.03286616847617552
+Validation loss for this epoch is 0.005228923255344853
+
+198 epochs have finished
+Current training loss is  0.03015299010439776
+Validation loss for this epoch is 0.005492270312970504
+
+199 epochs have finished
+Current training loss is  0.033791691123042256
+Validation loss for this epoch is 0.00603549211518839
+
+200 epochs have finished
+Current training loss is  0.033449436217779294
+Validation loss for this epoch is 0.00460382824530825
+This model is now saved to Path: lstm_best.pth
+
+Finished Training
+Best model has a validation loss of  0.00460382824530825
+Best model is in epoch  200
+Training Data saved! The path is LSTM_trainingData_Gadi.txt
