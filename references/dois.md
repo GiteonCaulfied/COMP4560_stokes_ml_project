@@ -16,7 +16,7 @@
 # https://www.deeplearningbook.org/
 
 # Bishop's book on ML and pattern recognition
-doi: 10.1117/1.2819119
+doi:10.1117/1.2819119
 
 # PDF available for free here
 # https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf

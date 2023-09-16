@@ -12,7 +12,7 @@
 # instead of the Pkg.add(...) instruction below
 
 using Pkg
-Pkg.add(url="git@github.com:BadiaLab/BibHandler.jl.git", rev="master")
+Pkg.add(path="../../BibHandler.jl", rev="master")
 Pkg.instantiate()
 
 using BibHandler
