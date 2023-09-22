@@ -80,3 +80,8 @@ doi:10.1016/j.pepi.2016.05.016
 # saw give a talk last year).
 #
 arxiv:2212.12086
+
+# The following references are discussed in the report
+
+# Prechelt, L., 2012. Early Stopping—But When?, pp. 53–67, Springer, Berlin, Heidelberg.
+doi:10.1007/978-3-642-35289-8_5
