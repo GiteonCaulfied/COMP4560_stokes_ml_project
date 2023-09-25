@@ -3,7 +3,7 @@
 
 \section{Neural networks: Fully connected, convolutional and long short-term memory}
 
-In this section, we introduce some basics about neural networks (NNs) according to a more detailed explanation provided by Bishop. \citep{10.1117/1.2819119} A simple NN usually consists of one input layer, 
+In this section, we introduce some basics about neural networks (NNs) according to a more detailed explanation provided by Bishop. \citep{10.1117_1.2819119} A simple NN usually consists of one input layer, 
 one output layer and one or more hidden layers in between. Multiple nodes inside each layers are called neurons. 
 
 For a fully connected neural network (FNN) using linear layers for connection (the term “fully connected” means that the neurons in each layer have a connection to all neurons in the previous layer and also the following layer), each neuron receives all inputs from the previous layer and the outputs are as follows:
@@ -22,9 +22,16 @@ Apart from FNNs, Convolutional neural networks (CNNs) are also one of the most c
 
 In this study, a variation of CNN is used as a way to compress the size of the input data in the mantle convection problem, which is called Convolutional Autoencoder (ConvAE). It is constructed as two separate sturcture that trained together: an encoder using convolution operation to reduce the size of the original input field and output a latent space representation, and a decoder using deconvolution operation to transform the latent space representation back to the original size field. By feeding the input field into a ConvAE, the dimension of the original high-resolution fields can be decreased with the main features captured (some information may be lost during the encoding process), thus making it more computationally efficient to work with before we feed it into a prediction NN.
 
-Since the data set in the mantle convection problem is a time sequence with adaptive timestamps, long short-term memory (LSTM) is used to predict a sequence of output apart from FNN. LSTM's architecture that use a sequence of input recurrently during prediction allows it to handle time-series data more accurately than other networks, thus leading to a potential better result.
+Since the data set in the mantle convection problem is a time sequence with adaptive timestamps, long short-term memory (LSTM) is used to predict a sequence of output apart from FNN. LSTM's architecture that use a sequence of input recurrently during prediction allows it to handle time-series data more accurately than other networks since it uses a set of previous time-steps to predict the next set of time-steps, thus leading to a potential better result.
 
 
 \section{Related works for solving geoid and mantle convection using Neural networks}
 
-(TODO...)
+Neural networks has been increasingly used for studying the geodynamics nowadays, especially when it comes to solving geoid or mantle convection simulation. 
+
+For example, Kerl provide a bold attempt at using ML as a low-cost solution to the geoid inverse problem in his thesis, where two separate solutions using different number of CNNs are compared.\citep{kerl2022geoid} He found that the single network solution where a radial viscosity profile is predicted directly from the geoid and density data allows him to obtain a smooth, long-wavelength estimate of the Earth’s radial viscosity profile. This provides us some implications on using only one NN to solve the inverse problem instead of stacking NNs together.
+
+As for the mantle convection problem, Agarwal, S. et al. make use of the FNN architecture to build a surrogate model that can predict the entire evolution (0–4.5 Gyr) of the 1D temperature profile of a Mars-like planet for a wide range of values of five different parameters, including reference viscosity, activation energy and activation volume of diffusion creep, enrichment factor of heat-producing elements in the crust and initial temperature of the mantle.\citep{10.1093_gji_ggaa234}
+
+In another study that is particularly worth highlighting, Agarwal, S. et al. extend the previous approach \citep{10.1093_gji_ggaa234} of using FNN trained using a large number of 2D simulations to predict the evolution of entire 1D laterally-averaged temperature profile in time for complex models. Instead of predicting 1D temperature field, the full 2D temperature field are predicted since it could contain more information related to the structure of the convection.\citep{10.1103_physrevfluids.6.113801} To show that NN techniques can produce reliable parameterized surrogates, they first use ConvAE to compress the size of each temperature field by a factor of 142 and then use FNN and LSTM to predict the compressed fields. They discovered that LSTM capture the flow dynamics better than FNN despite the fact that LSTM has a lower mean relative accuracy. Their study provides us some essential insights in solving the mantle convection problem by using NNs as a low-cost solution, including using ConvAE to compress the data and compare the prediction result of two different architectures (FNN and LSTM).
+

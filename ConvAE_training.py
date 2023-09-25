@@ -39,7 +39,7 @@ temperature_fields = np.asarray(temperature_fields).reshape(file_count*timestamp
 
 
 #Parameters
-n_epoch = 300
+n_epoch = 1000
 batch_size = 16
 lr = 5e-5
 accurate_loss_baseline = 0.005
@@ -131,16 +131,13 @@ class Encoder(nn.Module):
     def __init__(self):
         super(Encoder, self).__init__()
         
-        self.encoder = nn.Sequential( # 201x401 => 
+        self.encoder = nn.Sequential( # 201x401 => 6x23x45
             nn.Conv2d(1, 3, stride=(3, 3), kernel_size=(5, 5), padding=2),
             nn.Tanh(),
-            #nn.BatchNorm2d(3),
+            
             nn.Conv2d(3, 6, stride=(3, 3), kernel_size=(5, 5), padding=2),
             nn.Tanh(),
-            #nn.BatchNorm2d(6),
-            #nn.Conv2d(6, 9, stride=(3, 3), kernel_size=(5, 5), padding=2),
-            #nn.Tanh(),
-            #nn.BatchNorm2d(9), 
+            
         )
         
     def forward(self, x):
@@ -151,17 +148,13 @@ class Decoder(nn.Module):
     def __init__(self):
         super(Decoder, self).__init__()
         
-        self.decoder = nn.Sequential( # 201x401 => 
-            #nn.ConvTranspose2d(9, 6, stride=(3, 3), kernel_size=(5, 5), padding=(2,1)),
-            #nn.Tanh(),
-            #nn.BatchNorm2d(6),
+        self.decoder = nn.Sequential( # 6x23x45 => 201x401
+            
             nn.ConvTranspose2d(6, 3, stride=(3, 3), kernel_size=(5, 5), padding=(2,2)),
             nn.Tanh(),
-            #nn.BatchNorm2d(3),
+            
             nn.ConvTranspose2d(3, 1, stride=(3, 3), kernel_size=(5, 5), padding=(1,0)),
-            #nn.Tanh(),
-            #nn.BatchNorm2d(1),
-            #Trim(),
+            
         )
         
 
