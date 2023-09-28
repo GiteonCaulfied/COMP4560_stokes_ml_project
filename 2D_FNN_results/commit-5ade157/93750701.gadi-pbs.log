@@ -1,0 +1,1089 @@
+Current device is  cuda
+Encoder and Decoder loaded!
+1 epochs have finished
+Current training loss is  6.20597080886364
+Validation loss for this epoch is 0.09776701568625867
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+2 epochs have finished
+Current training loss is  0.4654771370405797
+Validation loss for this epoch is 0.03840474478784017
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+3 epochs have finished
+Current training loss is  0.2760280371294357
+Validation loss for this epoch is 0.028611806803382933
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+4 epochs have finished
+Current training loss is  0.20630281128978822
+Validation loss for this epoch is 0.020990349425119348
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+5 epochs have finished
+Current training loss is  0.15979280744795687
+Validation loss for this epoch is 0.017593382071936503
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+6 epochs have finished
+Current training loss is  0.1378303684614366
+Validation loss for this epoch is 0.015421973177581094
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+7 epochs have finished
+Current training loss is  0.11463304056087509
+Validation loss for this epoch is 0.012824125034967437
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+8 epochs have finished
+Current training loss is  0.09490760389599018
+Validation loss for this epoch is 0.010480000149982516
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+9 epochs have finished
+Current training loss is  0.08208226183342049
+Validation loss for this epoch is 0.009202846595144365
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+10 epochs have finished
+Current training loss is  0.07266779689234681
+Validation loss for this epoch is 0.008284696479677223
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+11 epochs have finished
+Current training loss is  0.06462937784090172
+Validation loss for this epoch is 0.007742438894638326
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+12 epochs have finished
+Current training loss is  0.058250115580449346
+Validation loss for this epoch is 0.006995895797444973
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+13 epochs have finished
+Current training loss is  0.05383455574337859
+Validation loss for this epoch is 0.006372446681780275
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+14 epochs have finished
+Current training loss is  0.05006415765819838
+Validation loss for this epoch is 0.0061702320163021795
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+15 epochs have finished
+Current training loss is  0.04785249075939646
+Validation loss for this epoch is 0.0057617702696006745
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+16 epochs have finished
+Current training loss is  0.04526030166016426
+Validation loss for this epoch is 0.00553375016170321
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+17 epochs have finished
+Current training loss is  0.04307061904546572
+Validation loss for this epoch is 0.005221961218921933
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+18 epochs have finished
+Current training loss is  0.04099632487486815
+Validation loss for this epoch is 0.004984233182767639
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+19 epochs have finished
+Current training loss is  0.03852051699504955
+Validation loss for this epoch is 0.0045270682785485405
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+20 epochs have finished
+Current training loss is  0.03614686315268045
+Validation loss for this epoch is 0.004432865578564815
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+21 epochs have finished
+Current training loss is  0.03409960689168656
+Validation loss for this epoch is 0.004131701989535941
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+22 epochs have finished
+Current training loss is  0.03261566585570108
+Validation loss for this epoch is 0.0038837979445816018
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+23 epochs have finished
+Current training loss is  0.030839671573630767
+Validation loss for this epoch is 0.003871559842082206
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+24 epochs have finished
+Current training loss is  0.029114980785379885
+Validation loss for this epoch is 0.0034670748027565423
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+25 epochs have finished
+Current training loss is  0.028493887944932794
+Validation loss for this epoch is 0.003395709427422844
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+26 epochs have finished
+Current training loss is  0.02705950164818205
+Validation loss for this epoch is 0.003228611676604487
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+27 epochs have finished
+Current training loss is  0.0264730069648067
+Validation loss for this epoch is 0.003161781485687243
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+28 epochs have finished
+Current training loss is  0.025700171394419158
+Validation loss for this epoch is 0.0032422914264316205
+Validation Accuracy for this epoch is 100
+
+29 epochs have finished
+Current training loss is  0.02461028219840955
+Validation loss for this epoch is 0.003057522673771018
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+30 epochs have finished
+Current training loss is  0.02379181849391898
+Validation loss for this epoch is 0.002901184056099737
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+31 epochs have finished
+Current training loss is  0.023402215931128012
+Validation loss for this epoch is 0.0026963680174958427
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+32 epochs have finished
+Current training loss is  0.022467368504294427
+Validation loss for this epoch is 0.0027866234740940854
+Validation Accuracy for this epoch is 100
+
+33 epochs have finished
+Current training loss is  0.021914084240052034
+Validation loss for this epoch is 0.0026253924988850486
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+34 epochs have finished
+Current training loss is  0.021367626766732428
+Validation loss for this epoch is 0.0025515899833408184
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+35 epochs have finished
+Current training loss is  0.02039077646441001
+Validation loss for this epoch is 0.002491289418685483
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+36 epochs have finished
+Current training loss is  0.020096304953767685
+Validation loss for this epoch is 0.0024845552070473786
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+37 epochs have finished
+Current training loss is  0.019584033672799706
+Validation loss for this epoch is 0.0025044590256584343
+Validation Accuracy for this epoch is 100
+
+38 epochs have finished
+Current training loss is  0.019096181247732602
+Validation loss for this epoch is 0.0023282949350686977
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+39 epochs have finished
+Current training loss is  0.0187396923374763
+Validation loss for this epoch is 0.0023469392363040242
+Validation Accuracy for this epoch is 100
+
+40 epochs have finished
+Current training loss is  0.01827101297021727
+Validation loss for this epoch is 0.0024398153345828177
+Validation Accuracy for this epoch is 100
+
+41 epochs have finished
+Current training loss is  0.017901495906698983
+Validation loss for this epoch is 0.0020830175581068033
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+42 epochs have finished
+Current training loss is  0.017010248911901726
+Validation loss for this epoch is 0.0022624685807386413
+Validation Accuracy for this epoch is 100
+
+43 epochs have finished
+Current training loss is  0.01740330048960459
+Validation loss for this epoch is 0.0020489077887759777
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+44 epochs have finished
+Current training loss is  0.016791780737548834
+Validation loss for this epoch is 0.0019918533853342524
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+45 epochs have finished
+Current training loss is  0.016211380554523203
+Validation loss for this epoch is 0.0019858131690853043
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+46 epochs have finished
+Current training loss is  0.015900518870694214
+Validation loss for this epoch is 0.0020688583063019905
+Validation Accuracy for this epoch is 100
+
+47 epochs have finished
+Current training loss is  0.015939729899400845
+Validation loss for this epoch is 0.0018461123381712241
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+48 epochs have finished
+Current training loss is  0.015375506305645104
+Validation loss for this epoch is 0.0018813253700500354
+Validation Accuracy for this epoch is 100
+
+49 epochs have finished
+Current training loss is  0.014781180887439405
+Validation loss for this epoch is 0.001825173889301368
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+50 epochs have finished
+Current training loss is  0.015408732881041942
+Validation loss for this epoch is 0.0019107267289655283
+Validation Accuracy for this epoch is 100
+
+51 epochs have finished
+Current training loss is  0.014215197839803295
+Validation loss for this epoch is 0.001772944178810576
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+52 epochs have finished
+Current training loss is  0.014394153035027557
+Validation loss for this epoch is 0.0018270237032993464
+Validation Accuracy for this epoch is 100
+
+53 epochs have finished
+Current training loss is  0.014083157966524595
+Validation loss for this epoch is 0.0017093584065150935
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+54 epochs have finished
+Current training loss is  0.013930209403042682
+Validation loss for this epoch is 0.0017405120179319056
+Validation Accuracy for this epoch is 100
+
+55 epochs have finished
+Current training loss is  0.013516394003090682
+Validation loss for this epoch is 0.0016714561497792602
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+56 epochs have finished
+Current training loss is  0.013669495134308818
+Validation loss for this epoch is 0.0017177351273858221
+Validation Accuracy for this epoch is 100
+
+57 epochs have finished
+Current training loss is  0.012896394160634372
+Validation loss for this epoch is 0.001673161450526095
+Validation Accuracy for this epoch is 100
+
+58 epochs have finished
+Current training loss is  0.01318538653140422
+Validation loss for this epoch is 0.0017139249030151404
+Validation Accuracy for this epoch is 100
+
+59 epochs have finished
+Current training loss is  0.012838297650887398
+Validation loss for this epoch is 0.0015713636585132917
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+60 epochs have finished
+Current training loss is  0.012484470064009656
+Validation loss for this epoch is 0.0016377257561543956
+Validation Accuracy for this epoch is 100
+
+61 epochs have finished
+Current training loss is  0.012391545249556657
+Validation loss for this epoch is 0.00151603761514707
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+62 epochs have finished
+Current training loss is  0.012250514057086548
+Validation loss for this epoch is 0.001494809910582262
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+63 epochs have finished
+Current training loss is  0.012142952743488422
+Validation loss for this epoch is 0.0014808104097028263
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+64 epochs have finished
+Current training loss is  0.012082051160177798
+Validation loss for this epoch is 0.0015621980546711711
+Validation Accuracy for this epoch is 100
+
+65 epochs have finished
+Current training loss is  0.011659569021503557
+Validation loss for this epoch is 0.0014566875688615255
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+66 epochs have finished
+Current training loss is  0.011687431142490823
+Validation loss for this epoch is 0.0014123527762421872
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+67 epochs have finished
+Current training loss is  0.01149451674791635
+Validation loss for this epoch is 0.0014527773528243415
+Validation Accuracy for this epoch is 100
+
+68 epochs have finished
+Current training loss is  0.011024383778931224
+Validation loss for this epoch is 0.0013705840428883675
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+69 epochs have finished
+Current training loss is  0.01161618788864871
+Validation loss for this epoch is 0.0015289091825252399
+Validation Accuracy for this epoch is 100
+
+70 epochs have finished
+Current training loss is  0.01093836493055278
+Validation loss for this epoch is 0.0012658117566388682
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+71 epochs have finished
+Current training loss is  0.010856086453713942
+Validation loss for this epoch is 0.0016249299078481272
+Validation Accuracy for this epoch is 100
+
+72 epochs have finished
+Current training loss is  0.010603267333863187
+Validation loss for this epoch is 0.0013227592535258736
+Validation Accuracy for this epoch is 100
+
+73 epochs have finished
+Current training loss is  0.010936258191577508
+Validation loss for this epoch is 0.0012166922188043827
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+74 epochs have finished
+Current training loss is  0.010232322994852439
+Validation loss for this epoch is 0.0012838152306358097
+Validation Accuracy for this epoch is 100
+
+75 epochs have finished
+Current training loss is  0.010302927625161828
+Validation loss for this epoch is 0.0012450236072254484
+Validation Accuracy for this epoch is 100
+
+76 epochs have finished
+Current training loss is  0.010364756514718465
+Validation loss for this epoch is 0.0014912194055796135
+Validation Accuracy for this epoch is 100
+
+77 epochs have finished
+Current training loss is  0.0102852781637921
+Validation loss for this epoch is 0.0012432796338543994
+Validation Accuracy for this epoch is 100
+
+78 epochs have finished
+Current training loss is  0.010133221105206758
+Validation loss for this epoch is 0.001235109582921723
+Validation Accuracy for this epoch is 100
+
+79 epochs have finished
+Current training loss is  0.009700921633339021
+Validation loss for this epoch is 0.0011774243102991022
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+80 epochs have finished
+Current training loss is  0.009900224676130165
+Validation loss for this epoch is 0.0011817059539680486
+Validation Accuracy for this epoch is 100
+
+81 epochs have finished
+Current training loss is  0.009910535332892323
+Validation loss for this epoch is 0.0011239931900490774
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+82 epochs have finished
+Current training loss is  0.009631307809286227
+Validation loss for this epoch is 0.0012144922593506635
+Validation Accuracy for this epoch is 100
+
+83 epochs have finished
+Current training loss is  0.00942372179360973
+Validation loss for this epoch is 0.00116415880893328
+Validation Accuracy for this epoch is 100
+
+84 epochs have finished
+Current training loss is  0.00971537636269204
+Validation loss for this epoch is 0.0013745710384682752
+Validation Accuracy for this epoch is 100
+
+85 epochs have finished
+Current training loss is  0.00928381555058877
+Validation loss for this epoch is 0.0012257703219802352
+Validation Accuracy for this epoch is 100
+
+86 epochs have finished
+Current training loss is  0.009385578155161056
+Validation loss for this epoch is 0.0011572893172342447
+Validation Accuracy for this epoch is 100
+
+87 epochs have finished
+Current training loss is  0.009149136375526723
+Validation loss for this epoch is 0.0011944273492190405
+Validation Accuracy for this epoch is 100
+
+88 epochs have finished
+Current training loss is  0.009114012648751668
+Validation loss for this epoch is 0.0010548735035627033
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+89 epochs have finished
+Current training loss is  0.00945105563278048
+Validation loss for this epoch is 0.0011810073219749029
+Validation Accuracy for this epoch is 100
+
+90 epochs have finished
+Current training loss is  0.008717900886949792
+Validation loss for this epoch is 0.0012511731420090655
+Validation Accuracy for this epoch is 100
+
+91 epochs have finished
+Current training loss is  0.008962467684796138
+Validation loss for this epoch is 0.0012076377170160413
+Validation Accuracy for this epoch is 100
+
+92 epochs have finished
+Current training loss is  0.008825849795357499
+Validation loss for this epoch is 0.0010288680450685206
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+93 epochs have finished
+Current training loss is  0.008679926497279666
+Validation loss for this epoch is 0.001090406514776987
+Validation Accuracy for this epoch is 100
+
+94 epochs have finished
+Current training loss is  0.00864957684007095
+Validation loss for this epoch is 0.0010125779162990511
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+95 epochs have finished
+Current training loss is  0.008509789644449484
+Validation loss for this epoch is 0.0010811006959556835
+Validation Accuracy for this epoch is 100
+
+96 epochs have finished
+Current training loss is  0.00873727744055941
+Validation loss for this epoch is 0.0010082739036079147
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+97 epochs have finished
+Current training loss is  0.008491773374771583
+Validation loss for this epoch is 0.0010885253304877551
+Validation Accuracy for this epoch is 100
+
+98 epochs have finished
+Current training loss is  0.008245276179877692
+Validation loss for this epoch is 0.0009944613557308912
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+99 epochs have finished
+Current training loss is  0.008451052356576838
+Validation loss for this epoch is 0.0011397972775739618
+Validation Accuracy for this epoch is 100
+
+100 epochs have finished
+Current training loss is  0.008301740382194112
+Validation loss for this epoch is 0.0010073031062347582
+Validation Accuracy for this epoch is 100
+
+101 epochs have finished
+Current training loss is  0.00828375522087299
+Validation loss for this epoch is 0.0010560061609794502
+Validation Accuracy for this epoch is 100
+
+102 epochs have finished
+Current training loss is  0.008023229666832776
+Validation loss for this epoch is 0.001033200175697857
+Validation Accuracy for this epoch is 100
+
+103 epochs have finished
+Current training loss is  0.007909206496151455
+Validation loss for this epoch is 0.0009961826008293428
+Validation Accuracy for this epoch is 100
+
+104 epochs have finished
+Current training loss is  0.00829064049412409
+Validation loss for this epoch is 0.0010456778218213003
+Validation Accuracy for this epoch is 100
+
+105 epochs have finished
+Current training loss is  0.007876885440964543
+Validation loss for this epoch is 0.0010248824255540967
+Validation Accuracy for this epoch is 100
+
+106 epochs have finished
+Current training loss is  0.00779741652058874
+Validation loss for this epoch is 0.001026503529828915
+Validation Accuracy for this epoch is 100
+
+107 epochs have finished
+Current training loss is  0.00784515216764703
+Validation loss for this epoch is 0.0010572086903266609
+Validation Accuracy for this epoch is 100
+
+108 epochs have finished
+Current training loss is  0.007998664524166088
+Validation loss for this epoch is 0.0009225587500623078
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+109 epochs have finished
+Current training loss is  0.00768103535665432
+Validation loss for this epoch is 0.0009276290184061509
+Validation Accuracy for this epoch is 100
+
+110 epochs have finished
+Current training loss is  0.007719358535723586
+Validation loss for this epoch is 0.0010257136536893086
+Validation Accuracy for this epoch is 100
+
+111 epochs have finished
+Current training loss is  0.007834011886188819
+Validation loss for this epoch is 0.0009542451452944078
+Validation Accuracy for this epoch is 100
+
+112 epochs have finished
+Current training loss is  0.007530344949373102
+Validation loss for this epoch is 0.0008402879730056156
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+113 epochs have finished
+Current training loss is  0.00736050563682511
+Validation loss for this epoch is 0.0010403348387626465
+Validation Accuracy for this epoch is 100
+
+114 epochs have finished
+Current training loss is  0.007449688537235488
+Validation loss for this epoch is 0.0009852474031504244
+Validation Accuracy for this epoch is 100
+
+115 epochs have finished
+Current training loss is  0.0073235664785897825
+Validation loss for this epoch is 0.0008841721264616353
+Validation Accuracy for this epoch is 100
+
+116 epochs have finished
+Current training loss is  0.0072433960649505025
+Validation loss for this epoch is 0.0010676240917746327
+Validation Accuracy for this epoch is 100
+
+117 epochs have finished
+Current training loss is  0.007875722425524145
+Validation loss for this epoch is 0.0008485226726406836
+Validation Accuracy for this epoch is 100
+
+118 epochs have finished
+Current training loss is  0.006988180150074186
+Validation loss for this epoch is 0.0009064409259735839
+Validation Accuracy for this epoch is 100
+
+119 epochs have finished
+Current training loss is  0.0069260434256648296
+Validation loss for this epoch is 0.0008611672719780472
+Validation Accuracy for this epoch is 100
+
+120 epochs have finished
+Current training loss is  0.0074060293336515315
+Validation loss for this epoch is 0.0008497839962728904
+Validation Accuracy for this epoch is 100
+
+121 epochs have finished
+Current training loss is  0.007455012606442324
+Validation loss for this epoch is 0.0008561628055758774
+Validation Accuracy for this epoch is 100
+
+122 epochs have finished
+Current training loss is  0.006749239663804474
+Validation loss for this epoch is 0.0009185355693261954
+Validation Accuracy for this epoch is 100
+
+123 epochs have finished
+Current training loss is  0.007206775884696981
+Validation loss for this epoch is 0.0008765243392190314
+Validation Accuracy for this epoch is 100
+
+124 epochs have finished
+Current training loss is  0.00697672189471632
+Validation loss for this epoch is 0.0008695968372194329
+Validation Accuracy for this epoch is 100
+
+125 epochs have finished
+Current training loss is  0.00690351536104572
+Validation loss for this epoch is 0.0008419090390816564
+Validation Accuracy for this epoch is 100
+
+126 epochs have finished
+Current training loss is  0.006638622947320982
+Validation loss for this epoch is 0.001061745647348289
+Validation Accuracy for this epoch is 100
+
+127 epochs have finished
+Current training loss is  0.007228223645142862
+Validation loss for this epoch is 0.0010032317377408617
+Validation Accuracy for this epoch is 100
+
+128 epochs have finished
+Current training loss is  0.006716997408148018
+Validation loss for this epoch is 0.0008003600742085837
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+129 epochs have finished
+Current training loss is  0.0064158014492932125
+Validation loss for this epoch is 0.000790689457062399
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+130 epochs have finished
+Current training loss is  0.006847915449725406
+Validation loss for this epoch is 0.0007800449611750082
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+131 epochs have finished
+Current training loss is  0.006671334972452314
+Validation loss for this epoch is 0.0008413654586547636
+Validation Accuracy for this epoch is 100
+
+132 epochs have finished
+Current training loss is  0.006642621481660171
+Validation loss for this epoch is 0.0009226369456882821
+Validation Accuracy for this epoch is 100
+
+133 epochs have finished
+Current training loss is  0.006480335772721446
+Validation loss for this epoch is 0.000921633143661893
+Validation Accuracy for this epoch is 100
+
+134 epochs have finished
+Current training loss is  0.0068282374095360865
+Validation loss for this epoch is 0.0008842709776217816
+Validation Accuracy for this epoch is 100
+
+135 epochs have finished
+Current training loss is  0.006476301384282124
+Validation loss for this epoch is 0.0008049788175412687
+Validation Accuracy for this epoch is 100
+
+136 epochs have finished
+Current training loss is  0.006287438991421368
+Validation loss for this epoch is 0.0007759939398965798
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+137 epochs have finished
+Current training loss is  0.0064811001147973
+Validation loss for this epoch is 0.0008454443450318649
+Validation Accuracy for this epoch is 100
+
+138 epochs have finished
+Current training loss is  0.006577853346243501
+Validation loss for this epoch is 0.0009569165940774838
+Validation Accuracy for this epoch is 100
+
+139 epochs have finished
+Current training loss is  0.006333161431939516
+Validation loss for this epoch is 0.0007919899881017045
+Validation Accuracy for this epoch is 100
+
+140 epochs have finished
+Current training loss is  0.00642472539220762
+Validation loss for this epoch is 0.0007988708866832894
+Validation Accuracy for this epoch is 100
+
+141 epochs have finished
+Current training loss is  0.0063084556477406295
+Validation loss for this epoch is 0.0008403021856793202
+Validation Accuracy for this epoch is 100
+
+142 epochs have finished
+Current training loss is  0.00599898406653665
+Validation loss for this epoch is 0.000769081861108134
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+143 epochs have finished
+Current training loss is  0.006272395173255063
+Validation loss for this epoch is 0.0007679471627852763
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+144 epochs have finished
+Current training loss is  0.006232307300706452
+Validation loss for this epoch is 0.00073913786218327
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+145 epochs have finished
+Current training loss is  0.006209315669366333
+Validation loss for this epoch is 0.0007481308593924041
+Validation Accuracy for this epoch is 100
+
+146 epochs have finished
+Current training loss is  0.006038482861185912
+Validation loss for this epoch is 0.0007383319016298628
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+147 epochs have finished
+Current training loss is  0.006517002525470161
+Validation loss for this epoch is 0.0007198017092377995
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+148 epochs have finished
+Current training loss is  0.005847592885402264
+Validation loss for this epoch is 0.0007557268318123533
+Validation Accuracy for this epoch is 100
+
+149 epochs have finished
+Current training loss is  0.006176470570608217
+Validation loss for this epoch is 0.0007541581971963751
+Validation Accuracy for this epoch is 100
+
+150 epochs have finished
+Current training loss is  0.005882370703147899
+Validation loss for this epoch is 0.0007018447713562637
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+151 epochs have finished
+Current training loss is  0.005980029703096079
+Validation loss for this epoch is 0.0011936806513404008
+Validation Accuracy for this epoch is 100
+
+152 epochs have finished
+Current training loss is  0.005812972810417705
+Validation loss for this epoch is 0.0007589118740725098
+Validation Accuracy for this epoch is 100
+
+153 epochs have finished
+Current training loss is  0.005932674017458339
+Validation loss for this epoch is 0.0007433406826748978
+Validation Accuracy for this epoch is 100
+
+154 epochs have finished
+Current training loss is  0.005670541644576588
+Validation loss for this epoch is 0.0007589969181935885
+Validation Accuracy for this epoch is 100
+
+155 epochs have finished
+Current training loss is  0.006157906519547396
+Validation loss for this epoch is 0.0006776702084607678
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+156 epochs have finished
+Current training loss is  0.0062601161380371195
+Validation loss for this epoch is 0.0006569607458004612
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+157 epochs have finished
+Current training loss is  0.005327384838892613
+Validation loss for this epoch is 0.0006884209469717462
+Validation Accuracy for this epoch is 100
+
+158 epochs have finished
+Current training loss is  0.00593776022651582
+Validation loss for this epoch is 0.0006987275291976403
+Validation Accuracy for this epoch is 100
+
+159 epochs have finished
+Current training loss is  0.005567205904299044
+Validation loss for this epoch is 0.0006494622234640701
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+160 epochs have finished
+Current training loss is  0.00567079919801472
+Validation loss for this epoch is 0.0006501890002255095
+Validation Accuracy for this epoch is 100
+
+161 epochs have finished
+Current training loss is  0.005855064843217406
+Validation loss for this epoch is 0.000676313393341843
+Validation Accuracy for this epoch is 100
+
+162 epochs have finished
+Current training loss is  0.00562711357997614
+Validation loss for this epoch is 0.0007564666839243728
+Validation Accuracy for this epoch is 100
+
+163 epochs have finished
+Current training loss is  0.0057364631657037535
+Validation loss for this epoch is 0.0006237887109818985
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+164 epochs have finished
+Current training loss is  0.0052503683627946884
+Validation loss for this epoch is 0.0006733708096362534
+Validation Accuracy for this epoch is 100
+
+165 epochs have finished
+Current training loss is  0.005523896591057564
+Validation loss for this epoch is 0.0007992314804141643
+Validation Accuracy for this epoch is 100
+
+166 epochs have finished
+Current training loss is  0.0058576655965225655
+Validation loss for this epoch is 0.0006803818378102733
+Validation Accuracy for this epoch is 100
+
+167 epochs have finished
+Current training loss is  0.005271110979720106
+Validation loss for this epoch is 0.0006938720744074089
+Validation Accuracy for this epoch is 100
+
+168 epochs have finished
+Current training loss is  0.005302550739997969
+Validation loss for this epoch is 0.0006534463454954675
+Validation Accuracy for this epoch is 100
+
+169 epochs have finished
+Current training loss is  0.005713647381526243
+Validation loss for this epoch is 0.0006741971301380545
+Validation Accuracy for this epoch is 100
+
+170 epochs have finished
+Current training loss is  0.005400909506533935
+Validation loss for this epoch is 0.0006257969780563144
+Validation Accuracy for this epoch is 100
+
+171 epochs have finished
+Current training loss is  0.005469907343467639
+Validation loss for this epoch is 0.0006177681971166749
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+172 epochs have finished
+Current training loss is  0.005559085983350087
+Validation loss for this epoch is 0.0008456104587821756
+Validation Accuracy for this epoch is 100
+
+173 epochs have finished
+Current training loss is  0.0051504388979992655
+Validation loss for this epoch is 0.0007165922415879322
+Validation Accuracy for this epoch is 100
+
+174 epochs have finished
+Current training loss is  0.0053632575527444715
+Validation loss for this epoch is 0.000652972080388281
+Validation Accuracy for this epoch is 100
+
+175 epochs have finished
+Current training loss is  0.00529226156322693
+Validation loss for this epoch is 0.0007215745335997781
+Validation Accuracy for this epoch is 100
+
+176 epochs have finished
+Current training loss is  0.005178431966214703
+Validation loss for this epoch is 0.0006051894752090448
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+177 epochs have finished
+Current training loss is  0.0055463307758145675
+Validation loss for this epoch is 0.0006523920355903101
+Validation Accuracy for this epoch is 100
+
+178 epochs have finished
+Current training loss is  0.005028475115977926
+Validation loss for this epoch is 0.0006263219247557572
+Validation Accuracy for this epoch is 100
+
+179 epochs have finished
+Current training loss is  0.005058073434611288
+Validation loss for this epoch is 0.0006040623593435157
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+180 epochs have finished
+Current training loss is  0.005151145913259825
+Validation loss for this epoch is 0.0006100634336689836
+Validation Accuracy for this epoch is 100
+
+181 epochs have finished
+Current training loss is  0.005374190831389569
+Validation loss for this epoch is 0.0006042206382517179
+Validation Accuracy for this epoch is 100
+
+182 epochs have finished
+Current training loss is  0.005010720477457653
+Validation loss for this epoch is 0.0006161761807561561
+Validation Accuracy for this epoch is 100
+
+183 epochs have finished
+Current training loss is  0.0049988271721304045
+Validation loss for this epoch is 0.0006176680676617252
+Validation Accuracy for this epoch is 100
+
+184 epochs have finished
+Current training loss is  0.005091922806968796
+Validation loss for this epoch is 0.0006222282509042998
+Validation Accuracy for this epoch is 100
+
+185 epochs have finished
+Current training loss is  0.005272882521239808
+Validation loss for this epoch is 0.0006207064052432543
+Validation Accuracy for this epoch is 100
+
+186 epochs have finished
+Current training loss is  0.004956050610871898
+Validation loss for this epoch is 0.0006047796496204683
+Validation Accuracy for this epoch is 100
+
+187 epochs have finished
+Current training loss is  0.00491488188117728
+Validation loss for this epoch is 0.0006914415462233592
+Validation Accuracy for this epoch is 100
+
+188 epochs have finished
+Current training loss is  0.00513776301568214
+Validation loss for this epoch is 0.0005682475793946651
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+189 epochs have finished
+Current training loss is  0.0048836205669431365
+Validation loss for this epoch is 0.0005843035446559952
+Validation Accuracy for this epoch is 100
+
+190 epochs have finished
+Current training loss is  0.005290498767863028
+Validation loss for this epoch is 0.0005873124728168477
+Validation Accuracy for this epoch is 100
+
+191 epochs have finished
+Current training loss is  0.004601456551881711
+Validation loss for this epoch is 0.0005876949062439962
+Validation Accuracy for this epoch is 100
+
+192 epochs have finished
+Current training loss is  0.00548992592803188
+Validation loss for this epoch is 0.0006352700902425568
+Validation Accuracy for this epoch is 100
+
+193 epochs have finished
+Current training loss is  0.0047024012410474825
+Validation loss for this epoch is 0.000564488692816667
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+194 epochs have finished
+Current training loss is  0.004741328575619264
+Validation loss for this epoch is 0.000716111412657483
+Validation Accuracy for this epoch is 100
+
+195 epochs have finished
+Current training loss is  0.00513931251498434
+Validation loss for this epoch is 0.0005721146435462288
+Validation Accuracy for this epoch is 100
+
+196 epochs have finished
+Current training loss is  0.004850945856560429
+Validation loss for this epoch is 0.0005518124894479115
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+197 epochs have finished
+Current training loss is  0.005047647905030317
+Validation loss for this epoch is 0.000579376692257938
+Validation Accuracy for this epoch is 100
+
+198 epochs have finished
+Current training loss is  0.004557232481147366
+Validation loss for this epoch is 0.0006554207702720305
+Validation Accuracy for this epoch is 100
+
+199 epochs have finished
+Current training loss is  0.00493281536091672
+Validation loss for this epoch is 0.0008856383356032893
+Validation Accuracy for this epoch is 100
+
+200 epochs have finished
+Current training loss is  0.004759992265007895
+Validation loss for this epoch is 0.0005483890067807806
+Validation Accuracy for this epoch is 100
+This model is now saved to Path: latent_space_model_best_Gadi.pth
+
+Finished Training
+Best model has a validation loss of  0.0005483890067807806
+Best model is in epoch  200
+Training Data saved! The path is LatentSpace_Prediction_trainingData_Gadi.txt

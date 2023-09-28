@@ -11,8 +11,8 @@ from torch.utils.data import Dataset, DataLoader, random_split
 
 from torch.utils.data.sampler import SubsetRandomSampler
 
-
-# Temperature for the two consecutive timestamp
+'''
+# Temperature fields
 temperature_fields = []
 
 # Folder Path
@@ -36,13 +36,14 @@ for file in os.listdir(path):
 
 timestamps_number = temperature_fields[0].shape[0]
 temperature_fields = np.asarray(temperature_fields).reshape(file_count*timestamps_number,201,401)
-
+'''
+temperature_fields = np.load('/scratch/kr97/xh7958/comp4560/solutions_standard.npy')
+temperature_fields = temperature_fields.reshape(-1,201,401)
 
 #Parameters
-n_epoch = 1000
+n_epoch = 200
 batch_size = 16
 lr = 5e-5
-accurate_loss_baseline = 0.005
 
 # Check current device
 if torch.cuda.is_available():
@@ -131,7 +132,7 @@ class Encoder(nn.Module):
     def __init__(self):
         super(Encoder, self).__init__()
         
-        self.encoder = nn.Sequential( # 201x401 => 6x23x45
+        self.encoder = nn.Sequential( # 201x401 => 
             nn.Conv2d(1, 3, stride=(3, 3), kernel_size=(5, 5), padding=2),
             nn.Tanh(),
             
@@ -148,7 +149,7 @@ class Decoder(nn.Module):
     def __init__(self):
         super(Decoder, self).__init__()
         
-        self.decoder = nn.Sequential( # 6x23x45 => 201x401
+        self.decoder = nn.Sequential( # 201x401 => 
             
             nn.ConvTranspose2d(6, 3, stride=(3, 3), kernel_size=(5, 5), padding=(2,2)),
             nn.Tanh(),
@@ -167,7 +168,7 @@ def train(encoder, decoder, train_loader, val_loader, device, optimizer, n_epoch
     
     criterion = nn.MSELoss()
     
-    minimum_validation_loss = 10000000
+    minimum_validation_loss = 1000000000
     best_model_index = -1
     
     running_loss_list = []
@@ -204,8 +205,6 @@ def train(encoder, decoder, train_loader, val_loader, device, optimizer, n_epoch
 
         # Valiadation
         with torch.no_grad():
-            correct = 0
-            total = 0
             valid_loss = 0.0
             for data in val_loader:
                 inputs = data.to(device)
@@ -215,20 +214,12 @@ def train(encoder, decoder, train_loader, val_loader, device, optimizer, n_epoch
                 outputs = encoder(inputs)
                 outputs = decoder(outputs)
                 loss = criterion(outputs, inputs)
-                
-                # If the loss value is less than accurate loss baseline, we consider it being accurate
-                for j in range(len(data)):
-                    single_loss = criterion(outputs[j], inputs[j])
-                    if single_loss.item() <= accurate_loss_baseline:
-                        correct += 1
-                    total += 1
     
                 # Add to the validation loss
                 valid_loss += loss.item()
 
             # Calculate valiadation accuracy and print Validation statistics
             print("Validation loss for this epoch is",valid_loss)
-            print("Validation Accuracy for this epoch is", 100*correct//total)
             validation_loss_list.append(valid_loss)
 
         # Update the statistics for the best model

@@ -2,12 +2,13 @@ import h5py
 import matplotlib.pyplot as plt
 from matplotlib import cm
 
-filename = 'solution_0.h5'
+filename = 'solutions/solution_1.h5'
 with h5py.File(filename, 'r') as f:
     # Access data within the group
     temperature = f['temperature'][:]
     timestamps = f['timestamps'][:]
 
+print(timestamps)
 
 plt.close(1)
 fig = plt.figure(1)

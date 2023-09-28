@@ -1,12 +1,12 @@
 #!/bin/bash
  
-#PBS -l ncpus=48
-#PBS -l ngpus=4
-#PBS -l mem=50GB
+#PBS -l ncpus=240
+#PBS -l ngpus=20
+#PBS -l mem=800GB
 #PBS -l jobfs=5GB
 #PBS -q gpuvolta
 #PBS -P kr97
-#PBS -l walltime=01:30:00
+#PBS -l walltime=5:00:00
 #PBS -l storage=scratch/kr97
 #PBS -l wd
   

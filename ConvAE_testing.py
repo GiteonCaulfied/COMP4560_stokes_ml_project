@@ -11,15 +11,16 @@ from torch.utils.data import Dataset, DataLoader, random_split
 
 from torch.utils.data.sampler import SubsetRandomSampler
 
+# Folder Path
+encoder_path = "Conv2D_encoder_best_Gadi.pth"
+decoder_path = "Conv2D_decoder_best_Gadi.pth"
 
+'''
 # Temperature for the two consecutive timestamp
 temperature_fields = []
 
-# Folder Path
 path = "/scratch/kr97/xh7958/comp4560/solutions"
-encoder_path = "Conv2D_encoder_best_Gadi.pth"
-decoder_path = "Conv2D_decoder_best_Gadi.pth"
-  
+
 # Read text File  
 def read_text_file(file_path):
     with h5py.File(file_path, 'r') as f:
@@ -38,10 +39,12 @@ for file in os.listdir(path):
 
 timestamps_number = temperature_fields[0].shape[0]
 temperature_fields = np.asarray(temperature_fields).reshape(file_count*timestamps_number,201,401)
+'''
+temperature_fields = np.load('/scratch/kr97/xh7958/comp4560/solutions_standard.npy')
+temperature_fields = temperature_fields.reshape(-1,201,401)
 
 
 #Parameters
-n_epoch = 1000
 batch_size = 16
 lr = 5e-5
 accurate_loss_baseline = 0.005
@@ -218,15 +221,15 @@ def test(encoder, decoder, test_loader, device, color_regions):
     
     text_file = open('ConvAE_testingData_Gadi_2.txt', "w")
     n1 = text_file.write("/".join([str(elem) for elem in best_worst_error_list])+"\n")
-    n2 = text_file.write("/".join([str(elem.detach().numpy()[0].flatten()) for elem in best_worst_input_list])+"\n")
-    n3 = text_file.write("/".join([str(elem.detach().numpy()[0].flatten()) for elem in best_worst_predicted_list]))         
+    n2 = text_file.write("/".join([str("|".join([str(x) for x in elem.cpu().detach().numpy()[0].flatten()])) for elem in best_worst_input_list])+"\n")
+    n3 = text_file.write("/".join([str("|".join([str(x) for x in elem.cpu().detach().numpy()[0].flatten()])) for elem in best_worst_predicted_list]))        
     text_file.close()
     print("Testing Data saved! The path is ConvAE_testingData_Gadi_2.txt")
 
     
 encoder = Encoder().to(device)
 decoder = Decoder().to(device)
-encoder.load_state_dict(torch.load(encoder_path, map_location=torch.device('cpu')))
-decoder.load_state_dict(torch.load(decoder_path, map_location=torch.device('cpu')))
+encoder.load_state_dict(torch.load(encoder_path))
+decoder.load_state_dict(torch.load(decoder_path))
 
 test(encoder, decoder, test_loader, device, 1)

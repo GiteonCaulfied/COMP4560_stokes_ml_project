@@ -13,17 +13,18 @@ from torch.utils.data import Dataset, DataLoader, random_split
 from torch.utils.data.sampler import SubsetRandomSampler
 
 # Paths
-path = "/scratch/kr97/xh7958/comp4560/solutions"
+
 encoder_path = "Conv2D_encoder_best_Gadi.pth"
 decoder_path = "Conv2D_decoder_best_Gadi.pth"
 
 #Parameters
-n_epoch = 200
+n_epoch = 100
 batch_size = 1
 lr = 1e-5
 betas = (0.9, 0.999)
 
-
+'''
+path = "/scratch/kr97/xh7958/comp4560/solutions"
 # Temperature for the two consecutive timestamp
 temperature_fields = []
   
@@ -42,6 +43,8 @@ for file in os.listdir(path):
     #print(f"{file_path} is finished reading")
 
 temperature_fields = np.asarray(temperature_fields)
+'''
+temperature_fields = np.load('/scratch/kr97/xh7958/comp4560/solutions_standard.npy')
 
 
 if torch.cuda.is_available():
