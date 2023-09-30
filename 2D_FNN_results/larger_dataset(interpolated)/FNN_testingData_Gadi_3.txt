@@ -1,0 +1,24 @@
+PCA sum for time step 1 is 289.64002450555563
+Loss sum for time step 1 is 9015.010049819946
+Loss / PCA = 31.124876698962673
+
+PCA sum for time step 2 is 290.4001666381955
+Loss sum for time step 2 is 9561.381294727325
+Loss / PCA = 32.92484782434606
+
+PCA sum for time step 4 is 292.106568928808
+Loss sum for time step 4 is 11816.668439388275
+Loss / PCA = 40.45327868771149
+
+PCA sum for time step 8 is 295.8369050733745
+Loss sum for time step 8 is 17948.576245307922
+Loss / PCA = 60.67051114145564
+
+PCA sum for time step 16 is 305.25952668488026
+Loss sum for time step 16 is 31843.945713043213
+Loss / PCA = 104.3176147813259
+
+PCA sum for time step 99 is 513.9104306250811
+Loss sum for time step 99 is 137845.2988333702
+Loss / PCA = 268.2282565576764
+

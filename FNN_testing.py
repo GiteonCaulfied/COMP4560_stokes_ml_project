@@ -21,17 +21,15 @@ batch_size = 16
 accurate_loss_baseline = 1e-6
 
 '''
-path = "solutions"
+path = "/scratch/kr97/xh7958/comp4560/solutions"
 
 # Temperature for the two consecutive timestamp
-temperature_fields_input = []
-temperature_fields_output = []
+temperature_fields = []
   
 # Read text File  
 def read_text_file(file_path):
     with h5py.File(file_path, 'r') as f:
-        temperature_fields_input.append(f['temperature'][:][:-1])
-        temperature_fields_output.append(f['temperature'][:][1:])
+        temperature_fields.append(f['temperature'][:])
         
         
 # Iterate through all file
@@ -42,12 +40,14 @@ for file in os.listdir(path):
     read_text_file(file_path)
     #print(f"{file_path} is finished reading")
 
-temperature_fields_input = np.asarray(temperature_fields_input).reshape(9900,201,401)
-temperature_fields_output = np.asarray(temperature_fields_output).reshape(9900,201,401)
+temperature_fields = np.asarray(temperature_fields)
+temperature_fields_input = temperature_fields[:,:99,:,:].reshape(-1,201,401)
+temperature_fields_output = temperature_fields[:,1:,:,:].reshape(-1,201,401)
 '''
 temperature_fields = np.load('/scratch/kr97/xh7958/comp4560/solutions_standard.npy')
 temperature_fields_input = temperature_fields[:,:99,:,:].reshape(-1,201,401)
 temperature_fields_output = temperature_fields[:,1:,:,:].reshape(-1,201,401)
+
 
 if torch.cuda.is_available():
     device = "cuda"
@@ -338,4 +338,46 @@ with open('FNN_best_evolution.npy', 'wb') as f:
 worst_evolution = np.asarray(worst_evolution)
 with open('FNN_worst_evolution.npy', 'wb') as f:
     np.save(f, worst_evolution)
+
+# Testing for how many time steps we can use the trained FNN without loosing track of the transient dynamics
+testing_time_steps = [1, 2, 4, 8, 16, 99]
+total_PCAs = [0, 0, 0, 0, 0, 0]
+total_loss = [0, 0, 0, 0, 0, 0]
+best_time_step = -1
+
+def SVD(X):
+    U,Sigma,VT = np.linalg.svd(X,full_matrices=0)
+    return U, Sigma, VT
+
+for i in range(len(temperature_fields)):
+
+    # Read the testing file
+    testing_temperature_fields = temperature_fields[i]
+
+    # Looping through the NN
+    predicted_temperature_fields_list = [[testing_temperature_fields[0]] for x in testing_time_steps]
+    testing_input_list = [encoder(torch.from_numpy(testing_temperature_fields[0]).to(device).view(1, 1, 201, 401)) for x in testing_time_steps]
     
+    for i in range(99):
+        for j in range(len(testing_time_steps)):
+            if i % testing_time_steps[j] == 0:
+                testing_input_list[j] = encoder(torch.from_numpy(testing_temperature_fields[i]).to(device).view(1, 1, 201, 401))
+            testing_latentSpace_j = model(testing_input_list[j])
+            predicted_temperature_fields_list[j].append(decoder(testing_latentSpace_j).cpu().detach().numpy()[0][0])
+
+    # Calculate the PCA difference and data difference for each time step
+    _, S_original, _ = SVD(np.transpose(np.asarray(testing_temperature_fields),(1,2,0)))
+    for j in range(len(testing_time_steps)):
+        _, S_predicted_j, _ = SVD(np.transpose(np.asarray(predicted_temperature_fields_list[j]),(1,2,0)))
+        total_PCAs[j] += np.linalg.norm(S_predicted_j.diagonal() - S_original.diagonal())
+        total_loss[j] += np.linalg.norm(predicted_temperature_fields_list[j] - testing_temperature_fields)
+
+text_file = open('FNN_testingData_Gadi_3.txt', "w")
+#n1 = text_file.write("The best consecutive time step is " + str(best_time_step) + "\n")
+for i in range(len(testing_time_steps)):
+    n1 = text_file.write("PCA sum for time step " + str(testing_time_steps[i]) + " is " + str(total_PCAs[i]) + "\n")
+    n2 = text_file.write("Loss sum for time step " + str(testing_time_steps[i]) + " is " + str(total_loss[i]) + "\n")
+    n3 = text_file.write("Loss / PCA = " + str(total_loss[i]/total_PCAs[i]) + "\n")
+    n4 = text_file.write("\n")
+text_file.close()
+print("Testing Data saved! The path is FNN_testingData_Gadi_3.txt")
