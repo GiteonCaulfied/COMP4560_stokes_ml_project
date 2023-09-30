@@ -341,8 +341,9 @@ with open('FNN_worst_evolution.npy', 'wb') as f:
 
 # Testing for how many time steps we can use the trained FNN without loosing track of the transient dynamics
 testing_time_steps = [1, 2, 4, 8, 16, 99]
-total_PCAs = [0, 0, 0, 0, 0, 0]
-total_loss = [0, 0, 0, 0, 0, 0]
+PCA_lists = [[] for x in testing_time_steps]
+PCA_relative_lists = [[] for x in testing_time_steps]
+loss_lists = [[] for x in testing_time_steps]
 best_time_step = -1
 
 def SVD(X):
@@ -369,15 +370,40 @@ for i in range(len(temperature_fields)):
     _, S_original, _ = SVD(np.transpose(np.asarray(testing_temperature_fields),(1,2,0)))
     for j in range(len(testing_time_steps)):
         _, S_predicted_j, _ = SVD(np.transpose(np.asarray(predicted_temperature_fields_list[j]),(1,2,0)))
-        total_PCAs[j] += np.linalg.norm(S_predicted_j.diagonal() - S_original.diagonal())
-        total_loss[j] += np.linalg.norm(predicted_temperature_fields_list[j] - testing_temperature_fields)
+        PCA_lists[j].append(np.linalg.norm(S_predicted_j.diagonal() - S_original.diagonal()))
+        PCA_relative_lists[j].append(np.linalg.norm(S_predicted_j.diagonal() - S_original.diagonal()) / np.linalg.norm(S_original.diagonal()))
+        loss_lists[j].append(np.linalg.norm(predicted_temperature_fields_list[j] - testing_temperature_fields))
 
 text_file = open('FNN_testingData_Gadi_3.txt', "w")
 #n1 = text_file.write("The best consecutive time step is " + str(best_time_step) + "\n")
 for i in range(len(testing_time_steps)):
-    n1 = text_file.write("PCA sum for time step " + str(testing_time_steps[i]) + " is " + str(total_PCAs[i]) + "\n")
-    n2 = text_file.write("Loss sum for time step " + str(testing_time_steps[i]) + " is " + str(total_loss[i]) + "\n")
-    n3 = text_file.write("Loss / PCA = " + str(total_loss[i]/total_PCAs[i]) + "\n")
-    n4 = text_file.write("\n")
+    n1 = text_file.write("Result for time step " + str(testing_time_steps[i]) + "\n")
+
+    n2 = text_file.write("Sum of PCA difference: " + str(sum(PCA_lists[i])) + "\n")
+    n3 = text_file.write("Minimum PCA difference: " + str(min(PCA_lists[i])) + "\n")
+    n4 = text_file.write("Maximum PCA difference: " + str(max(PCA_lists[i])) + "\n")
+    n5 = text_file.write("Average PCA difference: " + str(sum(PCA_lists[i])/len(PCA_lists[i])) + "\n")
+    n6 = text_file.write("Standard deviation of PCA difference: " + str(np.std(np.asarray(PCA_lists[i]))) + "\n")
+
+    n6_5 = text_file.write("------------------------------------------\n")
+
+    n2_r = text_file.write("Sum of relative PCA errors : " + str(sum(PCA_relative_lists[i])) + "\n")
+    n3_r = text_file.write("Minimum relative PCA errors: " + str(min(PCA_relative_lists[i])) + "\n")
+    n4_r = text_file.write("Maximum relative PCA errors: " + str(max(PCA_relative_lists[i])) + "\n")
+    n5_r = text_file.write("Average relative PCA errors: " + str(sum(PCA_relative_lists[i])/len(PCA_relative_lists[i])) + "\n")
+    n6_r = text_file.write("Standard deviation of relative PCA errors: " + str(np.std(np.asarray(PCA_relative_lists[i]))) + "\n")
+
+    n6_5r = text_file.write("------------------------------------------\n")
+
+    n7 = text_file.write("Sum of data loss: " + str(sum(loss_lists[i])) + "\n")
+    n8 = text_file.write("Minimum data loss: " + str(min(loss_lists[i])) + "\n")
+    n9 = text_file.write("Maximum data loss: " + str(max(loss_lists[i])) + "\n")
+    n10 = text_file.write("Average data lss: " + str(sum(loss_lists[i])/len(loss_lists[i])) + "\n")
+    n11 = text_file.write("Standard deviation of data loss: " + str(np.std(np.asarray(loss_lists[i]))) + "\n")
+
+    n11_5 = text_file.write("------------------------------------------\n")
+
+    n12 = text_file.write("Loss sum / PCA sum = " + str(sum(loss_lists[i]) / sum(PCA_lists[i])) + "\n")
+    n13 = text_file.write("\n")
 text_file.close()
 print("Testing Data saved! The path is FNN_testingData_Gadi_3.txt")
