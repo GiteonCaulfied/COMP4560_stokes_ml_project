@@ -5,12 +5,12 @@
 The data set consists of 1000 pairs of input and output. In the data set, input is a vector with 257 values representing a geoid model and output is a vector with 60 values representing a set of parameters. The following graphs plot 10 pairs of model input and output in separate figures to observe the patterns.
 
 \begin{figure}[H]
-    \textbf{Every 100th input in the data set}\par\medskip
+    \caption{Every 100th input in the data set}
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_sample_input.png}
 \end{figure}
 
 \begin{figure}[H]
-    \textbf{Every 100th input in the data set}\par\medskip
+    \caption{Every 100th input in the data set}
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_sample_output.png}
 \end{figure}
 
@@ -36,22 +36,22 @@ After testing with NNs with architectures of different number of hidden layers a
 In the following figures, we present results from a FNN with 4 hidden layers with 200, 160, 120 and 80 neurons, ReLU as activation function, MSELoss as loss function, and trained for 200 epochs using Mini-Batch Gradient Descent (with a batch size of 16).
 
 \begin{figure}[H]
-    \textbf{Training loss and Validation loss}\par\medskip
+    \caption{Training loss and Validation loss}
     \includegraphics[scale=0.6]{Report LaTeX/figures/geoid_images/Geoid_trainingData.png}
 \end{figure}
 
 \begin{figure}[H]
-    \textbf{Overall testing result}\par\medskip
-    \includegraphics[scale=0.6]{Report LaTeX/figures/geoid_images/Geoid_OverallTesting.png}
+    \caption{Overall testing result}
+    \includegraphics[scale=0.8]{Report LaTeX/figures/geoid_images/Geoid_OverallTesting.png}
 \end{figure}
 
 \begin{figure}[H]
-    \textbf{Best input and output}\par\medskip
+    \caption{Best input and output}
     \includegraphics[scale=0.6]{Report LaTeX/figures/geoid_images/Geoid_Best.png}
 \end{figure}
 
 \begin{figure}[H]
-    \textbf{Worst input and output}\par\medskip
+    \caption{Worst input and output}
     \includegraphics[scale=0.6]{Report LaTeX/figures/geoid_images/Geoid_Worst.png}
 \end{figure}
 
