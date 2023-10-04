@@ -2,7 +2,7 @@ import h5py
 import matplotlib.pyplot as plt
 from matplotlib import cm
 
-filename = 'solutions/solution_1.h5'
+filename = 'solutions_old/solution_1.h5'
 with h5py.File(filename, 'r') as f:
     # Access data within the group
     temperature = f['temperature'][:]

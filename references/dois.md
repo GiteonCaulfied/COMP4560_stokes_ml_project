@@ -85,3 +85,9 @@ arxiv:2212.12086
 
 # Prechelt, L., 2012. Early Stopping—But When?, pp. 53–67, Springer, Berlin, Heidelberg.
 doi:10.1007/978-3-642-35289-8_5
+
+# 7 Data-driven methods for reduced-order modeling
+doi:10.1515/9783110671490-007
+
+# The Proper Orthogonal Decomposition in the Analysis of Turbulent Flows
+doi:10.1146/annurev.fl.25.010193.002543
