@@ -1,41 +1,88 @@
 # COMP4560_stokes_ml_project
 A repository that we are going to use to keep track of project evolution, notes, ideas, etc.
 
-I am going to use this repository as a sort of research diary with my own notes on the project
+I am going to use this repository as a sort of research diary with my own notes on the project.
 
-## LaTeX project report templates
+## Geoid Problem
 
-https://gitlab.anu.edu.au/u1092535/latex-templates
+### Datasets
+Datasets used for this problem are located in the folder `Data/Geoid/new_results_1k_zero`.
 
-## Geoid Inversion For Mantle Viscosity With Convolutional Neural Networks
+### Files
+Files related to this problem includes:
 
-Highly related master thesis from Uni Houston
+```
+Geoid_systematic_training.ipynb
+Geoid_visualisation.ipynb
+ModelList.txt
+```
 
-https://uh-ir.tdl.org/bitstream/handle/10657/13138/KERL-THESIS-2022.pdf?sequence=1&isAllowed=y
+`Geoid_systematic_training.ipynb` is used for systematically training the models with their hyperparameters in the file `ModelList.txt` and saving them in the folder `1D_result`. 
 
-## Very illustrative/intuitive blog posts on VAEs
+`Geoid_visualisation.ipynb` is used for visualisation given a specific model's path.
 
-* https://jaan.io/what-is-variational-autoencoder-vae-tutorial/
-* https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73
+## Mantle Convection Problem
 
-## Interesting article on the concept of spherical CNNs 
+### Supported by HPC
 
-Not sure if this can be exploited in the geoid problem, though ...
+This problem is mainly researched with the help of a HPC system called Gadi. Files in the repository with a suffix of `.sh` are shell scripts submitted to Gadi in order to run the python script on Gadi. 
 
-* https://towardsdatascience.com/geometric-deep-learning-for-spherical-data-55612742d05f
 
-## Links to relevant software
+### Datasets
+Datasets used for this problem can be found in the following URLs:
 
-* https://gmd.copernicus.org/articles/15/5127/2022/gmd-15-5127-2022-assets.html
-* https://github.com/agsiddhant/ForwardSurrogate_Mars_1D
-* https://github.com/agsiddhant/ForwardSurrogate_Mars_2D
-* https://github.com/jaanli/variational-autoencoder
-* https://github.com/amartinhuertas/BiotBrinkmanWithVorticityPaper.jl (actually not related  to the project, but illustrates the concept of DrWatson.jl + Pluto.jl notebooks in Julia to automate parametric studies in a reproducible way)
+- [Limited Dataset](https://anu365-my.sharepoint.com/:f:/g/personal/u7189309_anu_edu_au/Em9tN9ofPRBBtJADs2G66rUBuY0WKp-2BEXNMI-U0a_JBw?e=pUFcF6)
+- [Larger Dataset](https://anu365-my.sharepoint.com/:f:/g/personal/u7189309_anu_edu_au/EvC4GCemOlFKm1JxQl8pSbEBn6ORYK_hVNnXW5_J-fUOBg?e=j7uxc2)
 
-## Links to articles and software to do systematic tracking of ML experiments
+Interpolated dataset is generated from the Larger dataset using `interpolation.py` and `interpolation_job.sh`.
 
-* https://danmackinlay.name/notebook/hydra_ml.html
-* https://developer.ibm.com/blogs/10-diy-tips-for-machine-learning-experiment-tracking-and-reproducibility/
-* https://neptune.ai/blog/best-ml-experiment-tracking-tools
-* https://www.kdnuggets.com/2023/02/7-best-tools-machine-learning-experiment-tracking.html
 
+### Convolutional Autoencoders (ConvAE)
+
+Convolutional Autoencoder is used to compress the data before feeding the data into a predicting model.
+
+Files related includes:
+
+```
+ConvAE_training.py
+ConvAE_testing.py
+ConvAE_training_job.sh
+ConvAE_testing_job.sh
+ConvAE_visualisation.ipynb
+```
+
+Training and testing results are stored in the folder `2D_ConvAE_results`
+
+
+### Fully Connected Neural Network (FNN)
+
+Fully Connected Neural Network is used to predict the temperature field at the next time step.
+
+Files related includes:
+
+```
+FNN_training.py
+FNN_testing.py
+FNN_training_job.sh
+FNN_testing_job.sh
+FNN_visualisation.ipynb
+```
+
+Training and testing results are stored in the folder `2D_FNN_results`.
+
+
+### Long Short-Term Memory (LSTM)
+
+Long Short-Term Memory is used to predict rest of the temperature fields as a sequence given the first 50 temperature field in a simulation.
+
+Files related includes:
+
+```
+LSTM_training.py
+LSTM_testing.py
+LSTM_training_job.sh
+LSTM_testing_job.sh
+LSTM_visualisation.ipynb
+```
+
+Training and testing results are stored in the folder `2D_LSTM_results`.
