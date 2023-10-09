@@ -1,0 +1,36 @@
+\documentclass[a0,portrait,17pt]{sciposter}
+
+\usepackage{vwcol}                     % for the fancy content boxes
+\usepackage{tikz}                      % for the fancy content boxes (I think! Not sure...)
+\usepackage{multicol,multirow}         % standard ...
+\usepackage{booktabs}                  % standard ...
+\usepackage{amsmath,amssymb,amsthm}    % standard ...
+\usepackage{graphicx,xcolor}           % standard ...
+
+
+\begin{document}
+
+\input{macros-styles}
+\input{macros}
+
+% header
+\leftlogo[1.3]{logos/ANU-logo}
+
+
+\title{Unleashing the power of Machine Learning in Geodynamics}
+
+\author{Xuzeng He}
+\email{u7189309@anu.edu.au}
+\institute{College of Engineering, Computing and Cybernetics (CECC)}
+\conference{ANU Computing Showcase Semester 2 2023}
+\renewcommand{\authorsize}{\huge}
+\renewcommand{\titlesize}{\Huge}
+\maketitle
+
+\setlength{\columnseprule}{0pt}
+
+\begin{multicols}{3}
+  \input{content}
+\end{multicols}
+
+\end{document}

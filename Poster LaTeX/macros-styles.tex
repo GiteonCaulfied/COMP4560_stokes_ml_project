@@ -1,0 +1,60 @@
+\definecolor{uc_prime}{RGB}{125,154,170}  % some color from UUlm
+\definecolor{uc_second}{RGB}{163,38,56}   % some other color from UUlm
+\definecolor{uc_accent}{RGB}{169,162,141} % yet another color from UUlm
+
+
+\pgfarrowsdeclare{biggertip}{biggertip}{  
+  \setlength{\arrowsize}{0.03em}  
+  \addtolength{\arrowsize}{.5\pgflinewidth}  
+  \pgfarrowsrightextend{0}  
+  \pgfarrowsleftextend{-5\arrowsize}  
+}{  
+  \setlength{\arrowsize}{0.03em}  
+  \addtolength{\arrowsize}{.5\pgflinewidth}  
+  \pgfpathmoveto{\pgfpoint{-5\arrowsize}{4\arrowsize}}  
+  \pgfpathlineto{\pgfpointorigin}  
+  \pgfpathlineto{\pgfpoint{-5\arrowsize}{-4\arrowsize}}  
+  \pgfusepathqstroke  
+}
+
+
+\newcommand{\BlueBullets}{
+  \renewcommand{\labelitemi}{\textcolor{uc_prime}{$\bullet$}}
+  \renewcommand{\labelitemii}{\textcolor{uc_prime}{$\blacktriangleright$}}
+}
+
+
+\tikzstyle{heading}=[rounded corners=0.3em,inner xsep=0.6em,right=10pt,fill=uc_prime,text=white, text depth=0.1em,font=\bfseries]
+\tikzstyle{box}=[
+  rounded corners=1em,
+  inner sep=1em,
+  inner ysep=1.5em,
+  fill=uc_prime!20,
+  line width=5pt,
+  draw=uc_prime!40,
+  execute at begin node=\BlueBullets
+]
+
+\tikzstyle{comment}=[
+  box,
+  fill=uc_accent!20,
+  draw=uc_accent!40,
+  execute at begin node=\BrownBullets
+]
+
+% this macro creates a content block for the poster
+% 
+% usage: \PBlock{id}{node-params}{heading}{content}
+% 
+\newcommand{\PBlock}[4]{
+\begin{tikzpicture}
+\node[box] (#1) {\begin{minipage}{\columnwidth-2em}#4\end{minipage}};
+\node[heading] at (#1.north west) {#3};
+\end{tikzpicture}
+}
+
+\newcommand{\Block}[2]{
+  \PBlock{some-label}{}{#1}{#2}
+}
+
+\renewcommand{\section}[2]{} % removes the header before the bibliography

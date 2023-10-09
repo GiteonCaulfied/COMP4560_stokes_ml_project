@@ -565,7 +565,7 @@ We can observe that the problem of predicted GIFs moving faster or slower than t
 
 \subsection{Further testing on FNN}
 
-To determine experimentally for how many time steps we can use the trained FNN during a set of S consecutive time steps ( e.g., S=2, S=4, or S=8, and then "correct" the time series with the truth coming from the simulator) without loosing track of the transient dynamics (How large can S be without significantly affecting accuracy), further testings extending the two methods in the FNN section are done over the entire interpolated data set using the trained FNN.
+To determine experimentally for how many time steps we can use the trained FNN during a set of S consecutive time steps (e.g., S=2, S=4, or S=8, and then "correct" the time series with the truth coming from the simulator) without loosing track of the transient dynamics (How large can S be without significantly affecting accuracy), further testings extending the two methods in the FNN section are done over the entire interpolated data set using the trained FNN.
 
 To compare against different values of S, POD are applied for each of the generated temperature field sequence to compare the difference of the eigenvalues between the predicted simulations and actual simulations. The data loss for each simulation are computed as well. The result for S = 1, 2, 4, 8, 16, 99 are shown as below (where S=1 is essentially the first method in the FNN section and S=99 is the second method):
 
@@ -589,7 +589,7 @@ To compare against different values of S, POD are applied for each of the genera
     \includegraphics[scale=0.6]{Report LaTeX/figures/mantle_convection_images/further_testings/Data_loss_POD_division_table.png}
 \end{figure}
 
-
+We can observe the sum of loss and the sum of POD difference tend to have a rapid increase when S is increased from 4 to 8, as well as the standard of deviation of the data loss. In this case, the maximum value of S that is not significantly affecting accuracy should be 4.
 
 
 
