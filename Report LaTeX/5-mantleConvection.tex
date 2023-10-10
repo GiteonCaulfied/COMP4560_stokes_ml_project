@@ -2,7 +2,7 @@
 
 \section{Mantle Convection Simulation on Limited Dataset}
 
-The limited data set consists of 100 files and each of them represents one mantle convection simulation in 100 time steps generated with an initial condition with random number of points and random amplitude and coordinates of Gaussian anomalies distributed in space (a total of 10000 temperature fields). Starting from each initial condition we convect as long as there is meaningful change in the simulation (that is the temperature fields change enough after one time-step). There are 100 temperature fields with a size of 201x401 for each of the 100 timestamps in a file and the time step has to be adaptive, otherwise the whole random generation of the initial condition would be hard to implement. This adaptive timestamps lead to a problem, that is, the distance between each consecutive time steps are not the same even in the same simulation file. This could lead to some uncommon behaviors when predicting a sequence of temperature fields using the ML architecture, which will be discussed in more details in the following sections.
+The limited data set consists of 100 files and each of them represents one mantle convection simulation in 100 time steps generated with an initial condition with random number of points and random amplitude and coordinates of Gaussian anomalies distributed in space (a total of 10000 temperature fields). Starting from each initial condition we convect as long as there is meaningful change in the simulation (that is the temperature fields change enough after one time-step). There are 100 temperature fields with a size of $201 \times 401$ for each of the 100 timestamps in a file and the time step has to be adaptive, otherwise the whole random generation of the initial condition would be hard to implement. This adaptive timestamps lead to a problem, that is, the distance between each consecutive time steps are not the same even in the same simulation file. This could lead to some uncommon behaviors when predicting a sequence of temperature fields using the ML architecture, which will be discussed in more details in the following sections.
 
 The following figure shows one random temperature fields in the data set with the y-axis inverted and colored using 10-color-map (all the figures in this chapter will have their y-axis inverted and colored using 10-color-map as well, but without labels on x-axis and y-axis for better visualisation):
 
@@ -29,9 +29,9 @@ In this study, the overall process to solve the mantle convection problem woule 
 
 The complete 10000 temperature fields are randomly shuffled and divided in a ratio of 80\%, 10\%, 10\% for training, testing and validation where each piece of data consists only one temperature field (fed as both the input and output). Given the size of the training set, ConvAE is fed with a batch size of 16 temperature fields during the training to perform Mini-Batch Gradient Descent.
 
-We find that ConvAE with a latent space size of 5x23x45 offers an excellent compression factor of 13, while being able to reconstruct the temperature fields in original size with the lowest data loss on the test set.
+We find that ConvAE with a latent space size of $5 \times 23 \times 45$ offers an excellent compression factor of 13, while being able to reconstruct the temperature fields in original size with the lowest data loss on the test set.
 
-The architecture of the ConvAE in this case consists of two convolutional layers for the encoder and two transpose convolutional layers for the decoder. Both of these four layers have the size of the filter as 5x5 and a stride of 3x3. Tanh() is used as activation function to introduce non-linearity between each layers (except for the last layer in the decoder) and mean square error (MSE) is used as the loss function. The model is trained for 1000 epochs on Gadi.
+The architecture of the ConvAE in this case consists of two convolutional layers for the encoder and two transpose convolutional layers for the decoder. Both of these four layers have the size of the filter as $5 \times 5$ and a stride of $3 \times 3$. Tanh() is used as activation function to introduce non-linearity between each layers (except for the last layer in the decoder) and mean square error (MSE) is used as the loss function. The model is trained for 1000 epochs on Gadi.
 
 In the following figures, we present some detailed test results from this ConvAE:
 
@@ -64,16 +64,18 @@ In the following figures, we present some detailed test results from this ConvAE
 \end{figure}
 
 
-On average, the reconstruction loss are low and no overfitting occurs. We also applied some POD (Proper Orthogonal Decomposition) analysis to the compressed-decompressed fields with contrast to the original temperature fields and the result is great as well, the figure to this analysis will be presented in the following sections as contrast to the POD analysis of the prediction model (FNN or LSTM) 
+On average, the reconstruction loss are low and no overfitting occurs. However, we can observe that the ConvAE does not reconstructe the thin feature in the bottom right corner of the worst case. This could imply that the ConvAE works best for "smooth" input hence others with small scale length features will generally perform worse.
+
+We also applied some POD (Proper Orthogonal Decomposition) analysis to the compressed-decompressed fields with contrast to the original temperature fields and the result is great as well, the figure to this analysis will be presented in the following sections as contrast to the POD analysis of the prediction model (FNN or LSTM) 
 
 
 \subsection{Fully Connected Neural Network (FNN) for Prediction}
 
-We now move on to predict the latent space representation and the first candidate is FNN. The FNN in this study uses each pair of temperature fields as one training set, takes one temperature fields as the input and output the temperature fields at the next time step. Therefore, the data set is reconstructed into 9900 pairs of temperature fields with consecutive timestamps. These pairs are randomly shuffled and divided in a ratio of 80\%, 10\%, 10\% for training, testing and validation where each piece of data consists two temperature field having consecutive timestamps.
+We now move on to predict the latent space representation and the first candidate is FNN. The FNN in this study uses each adjacent pair of temperature fields (e.g. $i$th and ($i+1$)th fields) as one training set, takes one temperature fields as the input and output the temperature fields at the next time step. Therefore, the data set is reconstructed into 9900 pairs of temperature fields with consecutive timestamps. These pairs are randomly shuffled and divided in a ratio of 80\%, 10\%, 10\% for training, testing and validation where each piece of data consists two temperature field having consecutive timestamps.
 
-Before the latent space representation is fed as the input of FNN, it is flattened into one dimension. The prediction of FNN in this case is then resized from a one dimensional vector (1x6210) to the shape of the latent space (6x23x45) for the convenience of further testing.
+Before the latent space representation is fed as the input of FNN, it is flattened into one dimension. The prediction of FNN in this case is then resized from a one dimensional vector ($1 \times 6210$) to the shape of the latent space ($6 \times 23 \times 45$) for the convenience of further testing.
 
-The learnable parameters of FNN are optimized using small mini-batches of 16 pairs of consecutive temperature fields and Adam as the optimizer, where the loss function is defined as the mean square error (MSE) between the prediction of FNN and the actual output (both in the shape of latent space representation, which is 6x23x45).
+The learnable parameters of FNN are optimized using small mini-batches of 16 pairs of consecutive temperature fields and Adam as the optimizer, where the loss function is defined as the mean square error (MSE) between the prediction of FNN and the actual output (both in the shape of latent space representation, which is $6 \times 23 \times 45$).
 
 After testing with FNNs with architectures of different number of hidden layers and neurons per hidden layer, we found that architectures with a total number 3 hidden layers seemed to perform the best. (We also test some deeper architectures with 4-5 hidden layers. However, there is no significant improvement in loss value)
 
@@ -129,7 +131,7 @@ The following figures show 10\% of the sprites sheets converted from the origina
 
 To further evaluate the performance of these two methods, we also applied a technique called Proper Orthogonal Decomposition (POD) to the set of predictions generated by these two methods in both the best case and the worst case, along with the original time series and the compressed-decompressed version generated by ConvAE serve as contrast.
 
-POD is mainly used to decompose a physical field (e.g. temperature field) depending on the different variables that influence its physical behaviors and it is similar to Principle Component Analysis (PCA) since it refers to eigenvalues of a physical field.\citep{10.1146_annurev.fl.25.010193.002543} Following \citep{10.1515_9783110671490-007}, the Singular Value Decomposition (SVD) of a simulation matrix $X$ (spatial points × time-steps, in this case it's 201x401x100) is computed as:
+POD is mainly used to decompose a physical field (e.g. temperature field) depending on the different variables that influence its physical behaviors and it is similar to Principle Component Analysis (PCA) since it refers to eigenvalues of a physical field.\citep{10.1146_annurev.fl.25.010193.002543} Following \citep{10.1515_9783110671490-007}, the Singular Value Decomposition (SVD) of a simulation matrix $X$ (spatial points × time-steps, in this case it's $201 \times 401 \times 100$) is computed as:
 
 \begin{equation}
 X = U\Sigma V
@@ -149,7 +151,7 @@ The following figures show the POD result in the best case and the worst case:
     \includegraphics[scale=0.5]{Report LaTeX/figures/mantle_convection_images/limited_dataset/FNN_Worst_POD.png}
 \end{figure}
 
-As seen in the animations and the POD results, the first method (output-as-input prediction) fails to capture the trend of the temperature fields simulations in the worst case and the result prediction is completely different to the actual simulations. This is because the information loss from the ConvAE and FNN in each prediction-as-input loop gets summed up, thus leading to a huge data loss in the end. In the mean time, the prediction result for the second method mostly matches with the actual output in both cases, which is consistent to our theory that the it is the first method itself leads to the huge information loss.
+As seen in the animations and the POD results, the first method (output-as-input prediction) fails to capture the trend of the temperature fields simulations in the worst case and the result prediction is completely different to the actual simulations. This is because the information loss from the ConvAE and FNN in each prediction-as-input loop accumulates, leading to poor result after 99 iterations. In the mean time, the prediction result for the second method mostly matches with the actual output in both cases, which is consistent to our theory that the it is the first method itself leads to the huge information loss.
 
 Also, the predicted GIFs in this case are either moving faster or slower than the actual simulations. This is probably due to the varying distance between time steps in the simulation. In this case, the model will try to predict the temperature field at the next time step by averaging out the distance between each time step, thus making the predicted simulations either too fast or too slow.
 
@@ -164,9 +166,9 @@ This 50:50 of input-output length is determined by PyTorch's limitation on LSTM,
 
 Therefore, the files in the data set are randomly shuffled and divided in a ratio of 80\%, 10\%, 10\% for training, testing and validation where each piece of data is a complete file to be divided in half as input and output.
 
-Again, before a sequence of latent space representation is fed as the input of LSTM, it is flattened into two dimension with its sequence index reserved (50x6210). The prediction of LSTM in this case is then resized from 50x6210 to 50x6x23x45 for the convenience of further testing.
+Again, before a sequence of latent space representation is fed as the input of LSTM, it is flattened into two dimension with its sequence index reserved ($50 \times 6210$). The prediction of LSTM in this case is then resized from $50 \times 6210$ to $50 \times 6 \times 23 \times 45$ for the convenience of further testing.
 
-The learnable parameters of LSTM are optimized using small mini-batches (only 1 batch in this case since we merely have 80 training samples) and Adam as the optimizer, where the loss function is defined as the MSE between the prediction of LSTM and the actual output (both in the shape of a sequence of latent space representation, which is 50x6x23x45).
+The learnable parameters of LSTM are optimized using small mini-batches (only 1 batch in this case since we merely have 80 training samples) and Adam as the optimizer, where the loss function is defined as the MSE between the prediction of LSTM and the actual output (both in the shape of a sequence of latent space representation, which is $50 \times 6 \times 23 \times 45$).
 
 After testing with LSTMs with different architectures, we found that architectures with a total number of 2 consecutive LSTMs layers seemed to perform the best. (We also test some deeper architectures with 4-6 LSTM. However, there is no significant improvement in loss value)
 
@@ -232,7 +234,7 @@ From the animations and the POD results, we can conclude that LSTM is able to ca
 
 \section{Mantle Convection Simulation on Larger Dataset}
 
-To confirm if the low accuracy of LSTM is caused by the scarceness of data, a larger data set is tested, whose only two differences with the limited data set are that it now contains 903 simulations and it use absolute time steps instead of adaptive time steps. However, even though it now uses absolute time steps instead, the distance between each of the consecutive time steps still varies.
+To confirm if the low accuracy of LSTM is caused by the scarceness of data, a larger data set is tested, whose only two differences with the limited data set are that it now contains 903 simulations and it uses absolute time steps instead of adaptive time steps. However, even though it now uses absolute time steps instead, the distance between each of the consecutive time steps still varies.
 
 For this section, time steps are not considered since we want to mainly focus on testing if the scarceness of data is the reason for the low accuracy of LSTM. Nevertheless, they will be used in the next section to create an interpolated data set.
 

@@ -2,7 +2,14 @@
 
 \section{Dataset of Geoid prediction}
 
-The data set consists of 1000 pairs of input and output. In the data set, input is a vector with 257 values representing a geoid model and output is a vector with 60 values representing a set of parameters. The following graphs plot 10 pairs of model input and output in separate figures to observe the patterns.
+The data set consists of 1000 pairs of input and output. In the data set, input is a vector with 257 values representing a geoid model and output is a vector with 60 values representing a set of spherical harmonic coefficients describing the geoid height on the surface of the Earth. The following figure is a sample visualization of a random set of 60 geoid coefficients from the output data as a 2D image, where this set of coefficients basically map to an image wrapped on the surface of a sphere.
+
+\begin{figure}[H]
+    \caption{Sample Geoid Coefficients Visualization}
+    \includegraphics[scale=0.6]{figures/geoid_images/Geoid_Sample_visualization.png}
+\end{figure}
+
+To further observe the patterns in the input and the output, 10 pairs of model input and output are plotted in the following figures.
 
 \begin{figure}[H]
     \caption{Every 100th input in the data set}
@@ -14,7 +21,7 @@ The data set consists of 1000 pairs of input and output. In the data set, input 
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_sample_output.png}
 \end{figure}
 
-From the second plot we can observe that the outputs in the data set can be seen as some "curves" with the same patterns but different altitude. In this case, each of the 60 values in the output data are normalised to be between 0 and 1 using their maximum and minimum values separately before feeding into the neural network. This is because each of the parameters in an output vector can be seen as equal and we want to prevent the neural network from spending most of its effort learning the parameter with a higher range. Hence, one can expect a higher accuracy when the parameters in the output data are standardized to a same range.
+From the second plot we can observe that the outputs in the data set can be seen as some "curves" with the same patterns but different altitude. In this case, each of the 60 coefficients in the output data are normalised to be between 0 and 1 using their maximum and minimum values separately before feeding into the neural network. This is because each of the parameters in an output vector can be seen as equal and we want to prevent the neural network from spending most of its effort learning the parameter with a higher range. Hence, one can expect a higher accuracy when the parameters in the output data are standardized to a same range.
 
 After the output data is normalised using a scaler, the entire data set is randomly divided in a ratio of 8:1:1: 80 per cent of the data set is used for training, 10 per cent of the data for testing accuracy and the remaining 10 per cent to perform validation during training and prevent overfitting. For a data set with 1000 samples, this result in a train-test-valiadation split of 800-100-100.
 
@@ -34,6 +41,8 @@ Also, to prevent overfitting, a variation of the early-stopping method is used d
 After testing with NNs with architectures of different number of hidden layers and neurons per hidden layer, we found that architectures with a total number 3–4 hidden layers seemed to perform the best.
 
 In the following figures, we present results from a FNN with 4 hidden layers with 200, 160, 120 and 80 neurons, ReLU as activation function, MSELoss as loss function, and trained for 200 epochs using Mini-Batch Gradient Descent (with a batch size of 16).
+
+One thing to notice is that the loss value that is back-propagated during the training process is calculated using the prediction and the normalised output. In this case, the best case and the worst case shown as below are also defined upon the value of this normalised error in order to be consistent.
 
 \begin{figure}[H]
     \caption{Training loss and Validation loss}
@@ -55,6 +64,22 @@ In the following figures, we present results from a FNN with 4 hidden layers wit
     \includegraphics[scale=0.6]{Report LaTeX/figures/geoid_images/Geoid_Worst.png}
 \end{figure}
 
-On average, the prediction loss are low even when the loss value here is calculated using the normalised output data and no overfitting occurs. The accuracy of the prediction is nearly 100\% when the threshold is set to be 10 times lower than the worst loss value. Overall, FNN is able to accurately solve the Geoid problem without numerous amount of data.
+On average, both the normalised loss and the reconstructed loss are low and no overfitting occurs. The accuracy of the prediction is nearly 100\% when the threshold is set to be 10 times lower than the worst loss value. 
+
+For further testing, the set of 60 coefficients produced by the FNN in both the best case and the worst case are visualized on globe geoid maps that are flattened as a 2D images, along with the map of the actual output data and an error map representing the difference between the prediction and the ground truth.
+
+\begin{figure}[H]
+    \caption{Best Geoid visualization}
+    \includegraphics[scale=0.6]{figures/geoid_images/Geoid_Best_visualization.png}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{Worst Geoid visualization}
+    \includegraphics[scale=0.6]{figures/geoid_images/Geoid_Worst_visualization.png}
+\end{figure}
+
+We can observe that the result produced by the FNN is in high quality even in the worst case, since the error map is completely black and this indicates that the loss value between the prediction and ground truth are nearly zero.
+
+Overall, FNN is able to accurately solve the Geoid problem without numerous amount of data.
 
 
