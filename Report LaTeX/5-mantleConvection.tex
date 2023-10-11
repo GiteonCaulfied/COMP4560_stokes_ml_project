@@ -27,6 +27,24 @@ In this study, the overall process to solve the mantle convection problem woule 
   \item Test the prediction result in original size (using decoder from ConvAE)
 \end{enumerate}
 
+\begin{figure}[H]
+    \centering
+    \caption{Workflow of ConvAE}
+    \includegraphics[scale=0.3]{figures/mantle_convection_images/ConvAE_workflow.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Workflow of FNN}
+    \includegraphics[scale=0.4]{figures/mantle_convection_images/FNN_workflow.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Simple Workflow of LSTM, where Tn is a temperature field in its latent space representation. Here we input the first 50 temperature fields (after compressed and flattened) from a simulation into the LSTM and hopefully LSTM would predict the rest 50 temperature fields of the same simulation (also compressed and flattened).}
+    \includegraphics[scale=0.6]{figures/mantle_convection_images/LSTM_workflow.png}
+\end{figure}
+
 The complete 10000 temperature fields are randomly shuffled and divided in a ratio of 80\%, 10\%, 10\% for training, testing and validation where each piece of data consists only one temperature field (fed as both the input and output). Given the size of the training set, ConvAE is fed with a batch size of 16 temperature fields during the training to perform Mini-Batch Gradient Descent.
 
 We find that ConvAE with a latent space size of $5 \times 23 \times 45$ offers an excellent compression factor of 13, while being able to reconstruct the temperature fields in original size with the lowest data loss on the test set.
