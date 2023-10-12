@@ -2,6 +2,8 @@
 import numpy
 from scipy.special import sph_harm
 
+import pyshtools
+
 import matplotlib.pyplot as P
 import matplotlib.cm
 
@@ -15,6 +17,21 @@ def mk_image(coeff, phi, theta, latsamples = 100, lonsamples = 100):
             offset += 1
 
     return numpy.real(accum)
+
+def mk_image_pyshtools(coeff, phi, theta, latsamples = 100, lonsamples = 100):
+
+    sph = pyshtools.SHCoeffs.from_zeros(lmax = 7, normalization = 'ortho')
+
+    offset = 0
+    for l in range(2, 8):
+        for m in range(-l, l + 1):
+            sph.set_coeffs(coeff[offset], l, m)
+            offset += 1
+
+    image = sph.expand(lon = theta.flatten() * 180.0/numpy.pi,
+                       lat = 90.0 - phi.flatten() * 180.0/numpy.pi)
+
+    return image.reshape(theta.shape)
 
 if __name__ == '__main__':
 
@@ -37,9 +54,10 @@ if __name__ == '__main__':
     y = numpy.sin(phi) * numpy.sin(theta)
     z = numpy.cos(phi)
 
-    abs_image = mk_image(out_sph, phi, theta)
+    abs_image = mk_image_pyshtools(out_sph, phi, theta)
 
-    err_image = mk_image((out_sph - error_sph), phi, theta)
+    ref_image = mk_image_pyshtools(error_sph, phi, theta)
+    err_image = abs_image - ref_image #mk_image_pyshtools((out_sph - error_sph), phi, theta)
 
 
     use_3d = False
