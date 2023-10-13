@@ -23,6 +23,7 @@ accurate_loss_baseline = 1e-6
 '''
 path = "/scratch/kr97/xh7958/comp4560/solutions"
 
+
 # Temperature for the two consecutive timestamp
 temperature_fields = []
   
@@ -339,8 +340,11 @@ worst_evolution = np.asarray(worst_evolution)
 with open('FNN_worst_evolution.npy', 'wb') as f:
     np.save(f, worst_evolution)
 
+
 # Testing for how many time steps we can use the trained FNN without loosing track of the transient dynamics
 testing_time_steps = [1, 2, 4, 8, 16, 99]
+
+
 PCA_lists = [[] for x in testing_time_steps]
 PCA_relative_lists = [[] for x in testing_time_steps]
 loss_lists = [[] for x in testing_time_steps]
@@ -364,6 +368,7 @@ for i in range(len(temperature_fields)):
             if i % testing_time_steps[j] == 0:
                 testing_input_list[j] = encoder(torch.from_numpy(testing_temperature_fields[i]).to(device).view(1, 1, 201, 401))
             testing_latentSpace_j = model(testing_input_list[j])
+            testing_input_list[j] = testing_latentSpace_j
             predicted_temperature_fields_list[j].append(decoder(testing_latentSpace_j).cpu().detach().numpy()[0][0])
 
     # Calculate the PCA difference and data difference for each time step
@@ -374,36 +379,42 @@ for i in range(len(temperature_fields)):
         PCA_relative_lists[j].append(np.linalg.norm(S_predicted_j.diagonal() - S_original.diagonal()) / np.linalg.norm(S_original.diagonal()))
         loss_lists[j].append(np.linalg.norm(predicted_temperature_fields_list[j] - testing_temperature_fields))
 
-text_file = open('FNN_testingData_Gadi_3.txt', "w")
-#n1 = text_file.write("The best consecutive time step is " + str(best_time_step) + "\n")
-for i in range(len(testing_time_steps)):
-    n1 = text_file.write("Result for time step " + str(testing_time_steps[i]) + "\n")
 
-    n2 = text_file.write("Sum of PCA difference: " + str(sum(PCA_lists[i])) + "\n")
-    n3 = text_file.write("Minimum PCA difference: " + str(min(PCA_lists[i])) + "\n")
-    n4 = text_file.write("Maximum PCA difference: " + str(max(PCA_lists[i])) + "\n")
-    n5 = text_file.write("Average PCA difference: " + str(sum(PCA_lists[i])/len(PCA_lists[i])) + "\n")
-    n6 = text_file.write("Standard deviation of PCA difference: " + str(np.std(np.asarray(PCA_lists[i]))) + "\n")
+PCA_lists = np.asarray(PCA_lists)
+with open('FNN_testing_PCA_lists.npy', 'wb') as f:
+    np.save(f, PCA_lists)
 
-    n6_5 = text_file.write("------------------------------------------\n")
+PCA_relative_lists = np.asarray(PCA_relative_lists)
+with open('FNN_testing_PCA_relative_lists.npy', 'wb') as f:
+    np.save(f, PCA_relative_lists)
 
-    n2_r = text_file.write("Sum of relative PCA errors : " + str(sum(PCA_relative_lists[i])) + "\n")
-    n3_r = text_file.write("Minimum relative PCA errors: " + str(min(PCA_relative_lists[i])) + "\n")
-    n4_r = text_file.write("Maximum relative PCA errors: " + str(max(PCA_relative_lists[i])) + "\n")
-    n5_r = text_file.write("Average relative PCA errors: " + str(sum(PCA_relative_lists[i])/len(PCA_relative_lists[i])) + "\n")
-    n6_r = text_file.write("Standard deviation of relative PCA errors: " + str(np.std(np.asarray(PCA_relative_lists[i]))) + "\n")
+loss_lists = np.asarray(loss_lists)
+with open('FNN_testing_loss_lists.npy', 'wb') as f:
+    np.save(f, loss_lists)
 
-    n6_5r = text_file.write("------------------------------------------\n")
 
-    n7 = text_file.write("Sum of data loss: " + str(sum(loss_lists[i])) + "\n")
-    n8 = text_file.write("Minimum data loss: " + str(min(loss_lists[i])) + "\n")
-    n9 = text_file.write("Maximum data loss: " + str(max(loss_lists[i])) + "\n")
-    n10 = text_file.write("Average data lss: " + str(sum(loss_lists[i])/len(loss_lists[i])) + "\n")
-    n11 = text_file.write("Standard deviation of data loss: " + str(np.std(np.asarray(loss_lists[i]))) + "\n")
 
-    n11_5 = text_file.write("------------------------------------------\n")
+# Visualize further testing 
 
-    n12 = text_file.write("Loss sum / PCA sum = " + str(sum(loss_lists[i]) / sum(PCA_lists[i])) + "\n")
-    n13 = text_file.write("\n")
-text_file.close()
-print("Testing Data saved! The path is FNN_testingData_Gadi_3.txt")
+# Read the testing file
+testing_temperature_fields = temperature_fields[123]
+
+# Looping through the NN
+predicted_temperature_fields_list = [[testing_temperature_fields[0]] for x in testing_time_steps]
+testing_input_list = [encoder(torch.from_numpy(testing_temperature_fields[0]).to(device).view(1, 1, 201, 401)) for x in testing_time_steps]
+    
+for i in range(99):
+    for j in range(len(testing_time_steps)):
+        if i % testing_time_steps[j] == 0:
+            testing_input_list[j] = encoder(torch.from_numpy(testing_temperature_fields[i]).to(device).view(1, 1, 201, 401))
+        testing_latentSpace_j = model(testing_input_list[j])
+        testing_input_list[j] = testing_latentSpace_j
+        predicted_temperature_fields_list[j].append(decoder(testing_latentSpace_j).cpu().detach().numpy()[0][0])
+
+predicted_temperature_fields_list = np.asarray(predicted_temperature_fields_list)
+with open('FNN_further_testing.npy', 'wb') as f:
+    np.save(f, predicted_temperature_fields_list)
+
+testing_temperature_fields = np.asarray(testing_temperature_fields)
+with open('FNN_further_testing_reference.npy', 'wb') as f:
+    np.save(f, testing_temperature_fields)

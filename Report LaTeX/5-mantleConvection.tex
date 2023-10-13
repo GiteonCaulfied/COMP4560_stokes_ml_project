@@ -591,22 +591,32 @@ To compare against different values of S, POD are applied for each of the genera
 
 \begin{figure}[H]
     \caption{Data Loss for S consecutive time steps}
-    \includegraphics[scale=0.6]{figures/mantle_convection_images/further_testings/Data_Loss_table.png}
+    \includegraphics[scale=0.7]{figures/mantle_convection_images/further_testings/Data_Loss_table.png}
 \end{figure}
 
 \begin{figure}[H]
     \caption{POD difference for S consecutive time steps}
-    \includegraphics[scale=0.6]{figures/mantle_convection_images/further_testings/POD_table.png}
+    \includegraphics[scale=0.7]{figures/mantle_convection_images/further_testings/POD_table.png}
 \end{figure}
 
 \begin{figure}[H]
     \caption{Relative POD difference for S consecutive time steps}
-    \includegraphics[scale=0.6]{figures/mantle_convection_images/further_testings/Relative_POD_table.png}
+    \includegraphics[scale=0.7]{figures/mantle_convection_images/further_testings/Relative_POD_table.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Data Loss / POD result for S consecutive time steps}
-    \includegraphics[scale=0.6]{figures/mantle_convection_images/further_testings/Data_loss_POD_division_table.png}
+    \caption{Box Plot for data loss when FNN is used in S consecutive time steps before correction}
+    \includegraphics[scale=0.4]{figures/mantle_convection_images/further_testings/Data_Loss_boxplot.png}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{Box Plot for POD difference when FNN is used in S consecutive time steps before correction}
+    \includegraphics[scale=0.4]{figures/mantle_convection_images/further_testings/POD_boxplot.png}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{Box Plot for relative POD difference when FNN is used in S consecutive time steps before correction}
+    \includegraphics[scale=0.4]{figures/mantle_convection_images/further_testings/Relative_POD_boxplot.png}
 \end{figure}
 
 We can observe the sum of loss and the sum of POD difference tend to have a rapid increase when S is increased from 4 to 8, as well as the standard of deviation of the data loss. In this case, the maximum value of S that is not significantly affecting accuracy should be 4.
