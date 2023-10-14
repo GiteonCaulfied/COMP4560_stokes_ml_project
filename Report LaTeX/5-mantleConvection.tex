@@ -41,7 +41,7 @@ In this study, the overall process to solve the mantle convection problem woule 
 
 \begin{figure}[H]
     \centering
-    \caption{Simple Workflow of LSTM, where Tn is a temperature field in its latent space representation. Here we input the first 50 temperature fields (after compressed and flattened) from a simulation into the LSTM and hopefully LSTM would predict the rest 50 temperature fields of the same simulation (also compressed and flattened).}
+    \caption{Simple Workflow of LSTM, where Tn is a temperature field in its latent space representation. Here we input the first 50 temperature fields (after compressed and flattened) from a simulation into the LSTM and hopefully LSTM would predict the rest 50 temperature fields of the same simulation (also compressed and flattened).General LSTM structure on the left is referenced from: \url{https://stackoverflow.com/questions/48302810/whats-the-difference-between-hidden-and-output-in-pytorch-lstm}}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/LSTM_workflow.png}
 \end{figure}
 
@@ -617,6 +617,14 @@ To compare against different values of S, POD are applied for each of the genera
 \begin{figure}[H]
     \caption{Box Plot for relative POD difference when FNN is used in S consecutive time steps before correction}
     \includegraphics[scale=0.4]{figures/mantle_convection_images/further_testings/Relative_POD_boxplot.png}
+\end{figure}
+
+For better visualisation, the animation representing the ground truth and the predicted simulation using different values of S are shown below.
+
+\begin{figure}[H]
+    \centering
+    \caption{Animation sheet for different values of S, including S = 1, 2, 4, 8, 16, 99 (Link to this GIF: \url{https://drive.google.com/file/d/1XOqXxLkuxnnvaTR0jw-7Sm68IqQFnTFf/view?usp=sharing})}
+    \includegraphics[scale=0.20]{figures/mantle_convection_images/further_testings/FNN_further_testing_sheet.png}
 \end{figure}
 
 We can observe the sum of loss and the sum of POD difference tend to have a rapid increase when S is increased from 4 to 8, as well as the standard of deviation of the data loss. In this case, the maximum value of S that is not significantly affecting accuracy should be 4.
