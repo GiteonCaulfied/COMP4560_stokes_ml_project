@@ -1,8 +1,17 @@
 \Block{Introduction}{
 
 \textbf{Geoid Problem}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{figures/Geoid.png}
+    \caption{Geoid and its two related factors}
+\end{figure}
+
 \begin{itemize}
-     \item (TODO)       
+     \item Research shows that when geoid is modelled purely based on density variation near the surface, the result can poorly explain the observed geoid measurements.
+
+     \item Therefore, the possibility of using Earth's viscosity to model geoid is explored in this research.
 \end{itemize}
 
 \textbf{Mantle Convection Problem}
@@ -44,7 +53,19 @@
 
 
 \Block{Research Aims}{
-(TODO)
+\textbf{Geoid Problem}
+
+\begin{itemize}
+     \item This research aims to use Neural Network as a way to forward model the geoid problem, assuming that viscosity varying in the radial direction with depth is the most important factor. 
+     
+     \item The Earths viscosity is modelled as a 1D spherically symmetric viscosity model and a geoid surface is computed in terms of spherical harmonics coefficients, which can be used to construct the Geoid surface.  
+\end{itemize}
+
+\textbf{Mantle Convection Problem}
+
+\begin{itemize}
+     \item (TODO)  
+\end{itemize}
 }
 
 
@@ -52,12 +73,12 @@
 
 \textbf{Geoid Problem}.
 \begin{itemize}
-    \item Testing on a dataset with 1000 pairs of input and output
+    \item Testing on a simplified small dataset (having 1000 pairs of input and output) using a reduced prior such that the perturbations to the output are smaller. 
     
         \begin{itemize}
-            \item Input: a vector with 257 values
-	    \item Output: a vector with 60 values      representing a set of spherical harmonic coefficients describing the geoid height on the
-        surface of the Earth
+            \item Input: a vector with 257 values indicating a 1D spherically symmetric viscosity model
+            
+	    \item Output: a vector with 60 values         representing a set of spherical harmonic      coefficients describing the geoid height      on the surface of the Earth
         \end{itemize}  
 \end{itemize}
 
@@ -96,6 +117,12 @@
     \includegraphics[width=0.5\linewidth]{figures/temperature_field_example.png}
     \caption{Sample Temperature field}
 \end{figure}   
+
+}
+
+
+
+\Block{Methods(Continue)}{
 
 \begin{itemize}   
     
@@ -137,7 +164,6 @@
     \caption{General LSTM structure and the workflow in this research, reference: https://stackoverflow.com/questions/48302810/whats-the-difference-between-hidden-and-output-in-pytorch-lstm}
 \end{figure}
 }
-
 
 \Block{Results and Findings}{
 
@@ -209,6 +235,10 @@
         
 \end{itemize}
 
+}
+
+\Block{Results and Findings (Continue)}{
+
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{figures/FNN_animation_sheet.png}
     \caption{Best case animation sheet for FNN trained with Interpolated Dataset}
@@ -228,9 +258,6 @@
     \caption{Box Plot for data loss when FNN is used in S consecutive time steps before correction}
 \end{figure}
 
-}
-
-\Block{Results and Findings (Continue)}{
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{figures/FNN_further_testing_sheet.png}
     \caption{Animation sheet when FNN is either not used (ground truth at the first row) or used in S consecutive time steps before correction, where S = 1, 2, 4, 8, 16, 99 (started from the second row)}
@@ -238,11 +265,29 @@
 }
 
 \Block{Conclusion}{
-(TODO)
+\textbf{Geoid Problem}
+
+\begin{itemize}
+     \item This research is presented as a proof showing that high-dimensional regression algorithms like neural networks can help with the forward modelling of the geoid problem when predicting a set of spherical harmonic coefficients given a reduced dataset with a fairly small number of 1D spherically symmetric viscosity models. 
+\end{itemize}
+
+\textbf{Mantle Convection Problem}
+
+\begin{itemize}
+     \item (TODO)
+\end{itemize}
 }
 
 
 \Block{Future Works}{
+\textbf{Geoid Problem}
+
+\begin{itemize}
+     \item Future studies may focus on extending the use of neural networks on solving the geoid problem using viscosity models by testing with a more general dataset, since the one used in this research is using a reduced prior such that the perturbations to the output are far smaller.
+
+     \item Future studies could also explore the potential use of neural networks to backward model the geoid problem.
+\end{itemize}
+
 \textbf{Mantle Convection Problem}
 
 \begin{itemize}
