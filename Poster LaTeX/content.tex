@@ -36,15 +36,15 @@
         \end{itemize}
     \item Convolutional Autoencoders (ConvAE)
         \begin{itemize}
-            \item An encoder using convolution operation to reduce the size of the original input field and output a latent space representation
+            \item An encoder using convolution operation to reduce the size of the original input field and output a latent space representation.
 
-            \item A decoder using deconvolution operation to transform the latent space representation back to the original size field
+            \item A decoder using deconvolution operation to transform the latent space representation back to the original size field.
         \end{itemize}
     \item Long short-term memory (LSTM)
         \begin{itemize}
             \item Use a sequence of input recurrently to predict a sequence of output.
             
-            \item Handle time-series data more accurately than other networks
+            \item Handle time-series data more accurately than other networks.
         \end{itemize}
         
 \end{itemize}
@@ -76,39 +76,38 @@
     \item Testing on a simplified small dataset (having 1000 pairs of input and output) using a reduced prior such that the perturbations to the output are smaller. 
     
         \begin{itemize}
-            \item Input: a vector with 257 values indicating a 1D spherically symmetric viscosity model
+            \item Input: a vector with 257 values indicating a 1D spherically symmetric viscosity model.
             
-	    \item Output: a vector with 60 values         representing a set of spherical harmonic      coefficients describing the geoid height      on the surface of the Earth
+	    \item Output: a vector with 60 values         representing a set of spherical harmonic      coefficients describing the geoid height      on the surface of the Earth.
         \end{itemize}  
 \end{itemize}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{figures/Geoid_Sample_visualization.png}
-    \caption{Sample Geoid coefficients}
+    \caption{Sample Geoid coefficients, where the units of the geoid are in metres and represent values greater or less than some reference value.}
 \end{figure}
 
 \begin{itemize}
-    \item Using Fully Connected Neural Networks (FNN) for prediction
+    \item Using Fully Connected Neural Networks (FNN) for prediction.
 
-    \item Systematically training and testing different FNN architectures
+    \item Systematically training and testing different FNN architectures.
 \end{itemize}
 
 \bigbreak
 
 \textbf{Mantle Convection Problem}
 \begin{itemize}
-    
-    \item Supported by Gadi - a HPC system
+
     \item Testing on 3 different datasets, where each dataset is composed of various simulations that each has 100 temperature fields and 100 timestamps.
     
         \begin{itemize}
             
-            \item Limited dataset: 100 simulations, varying distance between consecutive time steps
+            \item Limited dataset: 100 simulations, varying distance between consecutive time steps.
             
-	    \item Larger dataset: 903 simulations,           varying distance between consecutive time steps
+	    \item Larger dataset: 903 simulations,           varying distance between consecutive          time steps.
      
-            \item Interpolated dataset: generated from the Larger dataset, 903 simulations, equal distance between consecutive time steps
+            \item Interpolated dataset: generated from the Larger dataset, 903 simulations, equal distance between consecutive time steps.
         \end{itemize}
 \end{itemize}
 
@@ -117,12 +116,6 @@
     \includegraphics[width=0.5\linewidth]{figures/temperature_field_example.png}
     \caption{Sample Temperature field}
 \end{figure}   
-
-}
-
-
-
-\Block{Methods(Continue)}{
 
 \begin{itemize}   
     
@@ -134,6 +127,11 @@
     \includegraphics[width=0.8\linewidth]{figures/ConvAE_workflow.png}
     \caption{ConvAE workflow}
 \end{figure}
+}
+
+
+
+\Block{Methods(Continue)}{
 
 \begin{itemize}  
     \item Given a temperature field in its latent space representation, using Fully Connected Neural Network (FNN) to predict temperature field at the next timestamp. 
@@ -174,14 +172,14 @@
 \end{itemize}
 
 \begin{figure}[H]
-    \includegraphics[width=\linewidth]{figures/Geoid_Best_Worst.png}
-    \caption{Visualization of the most and the least accurate Geoid prediction}
+    \includegraphics[width=\linewidth]{figures/Geoid_Best_visualization}
+    \caption{Visualization of the most accurate Geoid prediction}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{figures/Geoid_Errors.png}
-    \caption{Visualization of errors in the most and the least accurate Geoid prediction}
+    \includegraphics[width=\linewidth]{figures/Geoid_Worst_visualization}
+    \caption{Visualization of the least accurate Geoid prediction}
 \end{figure}
 
 
@@ -191,20 +189,20 @@
     
     \item Limited Dataset
         \begin{itemize}
-            \item ConvAE has low reconstruction error given a latent space size of 5x23x45, which offers an excellent compression factor of 13.
+            \item ConvAE has low reconstruction error given a latent space size of 6x23x45, which offers an excellent compression factor of 13.
             
             \item FNN has low loss value when predicting the next temperature field given a total of 3 hidden layers. However, when predicting a complete simulation using FNN:
             
             \begin{itemize}
-                \item output-as-input prediction fails to capture the trend of simulation in its worst case and the prediction result is completely different to the actual simulations
+                \item output-as-input prediction fails to capture the trend of simulation in its worst case and the prediction result is completely different to the actual simulations.
             
                 \item while the second method mostly matches with the actual output even in its worst case.
             
             \end{itemize}
 
-            \item LSTM has a higher loss value than FNN, but is able to capture the characteristic of the simulation more precisely
+            \item LSTM has a higher loss value than FNN, but is able to capture the characteristic of the simulation more precisely.
 
-            \item predicted animations generated by FNN and LSTM are either moving faster or slower than the actual simulations
+            \item predicted animations generated by FNN and LSTM are either moving faster or slower than the actual simulations.
             
         \end{itemize}
         
@@ -214,7 +212,7 @@
 
             \item No significant improvement for the prediction result of FNN and LSTM.
 
-            \item Confirmed that the lower accuracy of LSTM is not caused by some potential underfitting problem brought by the limited size of the data
+            \item Confirmed that the lower accuracy of LSTM is not caused by some potential underfitting problem brought by the limited size of the data.
             
             \item The problem of the predicted animations having inconsistent speed still exists.
             
@@ -228,26 +226,27 @@
 
             \item Better performance for both FNN and LSTM.
             
-            \item The problem of the predicted animations having inconsistent speed with the actual one is now solved. Confirmed that this problem is caused by the varying distance between consecutive time steps
+            \item The problem of the predicted animations having inconsistent speed with the actual one is now solved. Confirmed that this problem is caused by the varying distance between consecutive time steps.
             
     \end{itemize} 
- 
-        
+       
 \end{itemize}
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{figures/FNN_animation_sheet.png}
+    \caption{Best case animation sheet for FNN trained with Interpolated Dataset, where each frame consists of 3 temperature fields as a group, representing the ground truth, prediction from the first method (output-as-input looping) and prediction from the second method (single prediction). Predictions from 10 different time steps are presented in this sheet from left to right and top to bottom, including 10, 20, 30, 40, 50, 60, 70, 80, 90, 100}
+\end{figure}
 
 }
 
 \Block{Results and Findings (Continue)}{
 
-\begin{figure}[H]
-    \includegraphics[width=\linewidth]{figures/FNN_animation_sheet.png}
-    \caption{Best case animation sheet for FNN trained with Interpolated Dataset}
-\end{figure}
+
 
 \begin{itemize}
     \item Further Testings on FNN trained with Interpolated Dataset
         \begin{itemize}
-            \item The aim is to determine experimentally for how many time steps we can use the trained FNN during a set of S consecutive time steps (e.g., S=2 and then ”correct” the time series with the truth coming from the simulator) without losing track of the transient dynamics (How large can S be without significantly affecting accuracy)
+            \item The aim is to determine experimentally for how many time steps we can use the trained FNN during a set of S consecutive time steps (e.g., S=2 and then ”correct” the time series with the truth coming from the simulator) without losing track of the transient dynamics (How large can S be without significantly affecting accuracy).
 
             \item The maximum value of S that is not significantly affecting accuracy should be 4 since the sum of loss and the sum of POD (Proper Orthogonal Decomposition) difference tend to have a rapid increase when S is increased from 4 to 8.
         \end{itemize}          
@@ -260,7 +259,7 @@
 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{figures/FNN_further_testing_sheet.png}
-    \caption{Animation sheet when FNN is either not used (ground truth at the first row) or used in S consecutive time steps before correction, where S = 1, 2, 4, 8, 16, 99 (started from the second row)}
+    \caption{Animation sheet when FNN is either not used (ground truth at the first row) or used in S consecutive time steps before correction, where S = 1, 2, 4, 8, 16, 99 (started from the second row). The time steps, from left to right, are 1, 25, 50, 75, 100}
 \end{figure}
 }
 
@@ -308,4 +307,8 @@ Review Fluids, 6, 11 (nov 2021). doi:10.1103/physrevf luids.6.113801. https://do
 \item Kerl, J., 2022. Geoid Inversion For Mantle Viscosity With Convolutional Neural Net-
 works. Master thesis.
 \end{itemize}
+}
+
+\Block{Acknowledgements}{
+This work was supported by computational resources provided by the Australian Government through the National Computational Infrastructure (NCI) under the ANU Merit Allocation Scheme.
 }
