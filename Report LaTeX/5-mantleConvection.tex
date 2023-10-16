@@ -7,7 +7,7 @@ The limited data set consists of 100 files and each of them represents one mantl
 The following figure shows one random temperature fields in the data set with the y-axis inverted and colored using 10-color-map (all the figures in this chapter will have their y-axis inverted and colored using 10-color-map as well, but without labels on x-axis and y-axis for better visualisation):
 
 \begin{figure}[H]
-    \caption{Temperature Field example}
+    \caption{Temperature Field example.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/temperature_field_example.png}
 \end{figure}
 
@@ -29,13 +29,13 @@ In this study, the overall process to solve the mantle convection problem woule 
 
 \begin{figure}[H]
     \centering
-    \caption{Workflow of ConvAE}
+    \caption{Workflow of ConvAE.}
     \includegraphics[scale=0.3]{figures/mantle_convection_images/ConvAE_workflow.png}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \caption{Workflow of FNN}
+    \caption{Workflow of FNN.}
     \includegraphics[scale=0.4]{figures/mantle_convection_images/FNN_workflow.png}
 \end{figure}
 
@@ -47,19 +47,19 @@ In this study, the overall process to solve the mantle convection problem woule 
 
 The complete 10000 temperature fields are randomly shuffled and divided in a ratio of 80\%, 10\%, 10\% for training, testing and validation where each piece of data consists only one temperature field (fed as both the input and output). Given the size of the training set, ConvAE is fed with a batch size of 16 temperature fields during the training to perform Mini-Batch Gradient Descent.
 
-We find that ConvAE with a latent space size of $5 \times 23 \times 45$ offers an excellent compression factor of 13, while being able to reconstruct the temperature fields in original size with the lowest data loss on the test set.
+We find that ConvAE with a latent space size of $6 \times 23 \times 45$ offers an excellent compression factor of 13, while being able to reconstruct the temperature fields in original size with the lowest data loss on the test set.
 
 The architecture of the ConvAE in this case consists of two convolutional layers for the encoder and two transpose convolutional layers for the decoder. Both of these four layers have the size of the filter as $5 \times 5$ and a stride of $3 \times 3$. Tanh() is used as activation function to introduce non-linearity between each layers (except for the last layer in the decoder) and mean square error (MSE) is used as the loss function. The model is trained for 1000 epochs on Gadi.
 
 In the following figures, we present some detailed test results from this ConvAE:
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss}
+    \caption{Training loss and Validation loss.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/limited_dataset/ConvAE_trainingData.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Overall testing result}
+    \caption{Overall testing result.}
     \includegraphics[scale=0.8]{figures/mantle_convection_images/limited_dataset/ConvAE_OverallTesting.png}
 \end{figure}
 
@@ -67,17 +67,17 @@ In the following figures, we present some detailed test results from this ConvAE
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/mantle_convection_images/limited_dataset/ConvAE_Best.png}
-    \caption{Best Case}
+    \caption{Best Case.}
     \label{fig:first}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/mantle_convection_images/limited_dataset/ConvAE_Worst.png}
-    \caption{Worst Case}
+    \caption{Worst Case.}
     \label{fig:second}
 \end{subfigure}
         
-\caption{Best case and worst case using ConvAE}
+\caption{Best case and worst case using ConvAE.}
 \label{fig:figures}
 \end{figure}
 
@@ -100,22 +100,22 @@ After testing with FNNs with architectures of different number of hidden layers 
 In the following figures, we present results from a FNN with 3 hidden layers with 3105, 1035, 3105 and 80 neurons, Tanh() as activation function, and trained for 1000 epochs.
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss}
+    \caption{Training loss and Validation loss.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/limited_dataset/FNN_trainingData.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Overall testing result}
+    \caption{Overall testing result.}
     \includegraphics[scale=0.8]{figures/mantle_convection_images/limited_dataset/FNN_OverallTesting.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Best case original output, original output after ConvAE's compression-decompression, and predicted output of FNN}
+    \caption{Best case original output, original output after ConvAE's compression-decompression, and predicted output of FNN.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/limited_dataset/FNN_Best.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst case original output, original output after ConvAE's compression-decompression, and predicted output of FNN}
+    \caption{Worst case original output, original output after ConvAE's compression-decompression, and predicted output of FNN.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/limited_dataset/FNN_Worst.png}
 \end{figure}
 
@@ -160,12 +160,12 @@ where the diagonal of $\Sigma$ contains the eigenvalues (POD coefficient) for th
 The following figures show the POD result in the best case and the worst case:
 
 \begin{figure}[H]
-    \caption{Best case POD}
+    \caption{Best case POD.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/limited_dataset/FNN_Best_POD.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst case POD}
+    \caption{Worst case POD.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/limited_dataset/FNN_Worst_POD.png}
 \end{figure}
 
@@ -193,22 +193,22 @@ After testing with LSTMs with different architectures, we found that architectur
 In the following figures, we present results from an architecture with 2 LSTM layers (first one input size is 6210, hidden size is 3105; second one input size is 3105, hidden size is 6210. Both of them only have one layer, no internal stacking), and trained for 200 epochs.
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss}
+    \caption{Training loss and Validation loss.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/limited_dataset/LSTM_trainingData.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Overall testing result}
+    \caption{Overall testing result.}
     \includegraphics[scale=0.8]{figures/mantle_convection_images/limited_dataset/LSTM_OverallTesting.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Best case original output, original output after ConvAE's compression-decompression, and predicted output of LSTM}
+    \caption{Best case original output, original output after ConvAE's compression-decompression, and predicted output of LSTM.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/limited_dataset/LSTM_Best.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst case original output, original output after ConvAE's compression-decompression, and predicted output of LSTM}
+    \caption{Worst case original output, original output after ConvAE's compression-decompression, and predicted output of LSTM.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/limited_dataset/LSTM_Worst.png}
 \end{figure}
 
@@ -238,12 +238,12 @@ To further evaluate the performance, we also applied POD to a sequence of predic
 The following figures show the POD result in best case and the worst case:
 
 \begin{figure}[H]
-    \caption{Best case POD}
+    \caption{Best case POD.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/limited_dataset/LSTM_Best_POD.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst case POD}
+    \caption{Worst case POD.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/limited_dataset/LSTM_Worst_POD.png}
 \end{figure}
 
@@ -265,12 +265,12 @@ The ConvAE used for compressing the temperature fields in this section has the s
 In the following figures, some detailed test results from this ConvAE trained with larger dataset are presented:
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss}
+    \caption{Training loss and Validation loss.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/larger_dataset/ConvAE_trainingData.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Overall testing result}
+    \caption{Overall testing result.}
     \includegraphics[scale=0.8]{figures/mantle_convection_images/larger_dataset/ConvAE_OverallTesting.png}
 \end{figure}
 
@@ -278,17 +278,17 @@ In the following figures, some detailed test results from this ConvAE trained wi
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/mantle_convection_images/larger_dataset/ConvAE_Best.png}
-    \caption{Best Case}
+    \caption{Best Case.}
     \label{fig:first}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/mantle_convection_images/larger_dataset/ConvAE_Worst.png}
-    \caption{Worst Case}
+    \caption{Worst Case.}
     \label{fig:second}
 \end{subfigure}
         
-\caption{Best case and worst case using ConvAE}
+\caption{Best case and worst case using ConvAE.}
 \label{fig:figures}
 \end{figure}
 
@@ -302,22 +302,22 @@ The FNN in this section also has the same structure and the same set of hyperpar
 The results are presented in the following figures:
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss}
+    \caption{Training loss and Validation loss.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/larger_dataset/FNN_trainingData.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Overall testing result}
+    \caption{Overall testing result.}
     \includegraphics[scale=0.8]{figures/mantle_convection_images/larger_dataset/FNN_OverallTesting.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Best case original output, original output after ConvAE's compression-decompression, and predicted output of FNN}
+    \caption{Best case original output, original output after ConvAE's compression-decompression, and predicted output of FNN.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset/FNN_Best.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst case original output, original output after ConvAE's compression-decompression, and predicted output of FNN}
+    \caption{Worst case original output, original output after ConvAE's compression-decompression, and predicted output of FNN.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset/FNN_Worst.png}
 \end{figure}
 
@@ -342,12 +342,12 @@ The following figures show 10\% of the sprites sheets converted from the origina
 
 
 \begin{figure}[H]
-    \caption{Best case POD}
+    \caption{Best case POD.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset/FNN_Best_POD.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst case POD}
+    \caption{Worst case POD.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset/FNN_Worst_POD.png}
 \end{figure}
 
@@ -361,22 +361,22 @@ The LSTM in this section also has the same structure and the same set of hyperpa
 The results are presented in the following figures:
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss}
+    \caption{Training loss and Validation loss.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/larger_dataset/LSTM_trainingData.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Overall testing result}
+    \caption{Overall testing result.}
     \includegraphics[scale=0.8]{figures/mantle_convection_images/larger_dataset/LSTM_OverallTesting.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Best case original output, original output after ConvAE's compression-decompression, and predicted output of LSTM}
+    \caption{Best case original output, original output after ConvAE's compression-decompression, and predicted output of LSTM.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset/LSTM_Best.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst case original output, original output after ConvAE's compression-decompression, and predicted output of LSTM}
+    \caption{Worst case original output, original output after ConvAE's compression-decompression, and predicted output of LSTM.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset/LSTM_Worst.png}
 \end{figure}
 
@@ -404,12 +404,12 @@ The following figures show 20\% of the sprites sheets converted from the origina
 
 
 \begin{figure}[H]
-    \caption{Best case POD}
+    \caption{Best case POD.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset/LSTM_Best_POD.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst case POD}
+    \caption{Worst case POD.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset/LSTM_Worst_POD.png}
 \end{figure}
 
@@ -434,12 +434,12 @@ The ConvAE used for compressing the temperature fields in this section has the s
 In the following figures, some detailed test results from this ConvAE trained with interpolated dataset are presented:
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss}
+    \caption{Training loss and Validation loss.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/larger_dataset_interpolated/ConvAE_trainingData.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Overall testing result}
+    \caption{Overall testing result.}
     \includegraphics[scale=0.8]{figures/mantle_convection_images/larger_dataset_interpolated/ConvAE_OverallTesting.png}
 \end{figure}
 
@@ -447,17 +447,17 @@ In the following figures, some detailed test results from this ConvAE trained wi
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/mantle_convection_images/larger_dataset_interpolated/ConvAE_Best.png}
-    \caption{Best Case}
+    \caption{Best Case.}
     \label{fig:first}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/mantle_convection_images/larger_dataset_interpolated/ConvAE_Worst.png}
-    \caption{Worst Case}
+    \caption{Worst Case.}
     \label{fig:second}
 \end{subfigure}
         
-\caption{Best case and worst case using ConvAE}
+\caption{Best case and worst case using ConvAE.}
 \label{fig:figures}
 \end{figure}
 
@@ -471,22 +471,22 @@ The FNN in this section also has the same structure and the same set of hyperpar
 The results are presented in the following figures:
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss}
+    \caption{Training loss and Validation loss.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/larger_dataset_interpolated/FNN_trainingData.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Overall testing result}
+    \caption{Overall testing result.}
     \includegraphics[scale=0.8]{figures/mantle_convection_images/larger_dataset_interpolated/FNN_OverallTesting.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Best case original output, original output after ConvAE's compression-decompression, and predicted output of FNN}
+    \caption{Best case original output, original output after ConvAE's compression-decompression, and predicted output of FNN.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset_interpolated/FNN_Best.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst case original output, original output after ConvAE's compression-decompression, and predicted output of FNN}
+    \caption{Worst case original output, original output after ConvAE's compression-decompression, and predicted output of FNN.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset_interpolated/FNN_Worst.png}
 \end{figure}
 
@@ -511,12 +511,12 @@ The following figures show 10\% of the sprites sheets converted from the origina
 
 
 \begin{figure}[H]
-    \caption{Best case POD}
+    \caption{Best case POD.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset_interpolated/FNN_Best_POD.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst case POD}
+    \caption{Worst case POD.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset_interpolated/FNN_Worst_POD.png}
 \end{figure}
 
@@ -530,22 +530,22 @@ The FNN in this section also has the same structure and the same set of hyperpar
 The results are presented in the following figures:
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss}
+    \caption{Training loss and Validation loss.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/larger_dataset_interpolated/LSTM_trainingData.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Overall testing result}
+    \caption{Overall testing result.}
     \includegraphics[scale=0.8]{figures/mantle_convection_images/larger_dataset_interpolated/LSTM_OverallTesting.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Best case original output, original output after ConvAE's compression-decompression, and predicted output of LSTM}
+    \caption{Best case original output, original output after ConvAE's compression-decompression, and predicted output of LSTM.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset_interpolated/LSTM_Best.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst case original output, original output after ConvAE's compression-decompression, and predicted output of LSTM}
+    \caption{Worst case original output, original output after ConvAE's compression-decompression, and predicted output of LSTM.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset_interpolated/LSTM_Worst.png}
 \end{figure}
 
@@ -570,12 +570,12 @@ The following figures show 20\% of the sprites sheets converted from the origina
 
 
 \begin{figure}[H]
-    \caption{Best case POD}
+    \caption{Best case POD.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset_interpolated/LSTM_Best_POD.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst case POD}
+    \caption{Worst case POD.}
     \includegraphics[scale=0.5]{figures/mantle_convection_images/larger_dataset_interpolated/LSTM_Worst_POD.png}
 \end{figure}
 
@@ -590,32 +590,32 @@ To determine experimentally for how many time steps we can use the trained FNN d
 To compare against different values of S, POD are applied for each of the generated temperature field sequence to compare the difference of the eigenvalues between the predicted simulations and actual simulations. The data loss for each simulation are computed as well. The result for S = 1, 2, 4, 8, 16, 99 are shown as below (where S=1 is essentially the first method in the FNN section and S=99 is the second method):
 
 \begin{figure}[H]
-    \caption{Data Loss for S consecutive time steps}
+    \caption{Data Loss for S consecutive time steps.}
     \includegraphics[scale=0.7]{figures/mantle_convection_images/further_testings/Data_Loss_table.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{POD difference for S consecutive time steps}
+    \caption{POD difference for S consecutive time steps.}
     \includegraphics[scale=0.7]{figures/mantle_convection_images/further_testings/POD_table.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Relative POD difference for S consecutive time steps}
+    \caption{Relative POD difference for S consecutive time steps.}
     \includegraphics[scale=0.7]{figures/mantle_convection_images/further_testings/Relative_POD_table.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Box Plot for data loss when FNN is used in S consecutive time steps before correction}
+    \caption{Box Plot for data loss when FNN is used in S consecutive time steps before correction.}
     \includegraphics[scale=0.4]{figures/mantle_convection_images/further_testings/Data_Loss_boxplot.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Box Plot for POD difference when FNN is used in S consecutive time steps before correction}
+    \caption{Box Plot for POD difference when FNN is used in S consecutive time steps before correction.}
     \includegraphics[scale=0.4]{figures/mantle_convection_images/further_testings/POD_boxplot.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Box Plot for relative POD difference when FNN is used in S consecutive time steps before correction}
+    \caption{Box Plot for relative POD difference when FNN is used in S consecutive time steps before correction.}
     \includegraphics[scale=0.4]{figures/mantle_convection_images/further_testings/Relative_POD_boxplot.png}
 \end{figure}
 
@@ -624,7 +624,7 @@ For better visualisation, the animation representing the ground truth and the pr
 \begin{figure}[H]
     \centering
     \caption{Animation sheet for different values of S, including S = 1, 2, 4, 8, 16, 99 (Link to this GIF: \url{https://drive.google.com/file/d/1XOqXxLkuxnnvaTR0jw-7Sm68IqQFnTFf/view?usp=sharing})}
-    \includegraphics[scale=0.20]{figures/mantle_convection_images/further_testings/FNN_further_testing_sheet.png}
+    \includegraphics[scale=0.30]{figures/mantle_convection_images/further_testings/FNN_further_testing_sheet.png}
 \end{figure}
 
 We can observe the sum of loss and the sum of POD difference tend to have a rapid increase when S is increased from 4 to 8, as well as the standard of deviation of the data loss. In this case, the maximum value of S that is not significantly affecting accuracy should be 4.

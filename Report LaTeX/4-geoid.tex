@@ -1,23 +1,28 @@
 \chapter{Geoid prediction}\label{chap:content}
 
+To explore the the potential use of neural networks in forward modelling a geoid surface, we use a 1D spherically symmetric viscosity model to compute a geoid surface in terms of some spherical harmonics coefficients that can be used to construct the Geoid surface. To further simplify this problem, the data set used for this research uses a reduced
+prior such that the perturbations to the output are smaller.
+
+
 \section{Dataset of Geoid prediction}
 
-The data set consists of 1000 pairs of input and output. In the data set, input is a vector with 257 values representing a geoid model and output is a vector with 60 values representing a set of spherical harmonic coefficients describing the geoid height on the surface of the Earth. The following figure is a sample visualization of a random set of 60 geoid coefficients from the output data as a 2D image, where this set of coefficients basically map to an image wrapped on the surface of a sphere.
+The reduced data set consists of 1000 pairs of input and output. In the data set, input is a vector with 257 values indicating a 1D spherically symmetric viscosity model and output is a vector with 60 values representing a set of spherical harmonic coefficients describing the geoid height on the surface of the Earth. The following figure is a sample visualization of a random set of 60 geoid coefficients from the output data as a 2D image, where this set of coefficients basically map to an image wrapped on the surface of a sphere.
 
 \begin{figure}[H]
-    \caption{Sample Geoid Coefficients Visualization}
+    \caption{Sample Geoid Coefficients Visualization,  where the units of the geoid are in metres and 
+     represent values greater or less than some reference value.}
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_Sample_visualization.png}
 \end{figure}
 
 To further observe the patterns in the input and the output, 10 pairs of model input and output are plotted in the following figures.
 
 \begin{figure}[H]
-    \caption{Every 100th input in the data set}
+    \caption{Every 100th input in the data set.}
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_sample_input.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Every 100th input in the data set}
+    \caption{Every 100th output in the data set.}
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_sample_output.png}
 \end{figure}
 
@@ -45,22 +50,22 @@ In the following figures, we present results from a FNN with 4 hidden layers wit
 One thing to notice is that the loss value that is back-propagated during the training process is calculated using the prediction and the normalised output. In this case, the best case and the worst case shown as below are also defined upon the value of this normalised error in order to be consistent.
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss}
+    \caption{Training loss and Validation loss.}
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_trainingData.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Overall testing result}
+    \caption{Overall testing result.}
     \includegraphics[scale=0.8]{figures/geoid_images/Geoid_OverallTesting.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Best input and output}
+    \caption{Most accurate Geoid prediction.}
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_Best.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Worst input and output}
+    \caption{Least accurate Geoid prediction.}
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_Worst.png}
 \end{figure}
 
@@ -69,13 +74,13 @@ On average, both the normalised loss and the reconstructed loss are low and no o
 For further testing, the set of 60 coefficients produced by the FNN in both the best case and the worst case are visualized on globe geoid maps that are flattened as a 2D images, along with the map of the actual output data and an error map representing the difference between the prediction and the ground truth.
 
 \begin{figure}[H]
-    \caption{Visualization of the most and the least accurate Geoid prediction}
-    \includegraphics[scale=0.4]{figures/geoid_images/Geoid_Best_Worst.png}
+    \caption{Visualization of the most accurate Geoid prediction.}
+    \includegraphics[scale=0.4]{figures/geoid_images/Geoid_Best_visualization.png}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Visualization of errors in the most and the least accurate Geoid prediction}
-    \includegraphics[scale=0.4]{figures/geoid_images/Geoid_Errors.png}
+    \caption{Visualization of the least accurate Geoid prediction.}
+    \includegraphics[scale=0.4]{figures/geoid_images/Geoid_Worst_visualization.png}
 \end{figure}
 
 We can observe that the result produced by the FNN is in high quality even in the worst case.

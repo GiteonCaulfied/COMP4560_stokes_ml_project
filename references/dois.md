@@ -91,3 +91,10 @@ doi:10.1515/9783110671490-007
 
 # The Proper Orthogonal Decomposition in the Analysis of Turbulent Flows
 doi:10.1146/annurev.fl.25.010193.002543
+
+# Referencee about Geoid
+doi:10.1038/299104a0
+
+doi:10.1098/rsta.1989.0038
+
+doi:10.1029/JB089iB07p05987
