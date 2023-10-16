@@ -1,5 +1,18 @@
 \Block{Introduction}{
 
+\textbf{Motivation}
+
+\begin{itemize}
+     \item In the field of computational geophysics, the continuum equations that govern a given physical phenomena (e.g. fluid flow inside the Earth's Mantle) is typically known. However, due to scarceness or uncertainty of data measurements, these equations cannot generate accurate predictions with data fed out-of-the-box.
+
+     \item To solve this problem, the concept of inverse problem is proposed where the objective is to find a model using gradient-optimization techniques which best fits to the available data coming from partial, incomplete or noisy measurements. Unfortunately, the standard approach to solve the inverse problem, adjoint method, is also very computationally demanding, as it requires to solve a time-dependent nonlinear forward problem and an adjoint problem at each gradient-optimization step.
+
+     \item The motivation of this research is, therefore, to reduce computational demands by evaluating the suitability of deep learning techniques as surrogate models that enable one to approximate the forward and adjoint problems with much less computational demands.
+
+     \item As a first step towards this goal, we have tackled the forward problem of two classic problems in geodynamics, namely the Geoid and 2D Mantle convection problems.
+\end{itemize}
+
+
 \textbf{Geoid Problem}
 
 \begin{figure}[H]
@@ -116,6 +129,11 @@
     \includegraphics[width=0.5\linewidth]{figures/temperature_field_example.png}
     \caption{Sample Temperature field.}
 \end{figure}   
+}
+
+
+
+\Block{Methods(Continue)}{
 
 \begin{itemize}   
     
@@ -127,11 +145,6 @@
     \includegraphics[width=0.8\linewidth]{figures/ConvAE_workflow.png}
     \caption{ConvAE workflow.}
 \end{figure}
-}
-
-
-
-\Block{Methods(Continue)}{
 
 \begin{itemize}  
     \item Given a temperature field in its latent space representation, using Fully Connected Neural Network (FNN) to predict temperature field at the next timestamp. 
@@ -172,13 +185,14 @@
 \end{itemize}
 
 \begin{figure}[H]
-    \includegraphics[width=\linewidth]{figures/Geoid_Best_visualization}
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/Geoid_Best_visualization}
     \caption{Visualization of the most accurate Geoid prediction.}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{figures/Geoid_Worst_visualization}
+    \includegraphics[width=0.8\linewidth]{figures/Geoid_Worst_visualization}
     \caption{Visualization of the least accurate Geoid prediction.}
 \end{figure}
 
@@ -233,15 +247,14 @@
 \end{itemize}
 
 \begin{figure}[H]
-    \includegraphics[width=\linewidth]{figures/FNN_animation_sheet.png}
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/FNN_animation_sheet.png}
     \caption{Best case animation sheet for FNN trained with Interpolated Dataset, where each frame consists of 3 temperature fields as a group, representing the ground truth, prediction from the first method (output-as-input looping) and prediction from the second method (single prediction). Predictions from 10 different time steps are presented in this sheet from left to right and top to bottom, including 10, 20, 30, 40, 50, 60, 70, 80, 90, 100.}
 \end{figure}
 
 }
 
 \Block{Results and Findings (Continue)}{
-
-
 
 \begin{itemize}
     \item Further Testings on FNN trained with Interpolated Dataset
@@ -253,12 +266,12 @@
 \end{itemize}
 
 \begin{figure}[H]
-    \includegraphics[width=\linewidth]{figures/FNN_boxplot.png}
+    \includegraphics[width=0.8\linewidth]{figures/FNN_boxplot.png}
     \caption{Box Plot for data loss when FNN is used in S consecutive time steps before correction.}
 \end{figure}
 
 \begin{figure}[H]
-    \includegraphics[width=\linewidth]{figures/FNN_further_testing_sheet.png}
+    \includegraphics[width=0.9\linewidth]{figures/FNN_further_testing_sheet.png}
     \caption{Animation sheet when FNN is either not used (ground truth at the first row) or used in S consecutive time steps before correction, where S = 1, 2, 4, 8, 16, 99 (started from the second row). The time steps, from left to right, are 1, 25, 50, 75, 100.}
 \end{figure}
 }
