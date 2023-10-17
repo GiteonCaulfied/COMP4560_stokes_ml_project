@@ -1,5 +1,18 @@
 
 import numpy
+
+# Function to fix errors when using pyshtools
+def patch_asscalar(a):
+    return a.item()
+
+setattr(numpy, "asscalar", patch_asscalar)
+
+def patch_alen(a):
+    return a.len()
+
+setattr(numpy, "alen", patch_asscalar)
+
+
 from scipy.special import sph_harm
 
 import pyshtools
