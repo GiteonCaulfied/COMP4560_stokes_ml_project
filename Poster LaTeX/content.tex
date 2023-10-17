@@ -3,14 +3,17 @@
 \textbf{Motivation}
 
 \begin{itemize}
-     \item In the field of computational geophysics, the continuum equations that govern a given physical phenomena (e.g. fluid flow inside the Earth's Mantle) is typically known. However, due to scarceness or uncertainty of data measurements, these equations cannot generate accurate predictions with data fed out-of-the-box.
+    \item Earth's mantle, constituting the topmost 3000 km layer, undergoes a process known as mantle convection. This is characterised by the slow churning motion driven by heat originating from the core. It entails the upward movement of warm, buoyant material and the downward migration of cooler, denser matter. This phenomenon is the main driving force behind tectonic plate movements and sculpting the Earth's surface. Intriguingly, despite the mantle being solid rock, it exhibits viscous fluid-like behavior over vast geological timescales spanning millions of years.
 
-     \item To solve this problem, the concept of inverse problem is proposed where the objective is to find a model using gradient-optimization techniques which best fits to the available data coming from partial, incomplete or noisy measurements. Unfortunately, the standard approach to solve the inverse problem, adjoint method, is also very computationally demanding, as it requires to solve a time-dependent nonlinear forward problem and an adjoint problem at each gradient-optimization step.
+    \item A paramount challenge in geosciences is reconstructing the thermo-chemical evolution of Earth's mantle and its various surface manifestations. This necessitates the development of a digital twin—a digital depiction of Earth's mantle across spatial and temporal dimensions, harmonising with observational data pertaining to the mantle's structure, dynamics, and evolution. Notably, while the continuum equations governing mantle convection are understood, it remains an initial condition problem, implying that insights into previous mantle states are imperative for reconstructing Earth's evolution.
 
-     \item The motivation of this research is, therefore, to reduce computational demands by evaluating the suitability of deep learning techniques as surrogate models that enable one to approximate the forward and adjoint problems with much less computational demands.
+    \item Addressing this issue, the concept of the inverse problem is introduced. Here, the aim is to determine a model through gradient-optimisation techniques, which aligns most coherently with data derived from partial, imperfect, or noisy measurements. The predominant strategy for deciphering this inverse problem is the adjoint method. Nevertheless, this approach is computationally intensive, necessitating the computation of both a time-dependent nonlinear forward problem and the corresponding adjoint system for each optimisation iteration.
 
-     \item As a first step towards this goal, we have tackled the forward problem of two classic problems in geodynamics, namely the Geoid and 2D Mantle convection problems.
+    \item The primary motivation behind this research is to curtail computational requirements. This is achieved by exploring the potential of deep learning methods as surrogate models. These models offer the means to approximate the forward and adjoint problems with significantly reduced computational cost.
+
+    \item As a first attempt in this direction, we have addressed the forward problem associated with two well-established geodynamics problems: (i) the semi-analytical solutions to the system integrated with Stokes and Poisson gravitational equations—referred to as the `Geoid' problem. These solutions simplify the Stokes system by presuming radial symmetry in the mantle's viscous properties, resulting in an instantaneous system, and (ii) the 2D Mantle convection problems. Here, the thermal evolution of a Stokes system is modelled by resolving the partial differential equations derived from the conservation equations of mass, momentum, and energy, in their simplest form of the Boussinesq approximation.
 \end{itemize}
+
 
 
 \textbf{Geoid Problem}
@@ -45,7 +48,7 @@
             \item Where \begin{equation} \Theta(x) = xA^{T} + b \end{equation}
 
             \item Here, FNN $\mathcal{N}$ is represented as the composition of $n$ affine maps ($n$ hidden layers) $\Theta$ and activation function $g$, where $\theta$ represents all the learnable parameters -- $A$ and $b$ in different $\Theta$. $A$ is the weight matrix (with a size of $num_\text{output neurons} \times num_\text{input neurons}$) and $b$ (with a size of $1 \times num_\text{output neurons}$) is the bias vector.
-            
+
         \end{itemize}
     \item Convolutional Autoencoders (ConvAE)
         \begin{itemize}
@@ -56,10 +59,10 @@
     \item Long short-term memory (LSTM)
         \begin{itemize}
             \item Use a sequence of input recurrently to predict a sequence of output.
-            
+
             \item Handle time-series data more accurately than other networks.
         \end{itemize}
-        
+
 \end{itemize}
 
 }
@@ -69,15 +72,15 @@
 \textbf{Geoid Problem}
 
 \begin{itemize}
-     \item This research aims to use Neural Network as a way to forward model the geoid problem, assuming that viscosity varying in the radial direction with depth is the most important factor. 
-     
-     \item The Earths viscosity is modelled as a 1D spherically symmetric viscosity model and a geoid surface is computed in terms of spherical harmonics coefficients, which can be used to construct the Geoid surface.  
+     \item This research aims to use Neural Network as a way to forward model the geoid problem, assuming that viscosity varying in the radial direction with depth is the most important factor.
+
+     \item The Earths viscosity is modelled as a 1D spherically symmetric viscosity model and a geoid surface is computed in terms of spherical harmonics coefficients, which can be used to construct the Geoid surface.
 \end{itemize}
 
 \textbf{Mantle Convection Problem}
 
 \begin{itemize}
-     \item (TODO)  
+     \item (TODO)
 \end{itemize}
 }
 
@@ -86,13 +89,13 @@
 
 \textbf{Geoid Problem}.
 \begin{itemize}
-    \item Testing on a simplified small dataset (having 1000 pairs of input and output) using a reduced prior such that the perturbations to the output are smaller. 
-    
+    \item Testing on a simplified small dataset (having 1000 pairs of input and output) using a reduced prior such that the perturbations to the output are smaller.
+
         \begin{itemize}
             \item Input: a vector with 257 values indicating a 1D spherically symmetric viscosity model.
-            
+
 	    \item Output: a vector with 60 values         representing a set of spherical harmonic      coefficients describing the geoid height      on the surface of the Earth.
-        \end{itemize}  
+        \end{itemize}
 \end{itemize}
 
 \begin{figure}[H]
@@ -113,13 +116,13 @@
 \begin{itemize}
 
     \item Testing on 3 different datasets, where each dataset is composed of various simulations that each has 100 temperature fields and 100 timestamps.
-    
+
         \begin{itemize}
-            
+
             \item Limited dataset: 100 simulations, varying distance between consecutive time steps.
-            
+
 	    \item Larger dataset: 903 simulations,           varying distance between consecutive          time steps.
-     
+
             \item Interpolated dataset: generated from the Larger dataset, 903 simulations, equal distance between consecutive time steps.
         \end{itemize}
 \end{itemize}
@@ -128,15 +131,15 @@
     \centering
     \includegraphics[width=0.5\linewidth]{figures/temperature_field_example.png}
     \caption{Sample Temperature field.}
-\end{figure}   
+\end{figure}
 }
 
 
 
 \Block{Methods(Continue)}{
 
-\begin{itemize}   
-    
+\begin{itemize}
+
     \item Using Convolutional Autoencoders (ConvAE) to compress the data into its latent space representation.
 \end{itemize}
 
@@ -146,8 +149,8 @@
     \caption{ConvAE workflow.}
 \end{figure}
 
-\begin{itemize}  
-    \item Given a temperature field in its latent space representation, using Fully Connected Neural Network (FNN) to predict temperature field at the next timestamp. 
+\begin{itemize}
+    \item Given a temperature field in its latent space representation, using Fully Connected Neural Network (FNN) to predict temperature field at the next timestamp.
 \end{itemize}
 
 \begin{figure}[H]
@@ -156,17 +159,17 @@
     \caption{FNN workflow.}
 \end{figure}
 
-\begin{itemize} 
+\begin{itemize}
     \item Two ways to predict a complete simulation using FNN:
 
         \begin{itemize}
             \item use $T1$ from data set $\rightarrow$ get predicted $T2$ $\rightarrow$ use predicted $T2$ $\rightarrow$ get predicted $T3$ $\rightarrow$ ...
-            
+
             \item use $T1$ from data set $\rightarrow$ get predicted $T2$ $\rightarrow$ use $T2$ from data set $\rightarrow$ get predicted $T3$ $\rightarrow$ ...
         \end{itemize}
 
     \item Given the first 50 temperature fields from a simulation in its latent space representation, using Long Short-Term Memory (LSTM) to predict the last 50 temperature fields as a sequence.
-     
+
 \end{itemize}
 
 \begin{figure}[H]
@@ -200,26 +203,26 @@
 \textbf{Mantle Convection Problem}
 
 \begin{itemize}
-    
+
     \item Limited Dataset
         \begin{itemize}
             \item ConvAE has low reconstruction error given a latent space size of 6x23x45, which offers an excellent compression factor of 13.
-            
+
             \item FNN has low loss value when predicting the next temperature field given a total of 3 hidden layers. However, when predicting a complete simulation using FNN:
-            
+
             \begin{itemize}
                 \item output-as-input prediction fails to capture the trend of simulation in its worst case and the prediction result is completely different to the actual simulations.
-            
+
                 \item while the second method mostly matches with the actual output even in its worst case.
-            
+
             \end{itemize}
 
             \item LSTM has a higher loss value than FNN, but is able to capture the characteristic of the simulation more precisely.
 
             \item predicted animations generated by FNN and LSTM are either moving faster or slower than the actual simulations.
-            
+
         \end{itemize}
-        
+
     \item Larger Dataset
         \begin{itemize}
             \item Low reconstruction error for ConvAE given the same architecture.
@@ -227,23 +230,23 @@
             \item No significant improvement for the prediction result of FNN and LSTM.
 
             \item Confirmed that the lower accuracy of LSTM is not caused by some potential underfitting problem brought by the limited size of the data.
-            
+
             \item The problem of the predicted animations having inconsistent speed still exists.
-            
+
         \end{itemize}
 
-        
+
     \item Interpolated Dataset
-    
+
     \begin{itemize}
             \item Lower reconstruction error is 3 times lower for ConvAE given the same architecture.
 
             \item Better performance for both FNN and LSTM.
-            
+
             \item The problem of the predicted animations having inconsistent speed with the actual one is now solved. Confirmed that this problem is caused by the varying distance between consecutive time steps.
-            
-    \end{itemize} 
-       
+
+    \end{itemize}
+
 \end{itemize}
 
 \begin{figure}[H]
@@ -262,7 +265,7 @@
             \item The aim is to determine experimentally for how many time steps we can use the trained FNN during a set of S consecutive time steps (e.g., S=2 and then ”correct” the time series with the truth coming from the simulator) without losing track of the transient dynamics (How large can S be without significantly affecting accuracy).
 
             \item The maximum value of S that is not significantly affecting accuracy should be 4 since the sum of loss and the sum of POD (Proper Orthogonal Decomposition) difference tend to have a rapid increase when S is increased from 4 to 8.
-        \end{itemize}          
+        \end{itemize}
 \end{itemize}
 
 \begin{figure}[H]
@@ -280,7 +283,7 @@
 \textbf{Geoid Problem}
 
 \begin{itemize}
-     \item This research is presented as a proof showing that high-dimensional regression algorithms like neural networks can help with the forward modelling of the geoid problem when predicting a set of spherical harmonic coefficients given a reduced dataset with a fairly small number of 1D spherically symmetric viscosity models. 
+     \item This research is presented as a proof showing that high-dimensional regression algorithms like neural networks can help with the forward modelling of the geoid problem when predicting a set of spherical harmonic coefficients given a reduced dataset with a fairly small number of 1D spherically symmetric viscosity models.
 \end{itemize}
 
 \textbf{Mantle Convection Problem}
