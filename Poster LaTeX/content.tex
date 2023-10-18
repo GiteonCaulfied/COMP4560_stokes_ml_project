@@ -32,26 +32,27 @@
 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{figures/Mantle_Convection_workflow.png}
-    \caption{Typical Mantle Convection Workflow.}
+    \caption{Typical mantle convection workflow.}
 \end{figure}
 
 \begin{itemize}
-    \item The thermal evolution of this Stokes system is modelled by resolving the partial differential equations derived from the conservation equations of mass, momentum, and energy, in their simplest form of the Boussinesq approximation. 
+    \item The thermal evolution is modelled by solving numerically the Stokes system of partial differential equations derived from the conservation equations of mass, momentum, and energy, in their simplest form of the Boussinesq approximation. 
 \end{itemize}
 
 \textbf{Neural Networks}
 \begin{itemize}
     \item Fully Connected Neural Network (FNN)
-        \begin{itemize}
-            \item\begin{equation}
-            \mathcal{N}(\theta) = \Theta_\text{n} \circ g \circ \Theta_\text{n-1} ... \circ g \circ \Theta_1
-            \end{equation}
-
-            \item Where \begin{equation} \Theta(x) = xA^{T} + b \end{equation}
-
-            \item Here, FNN $\mathcal{N}$ is represented as the composition of $n$ affine maps ($n$ hidden layers) $\Theta$ and activation function $g$, where $\theta$ represents all the learnable parameters -- $A$ and $b$ in different $\Theta$. $A$ is the weight matrix (with a size of $num_\text{output neurons} \times num_\text{input neurons}$) and $b$ (with a size of $1 \times num_\text{output neurons}$) is the bias vector.
-
+            \begin{itemize} 
+                \item A FNN is a parameterized function, denoted $\mathcal{N}(\theta)$, which is defined as the chained composition of $n$ affine maps $\Theta_i$ (i.e., $n$ hidden layers) and activation function $g$:
+            \begin{equation*}
+            \mathcal{N}(\theta) = \Theta_n \circ g \circ \Theta_{n-1} \circ \ldots \circ g \circ \Theta_1,
+            \end{equation*}
+            where  $\theta$ represents the set of all learnable parameters.
+               \item The affine maps are defined as:
+            \begin{equation*} \Theta_i(x) = xA_i^{T} + b_i, \ \mathrm{with} \ i=1,\ldots,n, \end{equation*}
+            where $A_i$ and $b_i$ are the weight matrix and bias vector, respectively, corresponding to the $i$-th hidden layer.
         \end{itemize}
+
     \item Convolutional Autoencoders (ConvAE)
         \begin{itemize}
             \item An encoder using convolution operation to reduce the size of the original input field and output a latent space representation.
@@ -74,9 +75,9 @@
 \textbf{Geoid Problem}
 
 \begin{itemize}
-     \item This research aims to use Neural Network as a way to forward model the geoid problem, assuming that viscosity varying in the radial direction with depth is the most important factor.
+     \item This research aims to use Neural Networks as a way to forward model the geoid problem, assuming that viscosity varying in the radial direction with depth is the most important factor.
 
-     \item The Earths viscosity is modelled as a 1D spherically symmetric viscosity model and a geoid surface is computed in terms of spherical harmonics coefficients, which can be used to construct the geoid surface.
+     \item The Earth's viscosity is modelled as a 1D spherically symmetric viscosity model and a geoid surface is computed in terms of spherical harmonics coefficients, which can be used to construct the geoid surface.
 \end{itemize}
 
 \textbf{Mantle Convection Problem}
@@ -103,7 +104,7 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{figures/Geoid_Sample_visualization.png}
-    \caption{Sample geoid coefficients, where the units of the geoid are in metres and represent values greater or less than some reference value.}
+    \caption{Sample geoid field, where the units of the geoid are in metres and represent values greater or less than some reference value.}
 \end{figure}
 
 \begin{itemize}
@@ -117,11 +118,13 @@
 \textbf{Mantle Convection Problem}
 \begin{itemize}
 
-    \item Testing on 3 different datasets, where each dataset is composed of various simulations that each has 100 temperature fields and 100 timestamps.
+    \item Testing on 3 different datasets, where each dataset is composed of several temperature 
+          time-series with 100 timestamps each resulting from numerical simulations 
+          with randomly sampled initial conditions.
 
         \begin{itemize}
 
-            \item Limited dataset: 100 simulations, varying distance between consecutive time steps.
+        \item Limited dataset: 100 simulations, varying distance between consecutive time steps.
 
 	    \item Larger dataset: 903 simulations,           varying distance between consecutive          time steps.
 
@@ -138,7 +141,7 @@
 
 
 
-\Block{Methods(Continue)}{
+\Block{Methods (Continue)}{
 
 \begin{itemize}
 
@@ -177,7 +180,7 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{figures/LSTM_workflow.png}
-    \caption{General LSTM structure and the workflow in this research, Source of the left figure: StackOverflow}
+    \caption{General LSTM structure and the workflow in this research. (Source of the left figure: StackOverflow.)}
 \end{figure}
 }
 
@@ -186,7 +189,8 @@
 \textbf{Geoid Problem}.
 
 \begin{itemize}
-    \item FNN architectures with a total number of 4 hidden layers have the best performance when the output data is normalised using a scaler before training and testing.
+    \item FNN architectures with a total number of 4 hidden layers have the best performance (among those tested)
+    when the output data is normalised using a scaler before training and testing.
 \end{itemize}
 
 \begin{figure}[H]
@@ -254,7 +258,7 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{figures/FNN_animation_sheet.png}
-    \caption{Best case animation sheet for FNN trained with Interpolated Dataset, where each frame consists of 3 temperature fields as a group, representing the ground truth, prediction from the first method (output-as-input looping) and prediction from the second method (single prediction). Predictions from 10 different time steps are presented in this sheet from left to right and top to bottom, including 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. (see Fig 4 for colorbar)}
+    \caption{Best case animation sheet for FNN trained with Interpolated Dataset, where each frame consists of 3 temperature fields as a group, representing the ground truth, prediction from the first method (output-as-input looping) and prediction from the second method (single prediction). Predictions from 10 different time steps are presented in this sheet from left to right and top to bottom, including 10, 20, 30, 40, 50, 60, 70, 80, 90, and 100. (see Fig. 4 for colorbar)}
 \end{figure}
 
 }
@@ -277,7 +281,7 @@
 
 \begin{figure}[H]
     \includegraphics[width=0.9\linewidth]{figures/FNN_further_testing_sheet.png}
-    \caption{Animation sheet when FNN is either not used (ground truth at the first row) or used in S consecutive time steps before correction, where S = 1, 2, 4, 8, 16, 99 (started from the second row). The time steps, from left to right, are 1, 25, 50, 75, 100. (see Fig 4 for colorbar)}
+    \caption{Animation sheet when FNN is either not used (ground truth at the first row) or used in S consecutive time steps before correction, where S = 1, 2, 4, 8, 16, and 99 (started from the second row). The time steps, from left to right, are 1, 25, 50, 75, and 100. (see Fig. 4 for colorbar)}
 \end{figure}
 }
 
@@ -315,15 +319,15 @@
 \textbf{Mantle Convection Problem}
 
 \begin{itemize}
-     \item Future studies may continue to explore the potential use of the trained FNN on a set of S consecutive time steps. If we can somehow replace the fine-grained truth temperature field from the simulator (size is 201x401), that is used to "correct" the predicted time series, with a coarse-grained temperature field (e.g. size is 50x100), the computational complexity of modelling mantle convection problem could be further reduced.
+     \item Future studies may continue to explore the potential use of the trained FNN on a set of S consecutive time steps. If we can replace the fine-grained truth temperature field from the simulator (size is 201x401), which is used to "correct" the predicted time series, with a coarse-grained temperature field (e.g., size is 50x100), the computational demands of modelling mantle convection problem could be further reduced.
 
-     \item Future studies could also focus on improving the performance of LSTM or using less truth temperature fields to predict more temperature fields, rather than sticking to the current ratio of 50:50 for input and output due to the technical limitation of PyTorch.
+     \item Future studies could also focus on improving the performance of LSTM or using less truth temperature fields to predict more temperature fields, rather than sticking to the current ratio of 50:50 for input and output due to technical limitations of PyTorch.
 
      \item The outliers in Figure 11 could be further investigated to see whether a common pattern can be identified.
 
      \item More complex physics (e.g., non-linear constitutive laws) could be considered in the Mantle convection model.
 
-     \item Investigating to which extent the current surrogate forward models are accurate enough to end up with sensible, application experts-certified solutions to the inverse Mantle Convection problem.
+     \item Investigating to which extent the current surrogate forward models are accurate enough to end up with sensible, application experts-certified solutions to the inverse mantle convection problem.
 \end{itemize}
 }
 
@@ -335,8 +339,7 @@ Geophysical Journal International, 222, 3 (may 2020), 1656–1670. doi:10.1093/g
 \item Agarwal, S.; Tosi, N.; Kessel, P.; Breuer, D.; and Montavon, G., 2021. Deep learning for surrogate modeling of two-dimensional mantle convection. Physical
 Review Fluids, 6, 11 (nov 2021). doi:10.1103/physrevf luids.6.113801. https://doi.org/10.1103/physrevfluids.6.113801.
 
-\item Kerl, J., 2022. Geoid Inversion For Mantle Viscosity With Convolutional Neural Net-
-works. Master thesis.
+\item Kerl, J., 2022. Geoid Inversion For Mantle Viscosity With Convolutional Neural Networks. Master thesis.
 \end{itemize}
 }
 
