@@ -5,7 +5,7 @@
 \begin{itemize}
     \item Earth's mantle, the topmost 3000 km layer, undergoes a process known as mantle convection. A paramount challenge in geosciences is reconstructing the thermochemical evolution of Earth's mantle and its various surface manifestations, where the insights into previous mantle states are imperative.
 
-    \item Therefore, the concept of the inverse problem is introduced to determine a model through gradient-optimisation techniques that aligns most coherently with data derived from partial, imperfect, or noisy measurements, whose predominant strategy is called adjoint method. Nevertheless, this approach is computationally intensive.
+    \item Therefore, the concept of the inverse problem is introduced, whose predominant strategy is called adjoint method. Nevertheless, this approach is computationally intensive.
 
     \item The primary motivation behind this research is to curtail computational requirements. This is achieved by exploring the potential of deep learning methods as surrogate models that offer the means to approximate the forward and adjoint problems with significantly reduced computational cost.
 
@@ -189,9 +189,7 @@
 \begin{itemize}
     \item Further Testings on FNN trained with Interpolated Dataset
         \begin{itemize}
-            \item The aim is to determine experimentally for how many time steps we can use the trained FNN during a set of S consecutive time steps (e.g., S=2 and then ”correct” the time series with the truth coming from the simulator) without losing track of the transient dynamics (How large can S be without significantly affecting accuracy).
-
-            \item The growth of the loss function (accuracy degradation) with S is remarkably moderate, with only a few outliers deviating moderately from the median.
+            \item The aim is to determine experimentally for how many time steps we can use the trained FNN during a set of S consecutive time steps (e.g., S=2 and then ”correct” the time series with the truth coming from the simulator) without losing track of the transient dynamics.
         \end{itemize}
 \end{itemize}
 
