@@ -3,7 +3,7 @@
 \textbf{Motivation}
 
 \begin{itemize}
-    \item Earth's mantle, the topmost 3000 km layer, undergoes a process known as mantle convection. A paramount challenge in geosciences is reconstructing the thermochemical evolution of Earth's mantle and its various surface manifestations, where the insights into previous mantle states are imperative.
+    \item Earth's mantle, between the crust and the liquid outercore, undergoes a process known as mantle convection. A paramount challenge in geosciences is reconstructing the thermochemical evolution of Earth's mantle and its various surface manifestations, where the insights into previous mantle states are imperative.
 
     \item Therefore, the concept of the inverse problem is introduced, whose predominant strategy is called adjoint method. Nevertheless, this approach is computationally intensive.
 
@@ -39,6 +39,34 @@
     \item The thermal evolution is modelled by solving numerically the Stokes system of partial differential equations derived from the conservation equations of mass, momentum, and energy, in their simplest form of the Boussinesq approximation. 
 \end{itemize}
 
+\textbf{Neural Networks}
+\begin{itemize}
+    \item Fully Connected Neural Network (FNN)
+            \begin{itemize} 
+                \item A FNN is a parameterized function, denoted $\mathcal{N}(\theta)$, which is defined as the chained composition of $n$ affine maps $\Theta_i$ (i.e., $n$ hidden layers) and activation function $g$:
+            \begin{equation*}
+            \mathcal{N}(\theta) = \Theta_n \circ g \circ \Theta_{n-1} \circ \ldots \circ g \circ \Theta_1,
+            \end{equation*}
+            where $\theta$ represents the set of all learnable parameters.
+               \item The affine maps are defined as:
+            \begin{equation*} \Theta_i(x) = xA_i^{T} + b_i, \ \mathrm{with} \ i=1,\ldots,n, \end{equation*}
+            where $A_i$ and $b_i$ are the weight matrix and bias vector, respectively, corresponding to the $i$-th hidden layer.
+        \end{itemize}
+
+    \item Convolutional Autoencoders (ConvAE)
+        \begin{itemize}
+            \item An encoder using convolution operation to reduce the size of the original input field and output a latent space representation.
+
+            \item A decoder using deconvolution operation to transform the latent space representation back to the original size field.
+        \end{itemize}
+    \item Long short-term memory (LSTM)
+        \begin{itemize}
+            \item Use a sequence of input recurrently to predict a sequence of output.
+
+            \item Handle time-series data more accurately than other networks.
+        \end{itemize}
+
+\end{itemize}
 }
 
 
@@ -47,14 +75,12 @@
 
 \begin{itemize}
      \item This research aims to use Neural Networks as a way to forward model the geoid problem, assuming that viscosity varying in the radial direction with depth is the most important factor.
-
-     \item The Earth's viscosity is modelled as a 1D spherically symmetric viscosity model and a geoid surface is computed in terms of spherical harmonics coefficients, which can be used to construct the geoid surface.
 \end{itemize}
 
 \textbf{Mantle Convection Problem}
 
 \begin{itemize}
-     \item (TODO)
+    \item (TODO)
 \end{itemize}
 }
 
@@ -83,8 +109,11 @@
 
     \item Systematically training and testing different FNN architectures.
 \end{itemize}
+}
 
-\bigbreak
+
+
+\Block{Methods (Continue)}{
 
 \textbf{Mantle Convection Problem}
 
@@ -93,11 +122,6 @@
     \includegraphics[width=\linewidth]{figures/Mantle_Convection_Dataset.png}
     \caption{Datasets for testing.}
 \end{figure}
-}
-
-
-
-\Block{Methods (Continue)}{
 
 \begin{figure}[H]
     \centering
@@ -201,6 +225,12 @@
 
 \begin{figure}[H]
     \centering
+    \includegraphics[width=0.7\linewidth]{figures/FNN_LogLog.png}
+    \caption{Growth of average data loss with respect to the value of S shown by LogLog, which is approximately $O(0.77S)$}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
     \includegraphics[width=0.9\linewidth]{figures/FNN_further_testing_sheet.png}
     \caption{Animation sheet when FNN is used in S consecutive time steps before correction, where S = 1, 2, 4, 8, 16, and 99. The time steps, from left to right, are 1, 25, 50, 75, and 100. (see Fig. 4 for colorbar)}
 \end{figure}
@@ -218,11 +248,22 @@
 \begin{itemize}
      \item We use neural networks as surrogate models for mantle convection simulations and found that while the fully connected neural network (FNN) offers a better accuracy and the result has less data loss when predicting a single temperature field, the Long short-term memory (LSTM) is slightly more capable to capture the general characteristics of a complete simulation when predicting a sequence of temperature fields, compared with the One-for-All method when predicting a sequence using FNN. 
 
-    \item We found that when FNN is used in S consecutive time steps, the growth of the data loss with S (ranging from 1, 2, 4, 8 to 16) is remarkably moderate, with only a few outliers deviating moderately from the median. This could provide some useful implications for the future research.
+    \item We found that when FNN is used in S consecutive time steps, the growth of the data loss with S (ranging from 1, 2, 4, 8 to 16) is remarkably moderate (less than $O(S)$), with only a few outliers deviating moderately from the median. This could provide some avenues for the future research.
 \end{itemize}
 
 }
 
-\Block{Acknowledgements}{
+\textbf{Acknowledgements}:
 This work was supported by computational resources provided by the Australian Government through the National Computational Infrastructure (NCI) under the ANU Merit Allocation Scheme.
-}
+
+\bigbreak
+
+\textbf{Reference}:
+
+Agarwal, S.; Tosi, N.; Breuer, D.; Padovan, S.; Kessel, P.; and Montavon, G., 2020. A machine-learning-based surrogate model of mars’ thermal evolution.
+Geophysical Journal International, 222, 3 (may 2020), 1656–1670. doi:10.1093/gji/ggaa234.
+
+Agarwal, S.; Tosi, N.; Kessel, P.; Breuer, D.; and Montavon, G., 2021. Deep learning for surrogate modeling of two-dimensional mantle convection. Physical
+Review Fluids, 6, 11 (nov 2021). doi:10.1103/physrevf luids.6.113801.
+
+Kerl, J., 2022. Geoid Inversion For Mantle Viscosity With Convolutional Neural Networks. Master thesis.
