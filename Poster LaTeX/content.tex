@@ -21,11 +21,11 @@
     \includegraphics[width=0.8\linewidth]{figures/Geoid.png}
     \caption{Geoid and its two related factors [1].}
 \end{figure}
-
+\vspace{-2ex}
 \begin{itemize}
      \item Research shows that when geoid is modelled purely based on density variation near the surface, the result can poorly explain the observed geoid measurements [1]. 
 
-     \item Therefore, the possibility of using Earth's viscosity to model geoid is explored in this research.
+     \item Therefore, we explore the usage of Earth's viscosity to model the geoid.
 \end{itemize}
 
 \textbf{Mantle Convection Problem}
@@ -34,7 +34,7 @@
     \includegraphics[width=\linewidth]{figures/Mantle_Convection_workflow.png}
     \caption{Typical mantle convection workflow.}
 \end{figure}
-
+\vspace{-2ex}
 \begin{itemize}
     \item The thermal evolution is modelled using the Stokes system of partial differential equations derived from the conservation equations of mass, momentum, and energy, in their simplest form of the Boussinesq approximation. 
 \end{itemize}
@@ -43,13 +43,13 @@
 \begin{itemize}
     \item Fully Connected Neural Network (FNN)
             \begin{itemize} 
-                \item A FNN is a parameterized function, denoted $\mathcal{N}(\theta)$, which is defined as the chained composition of $n$ affine maps $\Theta_i$ (i.e., $n$ hidden layers) and activation function $g$:
+                \item A parameterized function, here denoted $\mathcal{N}(\theta)$, and defined as the chained composition of $n$ affine maps $\Theta_i$ (i.e., $n$ hidden layers) and activation function $g$:
             \begin{equation*}
             \mathcal{N}(\theta) = \Theta_n \circ g \circ \Theta_{n-1} \circ \ldots \circ g \circ \Theta_1,
             \end{equation*}
-            where $\theta$ represents the set of all learnable parameters.
+            where $\theta$ represents the set of all trainable parameters.
                \item The affine maps are defined as:
-            \begin{equation*} \Theta_i(x) = xA_i^{T} + b_i, \ \mathrm{with} \ i=1,\ldots,n, \end{equation*}
+		       \begin{equation*} \Theta_i(x) = xA_i^{T} + b_i, \ \mathrm{with} \ i=1,\ldots,n, \end{equation*}
             where $A_i$ and $b_i$ are the weight matrix and bias vector, respectively, corresponding to the $i$-th hidden layer.
         \end{itemize}
 
@@ -89,7 +89,11 @@
 
 \begin{itemize}
 \item Previous works have explored the usage of Convolutional Neural Networks (CNNs) to solve the inverse geoid problem directly [2] or FNNs/LSTMs to approximate the forward mantle convention problem [3]. 
-\item In contrast to these works, we use FNN on 1D spherically symmetric viscosity model to solve the geoid problem. Besides, we aim to produce the complete time-series from an initial temperature field, rather than the next time-step out of the previous ones for a given set of parameters from the mantle convection model.
+\item In contrast to these works:
+	 \begin{itemize}
+          \item We use FNN on 1D spherically symmetric viscosity model to solve the forward geoid problem as a first step to solve the inverse geoid problem. 
+          \item We aim to produce the complete mantle convection time-series from an initial temperature field, rather than the next time-step out of the previous ones for a given set of parameters of the mantle convection model.
+        \end{itemize}
 \end{itemize}
 
 \bigbreak
