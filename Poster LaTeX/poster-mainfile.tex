@@ -7,6 +7,8 @@
 \usepackage{amsmath,amssymb,amsthm}    % standard ...
 \usepackage{graphicx,xcolor}           % standard ...
 
+\usepackage{eso-pic}
+
 
 \begin{document}
 
@@ -28,6 +30,15 @@
 \renewcommand{\authorsize}{\huge}
 \renewcommand{\titlesize}{\Huge}
 \maketitle
+
+
+\AddToShipoutPictureFG*{
+    \AtPageUpperLeft{\put(1850,-125){\parbox[t]{\paperwidth}{%
+     \mbox{}{\Large\textbf{Supervisors:}\\
+                    Dr. Alberto F. Martin Huertas\\
+                    Dr. Rhys P. Hawkins\\
+                    Dr. Siavash Ghelichkhan}}}}
+}%
 
 \setlength{\columnseprule}{0pt}
 
