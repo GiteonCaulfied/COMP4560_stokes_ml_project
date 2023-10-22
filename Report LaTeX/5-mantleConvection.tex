@@ -3,7 +3,7 @@
 Originally, the thermal evolution in mantle convection is modelled using the Stokes system of partial differential equations derived from the conservation equations of mass, momentum, and energy, in their simplest form of the Boussinesq approximation. Given an initial temperature, we can get a complete temperature time evolution predicted by the numerical solver, as shown below by the figure:
 
 \begin{figure}[H]
-    \caption{Temperature Field example.}
+    \caption{Typical mantle convection workflow.}
     \includegraphics[scale=0.15]{figures/mantle_convection_images/Mantle_Convection_workflow.png}
 \end{figure}
 
@@ -78,17 +78,14 @@ In the following figures, we present some detailed test results from this ConvAE
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/mantle_convection_images/limited_dataset/ConvAE_Best.png}
     \caption{Best Case of ConvAE trained with Limited Dataset.}
-    \label{fig:first}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/mantle_convection_images/limited_dataset/ConvAE_Worst.png}
     \caption{Worst Case of ConvAE trained with Limited Dataset.}
-    \label{fig:second}
 \end{subfigure}
         
 \caption{Best case and worst case using ConvAE.}
-\label{fig:figures}
 \end{figure}
 
 
@@ -134,9 +131,9 @@ On average, the loss values are low and no overfitting occurs. The prediction fo
 To further evaluate the performance of FNN in predicting a complete time series, two methods are tested on all 100 simulations one by one: 
 
 \begin{enumerate}
-    \item "One-for-All" (also referred as "Output-as-input Prediction"): Only take the first temperature field in the file as the input and use a prediction-as-input loop to get the rest of the 99 temperature fields. (use $T1$ from dataset $\rightarrow$ get predicted $T2$ $\rightarrow$ use predicted $T2$ $\rightarrow$ get predicted $T3$ $\rightarrow$ ...)
-    \item "One-for-One" (also referred as "Single Prediction"): Constantly feed a temperature field from the original dataset and get the temperature field at the next time step as usual. (use $T1$ from dataset $\rightarrow$ get predicted $T2$ $\rightarrow$ use $T2$ from dataset $\rightarrow$ get predicted $T3$ $\rightarrow$ ...)
-  \end{enumerate}
+  \item "One-for-All" (also referred as "Output-as-input Prediction"): Only take the first temperature field in the file as the input and use a prediction-as-input loop to get the rest of the 99 temperature fields. (use $T1$ from dataset $\rightarrow$ get predicted $T2$ $\rightarrow$ use predicted $T2$ $\rightarrow$ get predicted $T3$ $\rightarrow$ ...)
+  \item "One-for-One" (also referred as "Single Prediction"): Constantly feed a temperature field from the original dataset and get the temperature field at the next time step as usual. (use $T1$ from dataset $\rightarrow$ get predicted $T2$ $\rightarrow$ use $T2$ from dataset $\rightarrow$ get predicted $T3$ $\rightarrow$ ...)
+\end{enumerate}
 
 In this case, the first method can reduce the computation complexity of the mantle convection problem more effectively than the second method, since we only need one initial input data and the model can generate the rest of the temperature field sequence. Therefore, the following best case and worst case will be evaluated using the data loss of the first method.
 
@@ -289,17 +286,14 @@ In the following figures, some detailed test results from this ConvAE trained wi
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/mantle_convection_images/larger_dataset/ConvAE_Best.png}
     \caption{Best Case of ConvAE trained with Larger Dataset.}
-    \label{fig:first}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/mantle_convection_images/larger_dataset/ConvAE_Worst.png}
     \caption{Worst Case of ConvAE trained with Larger Dataset.}
-    \label{fig:second}
 \end{subfigure}
         
 \caption{Best case and worst case using ConvAE.}
-\label{fig:figures}
 \end{figure}
 
 Overall, the performance of this ConvAE is similar to the one trained with limited dataset: reconstruction loss are low and no overfitting occurs.
@@ -458,17 +452,14 @@ In the following figures, some detailed test results from this ConvAE trained wi
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/mantle_convection_images/larger_dataset_interpolated/ConvAE_Best.png}
     \caption{Best Case of ConvAE trained with Interpolated Dataset.}
-    \label{fig:first}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{figures/mantle_convection_images/larger_dataset_interpolated/ConvAE_Worst.png}
     \caption{Worst Case of ConvAE trained with Interpolated Dataset.}
-    \label{fig:second}
 \end{subfigure}
         
 \caption{Best case and worst case using ConvAE.}
-\label{fig:figures}
 \end{figure}
 
 We can observe that the performance of this ConvAE is better than the one trained with the original larger dataset since it has a total loss that is 3 times lower than the one in the last section (0.0005 to 0.0016). This could imply that the interpolated data make the training process of ConvAE easier given the same size of data. 
