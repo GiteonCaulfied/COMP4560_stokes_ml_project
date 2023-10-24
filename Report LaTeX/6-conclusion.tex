@@ -20,7 +20,7 @@ For the geoid problem, future studies may focus on extending the use of neural n
 
 As for the mantle convection problem, future studies may continue to explore the potential use of the trained FNN on a set of S consecutive time steps. If we can somehow replace the fine-grained truth temperature field from the simulator (size is $201 \times 401$), which is used to "correct" the predicted time series, with a coarse-grained temperature field (e.g. size is $50 \times 100$) instead, the computational demands of modelling mantle convection problem could be further reduced.
 
-Future studies could also focus on improving the performance of LSTM or using less truth temperature fields to predict more temperature fields, rather than sticking to the current ratio of 50:50 for input and output due to technical limitations of PyTorch.
+Future studies could also focus on improving the performance of LSTM, using less truth temperature fields to predict more temperature fields (20:80) or using less truth temperature fields to predict less temperature fields (20:20), rather than sticking to the current ratio of 50:50 for input and output due to technical limitations of PyTorch.
 
 Other studies could include further investigations on the outliers in the Box Plot of the Data loss when FNN is used in S consecutive time steps in Figure \ref{figure:further_loss_Box} to see whether a common pattern can be identified. Also, more complex physics (e.g., non-linear constitutive laws) could be considered in building Mantle convection model for testing. Apart from these, somehow accounting for adaptive time steps used within the NN would also be a useful avenue of research.
 
