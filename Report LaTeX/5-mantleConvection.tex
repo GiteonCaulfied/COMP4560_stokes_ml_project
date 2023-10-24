@@ -13,7 +13,7 @@ cost, three different datasets are tested, including Limited Dataset, Larger Dat
 
 \section{Mantle Convection Simulation on Limited Dataset}
 
-The limited dataset consists of 100 files and each of them represents one mantle convection simulation in 100 time steps generated with an initial condition with random number of points and random amplitude and coordinates of Gaussian anomalies distributed in space (a total of 10000 temperature fields). Starting from each initial condition we convect as long as there is meaningful change in the simulation (that is the temperature fields change enough after one time-step). There are 100 temperature fields with a size of $201 \times 401$ for each of the 100 timestamps in a file and the time step has to be adaptive, otherwise the whole random generation of the initial condition would be hard to implement. This adaptive timestamps lead to a problem, that is, the distance between each consecutive pairs of time steps are not the same even in the same simulation file. This could lead to some uncommon behaviors when predicting a sequence of temperature fields using the ML architecture, which will be discussed in more details in the following sections.
+The limited dataset consists of 100 files and each of them represents one mantle convection simulation in 100 time steps generated with an initial condition with random number of points and random amplitude and coordinates of Gaussian anomalies distributed in space (a total of 10000 temperature fields). Starting from each initial condition we convect as long as there is meaningful change in the simulation (that is the temperature fields change enough after one time-step). There are 100 temperature fields with a size of $201 \times 401$ for each of the 100 timestamps in a file and the time step has to be adaptive, otherwise the whole random generation of the initial condition would be hard to implement. This adaptive timestamps leads to a problem, that is, the distance between each consecutive pairs of time steps are not the same even in the same simulation file. This could lead to some uncommon behaviors when predicting a sequence of temperature fields using the ML architecture, which will be discussed in more details in the following sections.
 
 Figure \ref{figure:temperature_field_sample} shows one random temperature fields in the dataset with the y-axis inverted and colored using 10-color-map (all the figures in this chapter will have their y-axis inverted and colored using 10-color-map as well, but without labels on x-axis and y-axis for better visualisation):
 
@@ -98,14 +98,14 @@ In the following figures, we present some detailed test results from this ConvAE
 \end{figure}
 
 
-On average, the reconstruction loss are low and no overfitting occurs. However, we can observe that the ConvAE does not reconstructe the thin feature in the bottom right corner of the worst case. This could imply that the ConvAE works best for "smooth" input hence others with small scale length features will generally perform worse.
+On average, the reconstruction loss are low and no overfitting occurs. However, we can observe that the ConvAE does not reconstruct the thin feature in the bottom right corner of the worst case. This could imply that the ConvAE works best for "smooth" input hence others with small scale length features will generally perform worse.
 
 We also applied some POD (Proper Orthogonal Decomposition) analysis to the compressed-decompressed fields with contrast to the original temperature fields and the result is great as well, the figure to this analysis will be presented in the following sections as contrast to the POD analysis of the prediction model (FNN or LSTM) 
 
 
 \subsection{Fully Connected Neural Network for Prediction}
 
-We now move on to predict the latent space representation and our first candidate is the feedforward fully connected neural network (FNN). The FNN in this study uses each adjacent pair of temperature fields (e.g. $i$th and ($i+1$)th fields) as one training set, takes one temperature fields as the input and output the temperature fields at the next time step. Therefore, the dataset is reconstructed into 9900 pairs of temperature fields with consecutive timestamps. These pairs are randomly shuffled and divided in a ratio of 80\%, 10\%, 10\% for training, testing and validation where each piece of data consists two temperature field having consecutive timestamps.
+We now move on to predict the latent space representation and our first candidate is the feed-forward fully connected neural network (FNN). The FNN in this study uses each adjacent pair of temperature fields (e.g. $i$th and ($i+1$)th fields) as one training set, takes one temperature fields as the input and output the temperature fields at the next time step. Therefore, the dataset is reconstructed into 9900 pairs of temperature fields with consecutive timestamps. These pairs are randomly shuffled and divided in a ratio of 80\%, 10\%, 10\% for training, testing and validation where each piece of data consists two temperature field having consecutive timestamps.
 
 Before the latent space representation is fed as the input of FNN, it is flattened into one dimension. The prediction result of FNN in this case is then resized from a one dimensional vector ($1 \times 6210$) to the shape of the latent space ($6 \times 23 \times 45$) before we applied further testing.
 
@@ -139,7 +139,7 @@ In the following figures, we present results from a FNN with 3 hidden layers wit
     \label{figure:FNN_limited_worst}
 \end{figure}
 
-On average, the loss values are low and no overfitting occurs. The prediction for the temperature field at the next timestamp is able to capture the main features precisely with some small information loss, which is partially due to information loss caused by the compression-decompression process of ConvAE.
+On average, the loss values are low and no overfitting occurs. The prediction for the temperature field at the next time step is able to capture the main features precisely with some small information loss, which is partially due to information loss caused by the compression-decompression process of ConvAE.
 
 To further evaluate the performance of FNN in predicting a complete time series, two methods are tested on all 100 simulations one by one: 
 
@@ -470,9 +470,11 @@ From the animations and the POD results, we can now confirmed that LSTM is able 
 
 To confirm if the problem of the predicted GIFs moving too fast or too slow is caused by the varying distance between time steps, an interpolated dataset is created using the larger dataset in the last section.
 
-The interpolation process is done for each of the simulation separately by generating a sequence of temperature fields with equal distance between their consecutive time steps. The resulting sequence of time steps for every interpolated simulations are the same by giving a start time step (close to the minimum time step), an end time step (close to the maximum time step) and the number of samples (=100) to generate a new evenly spaced time step sequence to interpolate with. In order to retrieve the temperature field at the target time step, the temperature fields at two nearest time steps are searched for and the target temperature field is generated by interpolating between these two temperature fields.
+The interpolation process is done for each of the simulation separately by generating a sequence of temperature fields with equal distance between their consecutive time steps. The resulting sequence of time steps for every interpolated simulations are the same by giving a start time step (close to the minimum time step), an end time step (close to the maximum time step) and the number of samples (=100) to generate a new evenly spaced time step sequence to interpolate with. In order to retrieve the temperature field at the target time step, the temperature fields at two nearest time steps are searched for and the target temperature field is generated by linearly interpolating between these two temperature fields.
 
-After the interpolation process, we are able to get an interpolation dataset where every simulation has the same time steps.
+One thing to notice is that the interpolation may in fact be not physical (not dictated by the physical equations of the system). However, since this experiment is designed to predict temperature field "like" evolution with a fixed time step to understand improvements possible if we have regular time steps, 
+
+After the interpolation process, we are able to get an interpolated dataset where every simulation has the same time steps.
 
 The interpolated dataset are also randomly divided in the same way as the limited dataset for each of the three ML architectures in the following subsections.
 
@@ -717,6 +719,8 @@ One thing that is particularly worth pointing out is that the growth of the aver
 \end{figure}
 
 We can now confirmed that when FNN is used in S consecutive time steps, the growth of the data loss with S (ranging from 1, 2, 4, 8, 16 to 99) is remarkably moderate (less than $O(S)$), with only a few outliers deviating moderately from the median. This could provide some avenues for the future research.
+
+Overall, we tested on 3 different dataset by using ConvAE to compress the temperature fields and using FNN/LSTM to make predictions. We found that FNN using "One-for-One" method is generally better than LSTM when predicting a complete time series for its higher accuracy and lower data loss. However, LSTM is more capable to capture the characteristic of a simulation than FNN using "One-for-All" method. Inspired by the low computational demands of "One-for-All" method (1 in, 99 out), we conducted some further testings on FNN when it is used in a series of S consecutive time steps before it is corrected using the ground truth. The result for the growth of the data loss with respect to S is remarkable and could provide some valuable insights for future studies.
 
 
 
