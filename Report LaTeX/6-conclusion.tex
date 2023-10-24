@@ -4,8 +4,7 @@
 
 In this research, we use Neural Networks (NN) to solve the forward modelling problem of geoid as a set of spherical harmonic coefficients given a 1D spherically symmetric viscosity model. The dataset used to train the algorithms consists of 1000 pairs of the above models and has a reduced prior such that the perturbations to the output are smaller to simplify the problem. The dataset is fed into different feed-forward Fully Connected Neural Network (FNN) architectures with different set of hyperparameters systematically to find the model with the best performance. 
 
-We found that FNN architectures with a total of 3–4 hidden layers have the best mean accuracy. This could presented as a proof showing that high-dimensional regression algorithms like neural networks can help with the forward modelling of the geoid problem when predicting a set of spherical harmonic coefficients given a reduced dataset with a fairly small number of
-1D spherically symmetric viscosity models.
+We found that FNN architectures with a total of 3–4 hidden layers have the best mean accuracy. This could presented as a proof showing that high-dimensional regression algorithms like neural networks can help with the forward modelling of the geoid problem when predicting a set of spherical harmonic coefficients given a reduced dataset with a fairly small number of 1D spherically symmetric viscosity models.
 
 As for the Mantle Convection Problem, we use NN as a surrogate model for mantle convection simulations. The three datasets used to train the algorithms comes from either 100 or 903 mantle convection simulations of the Earth or is interpolated using the above dataset. For each of the dataset, We first compress the temperature fields using a Convolutional AutoEncoder by a factor of 13, and then tested two neural network algorithms for predicting the compressed temperature fields at the next time step given previous temperature fields. 
 
