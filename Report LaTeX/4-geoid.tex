@@ -45,7 +45,7 @@ To further observe the patterns in the input and the output, 10 pairs of input a
 
 From the second plot we can observe that the outputs in the dataset can be seen as some "curves" with the same patterns but with different amplitude. In this case, each of the 60 coefficients in the output data are normalised to be between 0 and 1 using their maximum and minimum values separately before feeding into the neural network. This is because each of the parameters in an output vector can be seen as equally important and we want to prevent the neural network from spending most of its effort learning the parameter with a higher range of values. Hence, one can expect a higher accuracy when the parameters in the output data are standardized to the same range.
 
-After the output data is normalised using a scalar, the entire dataset is randomly divided in a ratio of 8:1:1: 80 per cent of the dataset is used for training, 10 per cent of the data for testing accuracy and the remaining 10 per cent to perform validation during training and prevent overfitting. For a dataset with 1000 samples, this result in a train-test-valiadation split of 800-100-100.
+After the output data is normalised using a scalar, the entire dataset is randomly divided in a ratio of 8:1:1: 80 per cent of the dataset is used for training, 10 per cent of the data for testing accuracy and the remaining 10 per cent to perform validation during training and prevent overfitting. For a dataset with 1000 samples, this result in a train-test-validation split of 800-100-100.
 
 
 \section{Fully Connected Neural Network for Prediction}
