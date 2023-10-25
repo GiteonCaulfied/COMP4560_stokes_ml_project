@@ -9,7 +9,7 @@ I am going to use this repository as a sort of research diary with my own notes 
 Datasets used for this problem are located in the folder `Data/Geoid/new_results_1k_zero`.
 
 ### Files
-Files related to this problem includes:
+Files related to this problem include:
 
 ```
 Geoid_systematic_training.ipynb
@@ -20,6 +20,8 @@ ModelList.txt
 `Geoid_systematic_training.ipynb` is used for systematically training the models with their hyperparameters in the file `ModelList.txt` and saving them in the folder `1D_result`. 
 
 `Geoid_visualisation.ipynb` is used for visualisation given a specific model's path.
+
+NOTE: `pip install cartopy` and `pip install pyshtools ` need to be run before using `Geoid_visualisation.ipynb` for visualisation.
 
 ## Mantle Convection Problem
 
@@ -33,6 +35,7 @@ Datasets used for this problem can be found in the following URLs:
 
 - [Limited Dataset](https://anu365-my.sharepoint.com/:f:/g/personal/u7189309_anu_edu_au/Em9tN9ofPRBBtJADs2G66rUBuY0WKp-2BEXNMI-U0a_JBw?e=pUFcF6)
 - [Larger Dataset](https://anu365-my.sharepoint.com/:f:/g/personal/u7189309_anu_edu_au/EvC4GCemOlFKm1JxQl8pSbEBn6ORYK_hVNnXW5_J-fUOBg?e=j7uxc2)
+- [Interpolated Dataset](https://anu365-my.sharepoint.com/:u:/g/personal/u7189309_anu_edu_au/EXEKh4hSP2pBrlPEPDFBmisB0J-9QfzGwEy4zn6ika5Bew?e=NOkFj2)
 
 Interpolated dataset is generated from the Larger dataset using `interpolation.py` and `interpolation_job.sh`.
 
@@ -41,7 +44,7 @@ Interpolated dataset is generated from the Larger dataset using `interpolation.p
 
 Convolutional Autoencoder is used to compress the data before feeding the data into a predicting model.
 
-Files related includes:
+Files related include:
 
 ```
 ConvAE_training.py
@@ -58,7 +61,7 @@ Training and testing results are stored in the folder `2D_ConvAE_results`
 
 Fully Connected Neural Network is used to predict the temperature field at the next time step.
 
-Files related includes:
+Files related include:
 
 ```
 FNN_training.py
@@ -75,7 +78,7 @@ Training and testing results are stored in the folder `2D_FNN_results`.
 
 Long Short-Term Memory is used to predict rest of the temperature fields as a sequence given the first 50 temperature field in a simulation.
 
-Files related includes:
+Files related include:
 
 ```
 LSTM_training.py
