@@ -68,11 +68,11 @@ We find that ConvAE with a latent space size of $6 \times 23 \times 45$ offers a
 
 The architecture of the ConvAE in this case consists of two convolutional layers for the encoder and two transpose convolutional layers for the decoder. Both of these four layers use a filter of size $5 \times 5$ and a stride of $3 \times 3$. Tanh() is used as the activation function to introduce non-linearity between each layers (except for the last layer in the decoder) and mean square error (MSE) is used as the loss function. The model is trained for 1,000 epochs on Gadi.
 
-In the following figures, we present some detailed test results for this ConvAE, including the training loss and validation loss in Figure \ref{figure:ConvAE_limited_losses}, overall testing result in Figure \ref{figure:ConvAE_limited_testing}, and the most/least accurate prediction in 
+In the following figures, we present some detailed test results for this ConvAE, including the training and validation losses in Figure \ref{figure:ConvAE_limited_losses}, overall testing result in Figure \ref{figure:ConvAE_limited_testing}, and the most/least accurate prediction in 
 Figure \ref{figure:ConvAE_limited_best_worst}.
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss of ConvAE trained with Limited Dataset.}
+    \caption{Training and validation losses of ConvAE trained with Limited Dataset.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/limited_dataset/ConvAE_trainingData.png}
     \label{figure:ConvAE_limited_losses}
 \end{figure}
@@ -114,10 +114,10 @@ The trainable parameters of the FNN are optimized using small mini-batches of 16
 
 After testing with FNNs that have different number of hidden layers and neurons per hidden layer, we found that architectures with a total number 3 hidden layers seemed to perform the best. We also tested some deeper architectures with 4-5 hidden layers. However, there is no significant reduction in the loss value.
 
-In the following figures, we present results from a FNN with 3 hidden layers with 3,105; 1,035; and 3,105 neurons per layer, respectively. Tanh() was used as activation function. The network was trained for 1,000 epochs. The results reported include the training loss and validation loss in Figure \ref{figure:FNN_limited_losses}, overall testing result in Figure \ref{figure:FNN_limited_testing}, and the most/least accurate prediction in Figures \ref{figure:FNN_limited_best} and \ref{figure:FNN_limited_worst}, respectively.
+In the following figures, we present results from a FNN with 3 hidden layers with 3,105; 1,035; and 3,105 neurons per layer, respectively. Tanh() was used as activation function. The network was trained for 1,000 epochs. The results reported include the training and validation losses in Figure \ref{figure:FNN_limited_losses}, overall testing result in Figure \ref{figure:FNN_limited_testing}, and the most/least accurate prediction in Figures \ref{figure:FNN_limited_best} and \ref{figure:FNN_limited_worst}, respectively.
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss of FNN trained with Limited Dataset.}
+    \caption{Training and validation losses of FNN trained with Limited Dataset.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/limited_dataset/FNN_trainingData.png}
     \label{figure:FNN_limited_losses}
 \end{figure}
@@ -151,7 +151,7 @@ To further evaluate the performance of FNN in predicting a complete time series,
 
 The first method can reduce the computational demands of the mantle convection problem more effectively than the second method, since we only need one initial input data and the model can generate the rest of the temperature field sequence. Therefore, the following best case and worst case will be evaluated using the data loss of the first method.
 
-To better visualize the prediction result of the above two methods, two animations representing the best case and the worst case (evaluated based on the sum of MSE for each prediction using the first method) are generated. From top to bottom, the first picture represents the actual output from the dataset, the second one represents the prediction result using the first method, and the last one represents the prediction result using the second method.
+To better visualize the prediction result of the above two methods, two animations representing the best and worst cases (evaluated based on the sum of MSE for each prediction using the first method) are generated. From top to bottom, the first picture represents the actual output from the dataset, the second one represents the prediction result using the first method, and the last one represents the prediction result using the second method.
 
 Figure \ref{figure:FNN_limited_best_gif} and \ref{figure:FNN_limited_worst_gif} show 10\% of the two sprite sheets extracted from the animation (every 10th frame) for reading convenience.
 
@@ -170,7 +170,7 @@ Figure \ref{figure:FNN_limited_best_gif} and \ref{figure:FNN_limited_worst_gif} 
     \label{figure:FNN_limited_worst_gif}
 \end{figure}
 
-To further evaluate the performance of these two methods, we applied a technique called Proper Orthogonal Decomposition (POD) to their predictions in both the best case and the worst case. We also consider the original ``ground-truth'' time series and the compressed-decompressed version generated by ConvAE to serve as a contrast.
+To further evaluate the performance of these two methods, we applied a technique called Proper Orthogonal Decomposition (POD) to their predictions in both the best and worst cases. We also consider the original ``ground-truth'' time series and the compressed-decompressed version generated by ConvAE to serve as a contrast.
 
 POD is mainly used to decompose a physical field (e.g., temperature field) depending on the different variables that influence its physical behaviors and it is similar to Principle Component Analysis (PCA) since it refers to eigenvalues of a physical field.\citep{10.1146_annurev.fl.25.010193.002543}. The Singular Value Decomposition (SVD) of a simulation matrix $X$ (spatial points $\times$ time-steps, in this case $201 \times 401 \times 100$) is computed as \citep{10.1515_9783110671490-007}:
 \begin{equation}
@@ -178,7 +178,7 @@ X = U\Sigma V,
 \end{equation}
 where the diagonal of $\Sigma$ contains the eigenvalues (POD coefficients) for this simulation.
 
-Figure \ref{figure:FNN_limited_best_POD} and \ref{figure:FNN_limited_worst_POD} show the POD results when applied to the best case and the worst case predictions, respectively.
+Figure \ref{figure:FNN_limited_best_POD} and \ref{figure:FNN_limited_worst_POD} show the POD results when applied to the best and worst cases predictions, respectively.
 
 \begin{figure}[H]
     \caption{Best case POD of FNN trained with Limited Dataset.}
@@ -213,10 +213,10 @@ The trainable parameters of LSTM are optimized using small mini-batches (only 1 
 
 After testing several LSTMs with different configurations, we found that architectures with a total number of 2 consecutive LSTM layers perform the best. We also tested some deeper architectures with 4-6 LSTMs. However, there was no significant reduction in the loss value.
 
-In the following figures, we present results from an architecture with 2 LSTM layers (first one input size is 6210, hidden size is 3105; second one input size is 3105, hidden size is 6210. Both of them only have one layer, no internal stacking), and trained for 200 epochs. The results include the training loss and validation loss in Figure \ref{figure:LSTM_limited_losses}, overall testing result in Figure \ref{figure:LSTM_limited_testing}, and the most/least accurate prediction in Figures \ref{figure:LSTM_limited_best} and \ref{figure:LSTM_limited_worst}, respectively.
+In the following figures, we present results from an architecture with 2 LSTM layers (first one input size is 6210, hidden size is 3105; second one input size is 3105, hidden size is 6210. Both of them only have one layer, no internal stacking), and trained for 200 epochs. The results include the training and validation losses in Figure \ref{figure:LSTM_limited_losses}, overall testing result in Figure \ref{figure:LSTM_limited_testing}, and the most/least accurate prediction in Figures \ref{figure:LSTM_limited_best} and \ref{figure:LSTM_limited_worst}, respectively.
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss of LSTM trained with Limited Dataset.}
+    \caption{Training and validation losses of LSTM trained with Limited Dataset.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/limited_dataset/LSTM_trainingData.png}
     \label{figure:LSTM_limited_losses}
 \end{figure}
@@ -241,7 +241,7 @@ In the following figures, we present results from an architecture with 2 LSTM la
 
 On average, the loss values are higher than the FNN and no overfitting occurs. The prediction is able to capture the main features precisely with some small information loss in the best case, but fails to do so in the worst case. This is caused by the internal structure of LSTM since the worst case is the first temperature field in the output sequence.
 
-To better visualize the prediction result of LSTM on a 50:50 input length to output length ratio, two animations representing the best case and the worst case (evaluated based on the sum of MSE for each predicted temperature in the output sequence) in the format of animated files are generated. From top to bottom, the first picture represents the actual output from the dataset and the second one represents the prediction result.
+To better visualize the prediction result of LSTM on a 50:50 input length to output length ratio, two animations representing the best and worst cases (evaluated based on the sum of MSE for each predicted temperature in the output sequence) in the format of animated files are generated. From top to bottom, the first picture represents the actual output from the dataset and the second one represents the prediction result.
 
 Figure \ref{figure:LSTM_limited_best_gif} and Figure \ref{figure:LSTM_limited_worst_gif} show 20\% of the two sprite sheets converted from the original animation files (every 5th frame) for reading convenience.
 
@@ -262,7 +262,7 @@ Figure \ref{figure:LSTM_limited_best_gif} and Figure \ref{figure:LSTM_limited_wo
     \label{figure:LSTM_limited_worst_gif}
 \end{figure}
 
-To further evaluate the performance, we also applied POD to a sequence of predictions generated by LSTM in both the best case and the worst case. As with the FNN, we also consider as a contrast the POD of the original time series and the compressed-decompressed version generated by ConvAE. Figures \ref{figure:LSTM_limited_best_POD} and \ref{figure:LSTM_limited_worst_POD} show the POD results in the best and  worst cases, respectively.
+To further evaluate the performance, we also applied POD to a sequence of predictions generated by LSTM in both the best and worst cases. As with the FNN, we also consider as a contrast the POD of the original time series and the compressed-decompressed version generated by ConvAE. Figures \ref{figure:LSTM_limited_best_POD} and \ref{figure:LSTM_limited_worst_POD} show the POD results in the best and  worst cases, respectively.
 
 \begin{figure}[H]
     \caption{Best case POD of LSTM trained with Limited Dataset.}
@@ -289,12 +289,12 @@ The larger dataset are randomly divided in the same way as the limited dataset f
 
 \subsection{Compression of temperature fields}
 
-The ConvAE used for compressing the temperature fields in this section has the same structure and hyperparameters values as the one trained with limited dataset, except for the total number of epochs, which are now reduced from 1,000 to 200 due to the computational budget limitatins on Gadi.
+The ConvAE used for compressing the temperature fields in this section has the same structure and hyperparameters values as the one trained with limited dataset, except for the total number of epochs, which are now reduced from 1,000 to 200 due to the computational budget limitations on Gadi.
 
-In the following figures, some detailed test results from this ConvAE trained with larger dataset are presented, including the training loss and validation loss in Figure \ref{figure:ConvAE_larger_losses}, overall testing result in Figure \ref{figure:ConvAE_larger_testing}, and the most/least accurate prediction in Figure \ref{figure:ConvAE_larger_best_worst}.
+In the following figures, some detailed test results from this ConvAE trained with the larger dataset are presented, including the training and validation losses in Figure \ref{figure:ConvAE_larger_losses}, overall testing result in Figure \ref{figure:ConvAE_larger_testing}, and the most/least accurate prediction in Figure \ref{figure:ConvAE_larger_best_worst}.
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss of ConvAE trained with Larger Dataset.}
+    \caption{Training and validation losses of ConvAE trained with Larger Dataset.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/larger_dataset/ConvAE_trainingData.png}
     \label{figure:ConvAE_larger_losses}
 \end{figure}
@@ -325,12 +325,12 @@ Overall, the performance of this ConvAE is similar to the one trained with the l
 
 \subsection{Fully Connected Neural Network for Prediction}
 
-The FNN in this section also has the same structure and the same set of hyperparameters as the one trained with the limited dataset, except that the total number of epochs are reduced from 1,000 to 200 as well.
+The FNN in this section also has the same structure and the same set of hyperparameters as the one trained with the limited dataset, except that the total number of epochs is reduced from 1,000 to 200 as well.
 
-The results are presented in the following figures, including the training loss and validation loss from Figure \ref{figure:FNN_larger_losses}, overall testing result from Figure \ref{figure:FNN_larger_testing}, and the most/least accurate prediction in Figures \ref{figure:FNN_larger_best} and \ref{figure:FNN_larger_worst}, respectively.
+The results are presented in the following figures, including the training and validation losses from Figure \ref{figure:FNN_larger_losses}, overall testing result from Figure \ref{figure:FNN_larger_testing}, and the most/least accurate prediction in Figures \ref{figure:FNN_larger_best} and \ref{figure:FNN_larger_worst}, respectively.
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss of FNN trained with Larger Dataset.}
+    \caption{Training and validation losses of FNN trained with Larger Dataset.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/larger_dataset/FNN_trainingData.png}
     \label{figure:FNN_larger_losses}
 \end{figure}
@@ -355,7 +355,7 @@ The results are presented in the following figures, including the training loss 
 
 The results obtained with the FNN are similar to the ones obtained with the limited dataset: loss values are low and no overfitting occurs. There is still some small information loss, which is now confirmed as caused by the loss of data generated during the compression-decompression process of ConvAE.
 
-Again, two animations representing the best case and the worst case when predicting the entire simulation using "One-for-All" (use $T1$ from dataset $\rightarrow$ get predicted $T2$ $\rightarrow$ use predicted $T2$ $\rightarrow$ get predicted $T3$ $\rightarrow$ ...) are generated.
+Again, two animations representing the best and worst cases when predicting the entire simulation using "One-for-All" (use $T1$ from dataset $\rightarrow$ get predicted $T2$ $\rightarrow$ use predicted $T2$ $\rightarrow$ get predicted $T3$ $\rightarrow$ ...) are generated.
 
 Figures \ref{figure:FNN_larger_best_gif} and \ref{figure:FNN_larger_worst_gif} show 10\% of the two sprite sheets converted from the original animation files (Every 10th frame).
 
@@ -395,10 +395,10 @@ We can observe that the increasing size of the training data does not improve th
 
 The LSTM in this section also has the same structure and the same set of hyperparamters as the one trained with limited dataset, except that the total number of epochs are reduced from 200 to 100.
 
-The results are presented in the following figures, including the training loss and validation loss from Figure \ref{figure:LSTM_larger_losses}, overall testing result from Figure \ref{figure:LSTM_larger_testing}, and the most/least accurate prediction in Figures \ref{figure:LSTM_larger_best} and \ref{figure:LSTM_larger_worst}, respectively.
+The results are presented in the following figures, including the training and validation losses from Figure \ref{figure:LSTM_larger_losses}, overall testing result from Figure \ref{figure:LSTM_larger_testing}, and the most/least accurate prediction in Figures \ref{figure:LSTM_larger_best} and \ref{figure:LSTM_larger_worst}, respectively.
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss of LSTM trained with Larger Dataset.}
+    \caption{Training and validation losses of LSTM trained with Larger Dataset.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/larger_dataset/LSTM_trainingData.png}
     \label{figure:LSTM_larger_losses}
 \end{figure}
@@ -422,9 +422,9 @@ The results are presented in the following figures, including the training loss 
 \end{figure}
 
 
-From the above figures, we can see that the loss of the best case and the worst case for this LSTM are in the same level as the one trained with limited dataset given 10 times of the training data, which means that the low accuracy of LSTM is not caused by some potential underfitting problem as discussed in the last section.
+From the above figures, we can see that the loss of the best and worst cases for this LSTM are of the same order as the ones obtained with with the limited dataset given 10 times of the training data, which means that the low accuracy of LSTM is not caused by some potential underfitting problem as discussed in the last section.
 
-For better visualisation as well, two animations representing the best case and the worst case when predicting the rest of the simulation using the first 50 temperature fields are generated.
+For better visualisation, two animations representing the best and worst cases when predicting the rest of the simulation using the first 50 temperature fields are generated.
 
 Figure \ref{figure:LSTM_larger_best_gif} and \ref{figure:LSTM_larger_worst_gif} show 20\% of the two sprite sheets converted from the original animation fields (Every 5th frame).
 
@@ -445,7 +445,7 @@ Figure \ref{figure:LSTM_larger_best_gif} and \ref{figure:LSTM_larger_worst_gif} 
     \label{figure:LSTM_larger_worst_gif}
 \end{figure}
 
-POD result for the best case and worst case are shown in Figure \ref{figure:LSTM_larger_best_POD} and \ref{figure:LSTM_larger_worst_POD}:
+POD result for the best and worst cases are shown in Figure \ref{figure:LSTM_larger_best_POD} and \ref{figure:LSTM_larger_worst_POD}, respectively.
 
 \begin{figure}[H]
     \caption{Best case POD of LSTM trained with Larger Dataset.}
@@ -464,26 +464,26 @@ From the animations and the POD results, we can now confirmed that LSTM is able 
 
 \section{Mantle Convection Simulation on Interpolated Dataset}
 
-To confirm if the problem of the predicted GIFs moving too fast or too slow is caused by the varying distance between time steps, an interpolated dataset is created using the larger dataset in the last section.
+To confirm if the problem of the predicted temperature time series moving too fast or too slow is caused by the varying distance between time steps, an interpolated dataset is created using the larger dataset in the last section.
 
-The interpolation process is done for each of the simulation separately by generating a sequence of temperature fields with equal distance between their consecutive time steps. The resulting sequence of time steps for every interpolated simulations are the same by giving a start time step (close to the minimum time step), an end time step (close to the maximum time step) and the number of samples (=100) to generate a new evenly spaced time step sequence to interpolate with. In order to retrieve the temperature field at the target time step, the temperature fields at two nearest time steps are searched for and the target temperature field is generated by linearly interpolating between these two temperature fields.
+The interpolation process is done for each of the simulation separately by generating a sequence of temperature fields with equal distance between their consecutive time steps. The resulting sequence of time steps for every interpolated simulation are the same by giving a start time step (close to the minimum time step), an end time step (close to the maximum time step) and the number of samples (=100) to generate a new evenly spaced time step sequence to interpolate with. In order to retrieve the temperature field at the target time step, the temperature fields at two nearest time steps are searched for and the target temperature field is generated by linearly interpolating between these two temperature fields.
 
-One thing to notice is that the interpolation may in fact be not physical (not dictated by the physical equations of the system). However, since this experiment is designed to predict temperature field "like" evolution with a fixed time step to understand improvements possible if we have regular time steps, 
+One thing to notice is that the interpolation may in fact be not physical (not dictated by the physical equations of the system). However, since this experiment is designed to predict temperature field ``like'' evolution with a fixed time step to understand improvements possible if we had regular time steps, 
 
 After the interpolation process, we are able to get an interpolated dataset where every simulation has the same time steps.
 
-The interpolated dataset are also randomly divided in the same way as the limited dataset for each of the three ML architectures in the following subsections.
+The interpolated dataset is also randomly divided in the same way as the limited dataset for each of the three ML architectures in the following subsections.
 
 
 \subsection{Compression of temperature fields}
 
 The ConvAE used for compressing the temperature fields in this section has the same structure and the same set of hyperparameters as the one trained with the original larger dataset.
 
-In the following figures, some detailed test results from this ConvAE trained with interpolated dataset are presented, including the training loss and validation loss from Figure \ref{figure:ConvAE_interpolated_losses}, overall testing result from Figure \ref{figure:ConvAE_interpolated_testing}, and the most/least accurate prediction in Figure \ref{figure:ConvAE_interpolated_best_worst}:
+In the following figures, some detailed test results from this ConvAE trained with interpolated dataset are presented, including the training and validation losses from Figure \ref{figure:ConvAE_interpolated_losses}, overall testing result from Figure \ref{figure:ConvAE_interpolated_testing}, and the most/least accurate prediction in Figure \ref{figure:ConvAE_interpolated_best_worst}.
 
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss of ConvAE trained with Interpolated Dataset.}
+    \caption{Training and validation losses of ConvAE trained with Interpolated Dataset.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/larger_dataset_interpolated/ConvAE_trainingData.png}
     \label{figure:ConvAE_interpolated_losses}
 \end{figure}
@@ -509,17 +509,17 @@ In the following figures, some detailed test results from this ConvAE trained wi
 \label{figure:ConvAE_interpolated_best_worst}
 \end{figure}
 
-We can observe that the performance of this ConvAE is better than the one trained with the original larger dataset since it has a total loss that is 3 times lower than the one in the last section (0.0005 to 0.0016). This could imply that the interpolated data make the training process of ConvAE easier given the same size of data. 
+We can observe that the performance of this ConvAE is better than the one trained with the original larger dataset since it has a total loss that is 3 times lower than the one in the last section (0.0005 to 0.0016). This could imply that the interpolated data makes the training process of ConvAE easier given the same size of data. 
 
 
 \subsection{Fully Connected Neural Network for Prediction}
 
 The FNN in this section also has the same structure and the same set of hyperparameters as the one trained with the original larger dataset.
 
-The results are presented in the following figures, including the training loss and validation loss from Figure \ref{figure:FNN_interpolated_losses}, overall testing result from Figure \ref{figure:FNN_interpolated_testing}, and the most/least accurate prediction in Figures \ref{figure:FNN_interpolated_best} and \ref{figure:FNN_interpolated_worst}.
+The results are presented in the following figures, including the training and validation losses from Figure \ref{figure:FNN_interpolated_losses}, overall testing result from Figure \ref{figure:FNN_interpolated_testing}, and the most/least accurate prediction in Figures \ref{figure:FNN_interpolated_best} and \ref{figure:FNN_interpolated_worst}.
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss of FNN trained with Interpolated Dataset.}
+    \caption{Training and validation losses of FNN trained with Interpolated Dataset.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/larger_dataset_interpolated/FNN_trainingData.png}
     \label{figure:FNN_interpolated_losses}
 \end{figure}
@@ -542,9 +542,9 @@ The results are presented in the following figures, including the training loss 
     \label{figure:FNN_interpolated_worst}
 \end{figure}
 
-The above result of this FNN are better than the one trained with the original larger dataset since the loss values are 2 times lower than the one in the last section (0.0005 to 0.0011), which could be partially due to the better performance of the ConvAE.
+The results of FNN are better than the ones trained with the original larger dataset since the loss values are 2 times lower than the one in the last section (0.0005 to 0.0011), which could be partially due to the better performance of the ConvAE.
 
-Again, two animations representing the best case and the worst case when predicting the entire simulation using "One-for-All" method (use $T1$ from dataset $\rightarrow$ get predicted $T2$ $\rightarrow$ use predicted $T2$ $\rightarrow$ get predicted $T3$ $\rightarrow$ ...) are generated.
+Again, two animations representing the best and worst cases when predicting the entire simulation using "One-for-All" method (use $T1$ from dataset $\rightarrow$ get predicted $T2$ $\rightarrow$ use predicted $T2$ $\rightarrow$ get predicted $T3$ $\rightarrow$ ...) are generated.
 
 Figures \ref{figure:FNN_interpolated_best_gif} and \ref{figure:FNN_interpolated_worst_gif} show 10\% of the sprite sheets converted from the original animation files (Every 10th frame).
 
@@ -563,7 +563,7 @@ Figures \ref{figure:FNN_interpolated_best_gif} and \ref{figure:FNN_interpolated_
     \label{figure:FNN_interpolated_worst_gif}
 \end{figure}
 
-Figures \ref{figure:FNN_interpolated_best_POD} and \ref{figure:FNN_interpolated_worst_POD} show the POD result in the best case and the worst case:
+Figures \ref{figure:FNN_interpolated_best_POD} and \ref{figure:FNN_interpolated_worst_POD} show the POD result in the best and worst cases, respectively.
 
 \begin{figure}[H]
     \caption{Best case POD of FNN trained with Interpolated Dataset.}
@@ -577,18 +577,18 @@ Figures \ref{figure:FNN_interpolated_best_POD} and \ref{figure:FNN_interpolated_
     \label{figure:FNN_interpolated_worst_POD}
 \end{figure}
 
-We can observe that the problem of predicted GIFs moving faster or slower than the actual simulations is now gone. Also, the POD result in the worst case is now closer than the one in the original simulations. This confirmed that the varying time steps are the cause of the inconsistent convection speed and by fixing this issue using an interpolated dataset, the performance of the FNN is improved.
+We can observe that the problem of predicted time series moving faster or slower than the actual simulations is now gone. Also, the POD result in the worst case is now closer than the one in the original simulations. This confirmed that the varying time steps are the cause of the inconsistent convection speed and by fixing this issue using an interpolated dataset, the performance of the FNN is improved.
 
 
 \subsection{Long Short-Term Memory (LSTM) for Prediction}
 
 The LSTM in this section also has the same structure and the same set of hyperparameters as the one trained with the original larger dataset.
 
-The results are presented in the following figures, including the training loss and validation loss from Figure \ref{figure:LSTM_interpolated_losses}, overall testing result from Figure \ref{figure:LSTM_interpolated_testing}, and the most/least accurate prediction in Figures \ref{figure:LSTM_interpolated_best} and \ref{figure:LSTM_interpolated_worst}, respectively.
+The results are presented in the following figures, including the training and validation losses from Figure \ref{figure:LSTM_interpolated_losses}, overall testing result from Figure \ref{figure:LSTM_interpolated_testing}, and the most/least accurate prediction in Figures \ref{figure:LSTM_interpolated_best} and \ref{figure:LSTM_interpolated_worst}, respectively.
 
 
 \begin{figure}[H]
-    \caption{Training loss and Validation loss of LSTM trained with Interpolated Dataset.}
+    \caption{Training and validation losses of LSTM trained with Interpolated Dataset.}
     \includegraphics[scale=0.6]{figures/mantle_convection_images/larger_dataset_interpolated/LSTM_trainingData.png}
     \label{figure:LSTM_interpolated_losses}
 \end{figure}
@@ -611,9 +611,9 @@ The results are presented in the following figures, including the training loss 
     \label{figure:LSTM_interpolated_worst}
 \end{figure}
 
-From the above figures, we can see that the loss of the best case and the average loss of this LSTM is now less than the one trained with the original larger dataset, which means that the interpolation process improves the accuracy when using LSTM as well.
+From these figures, we can see that the loss of the best case and the average loss of this LSTM is now less than the one trained with the original larger dataset, which means that the interpolation process improves the accuracy when using LSTM as well.
 
-Again, two animations representing the best case and the worst case when predicting the rest of the simulation using the first 50 temperature fields are generated.
+Again, two animations representing the best and worst cases when predicting the rest of the simulation using the first 50 temperature fields are generated.
 
 Figures \ref{figure:LSTM_interpolated_best_gif} and \ref{figure:LSTM_interpolated_worst_gif} show 20\% of the two sprite sheets converted from the original animation files (Every 5th frame).
 
@@ -647,31 +647,28 @@ Figures \ref{figure:LSTM_interpolated_best_POD} and \ref{figure:LSTM_interpolate
 \end{figure}
 
 
-We can observe that the problem of predicted GIFs moving faster or slower than the actual simulations is gone, which is consistent with our conclusion in the last subsection.
+We can observe that the problem of predicted temperature evolution moving faster or slower than the actual simulations is gone, which is consistent with our conclusion in the last subsection.
 
+\section{Further experiments with Fully Connected Neural Network}
 
+To determine experimentally for how many time steps we can use the trained FNN during a set of $S$ consecutive time steps (e.g., $S=2$, $S=4$, or $S=8$, and then ``correct'' the time series with the truth coming from the simulator) without loosing track of the transient dynamics (that is, how large can $S$ be without significantly affecting accuracy), further experiments extending the two methods in the FNN section are done over the entire interpolated dataset using the trained FNN.
 
-
-\section{Further testings on Fully Connected Neural Network}
-
-To determine experimentally for how many time steps we can use the trained FNN during a set of S consecutive time steps (e.g., S=2, S=4, or S=8, and then "correct" the time series with the truth coming from the simulator) without loosing track of the transient dynamics (that is, how large can S be without significantly affecting accuracy), further testings extending the two methods in the FNN section are done over the entire interpolated dataset using the trained FNN.
-
-To compare against different values of S, POD are applied for each of the generated temperature field sequence to compare the difference of the eigenvalues between the predicted simulations and actual simulations. The data loss for each simulation are computed as well. The result for S = 1, 2, 4, 8, 16, 99 are shown as below (where S=1 is essentially the first method in the FNN section and S=99 is the second method), including the data loss shown by Figure \ref{figure:further_loss}, POD difference shown by Figure \ref{figure:further_POD} and Relative POD difference shown by Figure \ref{figure:further_relative_POD}:
+To compare against different values of $S$, POD is applied to each generated temperature field sequence to evaluate the difference of the eigenvalues between the predicted simulations and actual simulations. The data loss for each simulation are computed as well. The result for $S = 1, 2, 4, 8, 16, 99$ are shown as below (where $S=1$ is essentially the first method in the FNN section and $S=99$ is the second method), including the data loss shown in Figure \ref{figure:further_loss}, POD difference in Figure \ref{figure:further_POD} and relative POD difference in Figure \ref{figure:further_relative_POD}.
 
 \begin{figure}[H]
-    \caption{Data Loss for S consecutive time steps.}
+    \caption{Data Loss for $S$ consecutive time steps.}
     \includegraphics[scale=0.7]{figures/mantle_convection_images/further_testings/Data_Loss_table.png}
     \label{figure:further_loss}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{POD difference for S consecutive time steps.}
+    \caption{POD difference for $S$ consecutive time steps.}
     \includegraphics[scale=0.7]{figures/mantle_convection_images/further_testings/POD_table.png}
     \label{figure:further_POD}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Relative POD difference for S consecutive time steps.}
+    \caption{Relative POD difference for $S$ consecutive time steps.}
     \includegraphics[scale=0.7]{figures/mantle_convection_images/further_testings/Relative_POD_table.png}
     \label{figure:further_relative_POD}
 \end{figure}
@@ -679,44 +676,44 @@ To compare against different values of S, POD are applied for each of the genera
 To further evaluate the performance, a series of box plots are drawn, including Figure \ref{figure:further_loss_Box} for the data loss, and Figures \ref{figure:further_POD_Box} and \ref{figure:further_relative_POD_Box} for the POD difference and relative POD difference, respectively.
 
 \begin{figure}[H]
-    \caption{Box Plot for data loss when FNN is used in S consecutive time steps before correction.}
+    \caption{Box Plot for data loss when FNN is used in $S$ consecutive time steps before correction.}
     \includegraphics[scale=0.4]{figures/mantle_convection_images/further_testings/Data_Loss_boxplot.png}
     \label{figure:further_loss_Box}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Box Plot for POD difference when FNN is used in S consecutive time steps before correction.}
+    \caption{Box Plot for POD difference when FNN is used in $S$ consecutive time steps before correction.}
     \includegraphics[scale=0.4]{figures/mantle_convection_images/further_testings/POD_boxplot.png}
     \label{figure:further_POD_Box}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Box Plot for relative POD difference when FNN is used in S consecutive time steps before correction.}
+    \caption{Box Plot for relative POD difference when FNN is used in $S$ consecutive time steps before correction.}
     \includegraphics[scale=0.4]{figures/mantle_convection_images/further_testings/Relative_POD_boxplot.png}
     \label{figure:further_relative_POD_Box}
 \end{figure}
 
-For better visualisation, the animation representing the ground truth and the predicted simulation using different values of S are shown below in Figure \ref{figure:further_GIF}:
+For better visualisation, the animation representing the ground truth and the predicted simulation using different values of $S$ are shown below in Figure \ref{figure:further_GIF}.
 
 \begin{figure}[H]
     \centering
-    \caption{Animation sheet when FNN is used in S consecutive time steps before correction, where S = 1, 2, 4, 8, 16, and 99. The time steps, from left to right, are 1, 25, 50, 75, and 100. (Link to animation: \url{https://drive.google.com/file/d/1XOqXxLkuxnnvaTR0jw-7Sm68IqQFnTFf/view?usp=sharing})}
+    \caption{Animation sheet when FNN is used in $S$ consecutive time steps before correction, where $S$ = 1, 2, 4, 8, 16, and 99. The time steps, from left to right, are 1, 25, 50, 75, and 100. (Link to animation: \url{https://drive.google.com/file/d/1XOqXxLkuxnnvaTR0jw-7Sm68IqQFnTFf/view?usp=sharing})}
     \includegraphics[scale=0.30]{figures/mantle_convection_images/further_testings/FNN_further_testing_sheet.png}
     \label{figure:further_GIF}
 \end{figure}
 
-One thing that is particularly worth pointing out is that the growth of the average data loss with respect to S shown in the box plot is more moderate than expected. Therefore, a plot showing the error growth in loglog which enables us to estimate this growth as a function of S is shown as below in Figure \ref{figure:further_loglog}:
+One thing that particularly worths pointing out is that the growth of the average data loss with respect to $S$ shown in the box plot is more moderate than expected. Therefore, a plot showing the error growth in loglog is shown as below in Figure \ref{figure:further_loglog}. This enables us to estimate this growth as a function of $S$.
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{figures/mantle_convection_images/further_testings/FNN_LogLog.png}
-    \caption{Growth of average data loss with respect to the value of S shown by LogLog, which is approximately $O(0.77S)$.}
+    \caption{Growth of average data loss with respect to the value of $S$ shown by LogLog, which is approximately $O(0.77S)$.}
     \label{figure:further_loglog}
 \end{figure}
 
-We can now confirmed that when FNN is used in S consecutive time steps, the growth of the data loss with S (ranging from 1, 2, 4, 8, 16 to 99) is remarkably moderate (less than $O(S)$), with only a few outliers deviating moderately from the median. This could provide some avenues for the future research.
+We can confirm that when FNN is used during $S$ consecutive time steps, the growth of the data loss with $S$ (ranging from 1, 2, 4, 8, 16 to 99) is remarkably moderate (less than $O(S)$), with only a few outliers deviating moderately from the median. This could provide some avenues for future research.
 
-Overall, we tested on 3 different dataset by using ConvAE to compress the temperature fields and using FNN/LSTM to make predictions. We found that even though FNN using "One-for-One" method is generally better than LSTM when predicting a complete time series for its higher accuracy and lower data loss, LSTM, however, is more capable to capture the characteristic of a simulation than FNN using "One-for-All" method. Inspired by the extremely low computational demands of the "One-for-All" method (1 in, 99 out), we conducted some further testings on FNN when it is used in a series of S consecutive time steps before it is corrected using the ground truth. The result for the growth of the data loss with respect to S is remarkable and could provide some valuable insights for future studies.
+Overall, we tested on 3 different dataset by using ConvAE to compress the temperature fields and using FNN/LSTM to make predictions. We found that even though FNN using "One-for-One" method is generally better than LSTM when predicting a complete time series for its higher accuracy and lower data loss, LSTM, however, is more capable to capture the characteristic of a simulation than FNN using "One-for-All" method. Inspired by the extremely low computational demands of the "One-for-All" method (1 in, 99 out), we conducted some further evaluaion of FNN when it is used in a series of $S$ consecutive time steps before it is corrected using the ground truth. The result for the growth of the data loss with respect to $S$ is remarkable and could provide some valuable insights for future studies.
 
 
 
