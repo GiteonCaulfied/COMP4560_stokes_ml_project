@@ -114,7 +114,7 @@ The trainable parameters of the FNN are optimized using small mini-batches of 16
 
 After testing with FNNs that have different number of hidden layers and neurons per hidden layer, we found that architectures with a total number 3 hidden layers seemed to perform the best. We also tested some deeper architectures with 4-5 hidden layers. However, there is no significant reduction in the loss value.
 
-In the following figures, we present results from a FNN with 3 hidden layers with 3,105; 1,035; and 3,105 neurons per layer, respectively. Tanh() was used as activation function. The network was trained for 1,000 epochs. The results reported include the training loss and validation loss in Figure \ref{figure:FNN_limited_losses}, overall testing result in Figure \ref{figure:FNN_limited_testing}, and the most/least accurate prediction in Figure \ref{figure:FNN_limited_best} and Figure \ref{figure:FNN_limited_worst}, respectively.
+In the following figures, we present results from a FNN with 3 hidden layers with 3,105; 1,035; and 3,105 neurons per layer, respectively. Tanh() was used as activation function. The network was trained for 1,000 epochs. The results reported include the training loss and validation loss in Figure \ref{figure:FNN_limited_losses}, overall testing result in Figure \ref{figure:FNN_limited_testing}, and the most/least accurate prediction in Figures \ref{figure:FNN_limited_best} and \ref{figure:FNN_limited_worst}, respectively.
 
 \begin{figure}[H]
     \caption{Training loss and Validation loss of FNN trained with Limited Dataset.}
@@ -289,10 +289,9 @@ The larger dataset are randomly divided in the same way as the limited dataset f
 
 \subsection{Compression of temperature fields}
 
-The ConvAE used for compressing the temperature fields in this section has the same structure and the same set of hyperparameters as the one trained with limited dataset, except that the total number of epochs are now reduced from 1,000 to 200 due to the constrains of the computational resources on Gadi.
+The ConvAE used for compressing the temperature fields in this section has the same structure and hyperparameters values as the one trained with limited dataset, except for the total number of epochs, which are now reduced from 1,000 to 200 due to the computational budget limitatins on Gadi.
 
 In the following figures, some detailed test results from this ConvAE trained with larger dataset are presented, including the training loss and validation loss in Figure \ref{figure:ConvAE_larger_losses}, overall testing result in Figure \ref{figure:ConvAE_larger_testing}, and the most/least accurate prediction in Figure \ref{figure:ConvAE_larger_best_worst}.
-:
 
 \begin{figure}[H]
     \caption{Training loss and Validation loss of ConvAE trained with Larger Dataset.}
@@ -321,14 +320,14 @@ In the following figures, some detailed test results from this ConvAE trained wi
 \label{figure:ConvAE_larger_best_worst}
 \end{figure}
 
-Overall, the performance of this ConvAE is similar to the one trained with limited dataset: reconstruction loss are low and no overfitting occurs.
+Overall, the performance of this ConvAE is similar to the one trained with the limited dataset: reconstruction loss is low and no overfitting occurs.
 
 
 \subsection{Fully Connected Neural Network for Prediction}
 
-The FNN in this section also has the same structure and the same set of hyperparamters as the one trained with limited dataset, except that the total number of epochs are reduced from 1,000 to 200 as well.
+The FNN in this section also has the same structure and the same set of hyperparameters as the one trained with the limited dataset, except that the total number of epochs are reduced from 1,000 to 200 as well.
 
-The results are presented in the following figures, including the training loss and validation loss from Figure \ref{figure:FNN_larger_losses}, overall testing result from Figure \ref{figure:FNN_larger_testing}, and the most/least accurate prediction in Figure \ref{figure:FNN_larger_best} and Figure \ref{figure:FNN_larger_worst}:
+The results are presented in the following figures, including the training loss and validation loss from Figure \ref{figure:FNN_larger_losses}, overall testing result from Figure \ref{figure:FNN_larger_testing}, and the most/least accurate prediction in Figures \ref{figure:FNN_larger_best} and \ref{figure:FNN_larger_worst}, respectively.
 
 \begin{figure}[H]
     \caption{Training loss and Validation loss of FNN trained with Larger Dataset.}
@@ -354,11 +353,11 @@ The results are presented in the following figures, including the training loss 
     \label{figure:FNN_larger_worst}
 \end{figure}
 
-The above result of this FNN are similar to the one trained with limited dataset: the loss values are low and no overfitting occurs. There are still some small information loss, which is now confirmed as caused by the loss of data generated during the compression-decompression process of ConvAE.
+The results obtained with the FNN are similar to the ones obtained with the limited dataset: loss values are low and no overfitting occurs. There is still some small information loss, which is now confirmed as caused by the loss of data generated during the compression-decompression process of ConvAE.
 
 Again, two animations representing the best case and the worst case when predicting the entire simulation using "One-for-All" (use $T1$ from dataset $\rightarrow$ get predicted $T2$ $\rightarrow$ use predicted $T2$ $\rightarrow$ get predicted $T3$ $\rightarrow$ ...) are generated.
 
-Figure \ref{figure:FNN_larger_best_gif} and Figure \ref{figure:FNN_larger_worst_gif} show 10\% of the two sprite sheets converted from the original animation files (Every 10th frame).
+Figures \ref{figure:FNN_larger_best_gif} and \ref{figure:FNN_larger_worst_gif} show 10\% of the two sprite sheets converted from the original animation files (Every 10th frame).
 
 \begin{figure}[H]
     \centering
@@ -375,7 +374,7 @@ Figure \ref{figure:FNN_larger_best_gif} and Figure \ref{figure:FNN_larger_worst_
     \label{figure:FNN_larger_worst_gif}
 \end{figure}
 
-POD result for the best case and worst case are shown by Figure \ref{figure:FNN_larger_best_POD} and Figure \ref{figure:FNN_larger_worst_POD}:
+POD results for the best and worst cases are shown in Figures \ref{figure:FNN_larger_best_POD} and \ref{figure:FNN_larger_worst_POD}, respectively.
 
 \begin{figure}[H]
     \caption{Best case POD of FNN trained with Larger Dataset.}
@@ -389,14 +388,14 @@ POD result for the best case and worst case are shown by Figure \ref{figure:FNN_
     \label{figure:FNN_larger_worst_POD}
 \end{figure}
 
-We can observe that the increasing size of the training data does not improve the quality of the animations when predicting the entire simulations using the first method. Also, apart from the information loss, the problem of the predicted GIFs moving too fast or too slow still exists.
+We can observe that the increasing size of the training data does not improve the quality of the animations when predicting the entire simulations using the first method. Also, apart from the information loss, the problem of the predicted time temperature evolution moving too fast or too slow still exists.
 
 
 \subsection{Long Short-Term Memory (LSTM) for Prediction}
 
 The LSTM in this section also has the same structure and the same set of hyperparamters as the one trained with limited dataset, except that the total number of epochs are reduced from 200 to 100.
 
-The results are presented in the following figures, including the training loss and validation loss from Figure \ref{figure:LSTM_larger_losses}, overall testing result from Figure \ref{figure:LSTM_larger_testing}, and the most/least accurate prediction in Figure \ref{figure:LSTM_larger_best} and Figure \ref{figure:LSTM_larger_worst}:
+The results are presented in the following figures, including the training loss and validation loss from Figure \ref{figure:LSTM_larger_losses}, overall testing result from Figure \ref{figure:LSTM_larger_testing}, and the most/least accurate prediction in Figures \ref{figure:LSTM_larger_best} and \ref{figure:LSTM_larger_worst}, respectively.
 
 \begin{figure}[H]
     \caption{Training loss and Validation loss of LSTM trained with Larger Dataset.}
@@ -427,7 +426,7 @@ From the above figures, we can see that the loss of the best case and the worst 
 
 For better visualisation as well, two animations representing the best case and the worst case when predicting the rest of the simulation using the first 50 temperature fields are generated.
 
-Figure \ref{figure:LSTM_larger_best_gif} and Figure \ref{figure:LSTM_larger_worst_gif} show 20\% of the two sprite sheets converted from the original animation fields (Every 5th frame).
+Figure \ref{figure:LSTM_larger_best_gif} and \ref{figure:LSTM_larger_worst_gif} show 20\% of the two sprite sheets converted from the original animation fields (Every 5th frame).
 
 \begin{figure}[H]
     \centering
@@ -446,7 +445,7 @@ Figure \ref{figure:LSTM_larger_best_gif} and Figure \ref{figure:LSTM_larger_wors
     \label{figure:LSTM_larger_worst_gif}
 \end{figure}
 
-POD result for the best case and worst case are shown in Figure \ref{figure:LSTM_larger_best_POD} and Figure \ref{figure:LSTM_larger_worst_POD}:
+POD result for the best case and worst case are shown in Figure \ref{figure:LSTM_larger_best_POD} and \ref{figure:LSTM_larger_worst_POD}:
 
 \begin{figure}[H]
     \caption{Best case POD of LSTM trained with Larger Dataset.}
@@ -517,7 +516,7 @@ We can observe that the performance of this ConvAE is better than the one traine
 
 The FNN in this section also has the same structure and the same set of hyperparameters as the one trained with the original larger dataset.
 
-The results are presented in the following figures, including the training loss and validation loss from Figure \ref{figure:FNN_interpolated_losses}, overall testing result from Figure \ref{figure:FNN_interpolated_testing}, and the most/least accurate prediction in Figure \ref{figure:FNN_interpolated_best} and Figure \ref{figure:FNN_interpolated_worst}:
+The results are presented in the following figures, including the training loss and validation loss from Figure \ref{figure:FNN_interpolated_losses}, overall testing result from Figure \ref{figure:FNN_interpolated_testing}, and the most/least accurate prediction in Figures \ref{figure:FNN_interpolated_best} and \ref{figure:FNN_interpolated_worst}.
 
 \begin{figure}[H]
     \caption{Training loss and Validation loss of FNN trained with Interpolated Dataset.}
@@ -547,7 +546,7 @@ The above result of this FNN are better than the one trained with the original l
 
 Again, two animations representing the best case and the worst case when predicting the entire simulation using "One-for-All" method (use $T1$ from dataset $\rightarrow$ get predicted $T2$ $\rightarrow$ use predicted $T2$ $\rightarrow$ get predicted $T3$ $\rightarrow$ ...) are generated.
 
-Figure \ref{figure:FNN_interpolated_best_gif} and Figure \ref{figure:FNN_interpolated_worst_gif} show 10\% of the sprite sheets converted from the original animation files (Every 10th frame).
+Figures \ref{figure:FNN_interpolated_best_gif} and \ref{figure:FNN_interpolated_worst_gif} show 10\% of the sprite sheets converted from the original animation files (Every 10th frame).
 
 \begin{figure}[H]
     \centering
@@ -564,7 +563,7 @@ Figure \ref{figure:FNN_interpolated_best_gif} and Figure \ref{figure:FNN_interpo
     \label{figure:FNN_interpolated_worst_gif}
 \end{figure}
 
-Figure \ref{figure:FNN_interpolated_best_POD} and Figure \ref{figure:FNN_interpolated_worst_POD} show the POD result in the best case and the worst case:
+Figures \ref{figure:FNN_interpolated_best_POD} and \ref{figure:FNN_interpolated_worst_POD} show the POD result in the best case and the worst case:
 
 \begin{figure}[H]
     \caption{Best case POD of FNN trained with Interpolated Dataset.}
@@ -585,7 +584,7 @@ We can observe that the problem of predicted GIFs moving faster or slower than t
 
 The LSTM in this section also has the same structure and the same set of hyperparameters as the one trained with the original larger dataset.
 
-The results are presented in the following figures, including the training loss and validation loss from Figure \ref{figure:LSTM_interpolated_losses}, overall testing result from Figure \ref{figure:LSTM_interpolated_testing}, and the most/least accurate prediction in Figure \ref{figure:LSTM_interpolated_best} and Figure \ref{figure:LSTM_interpolated_worst}:
+The results are presented in the following figures, including the training loss and validation loss from Figure \ref{figure:LSTM_interpolated_losses}, overall testing result from Figure \ref{figure:LSTM_interpolated_testing}, and the most/least accurate prediction in Figures \ref{figure:LSTM_interpolated_best} and \ref{figure:LSTM_interpolated_worst}, respectively.
 
 
 \begin{figure}[H]
@@ -616,7 +615,7 @@ From the above figures, we can see that the loss of the best case and the averag
 
 Again, two animations representing the best case and the worst case when predicting the rest of the simulation using the first 50 temperature fields are generated.
 
-Figure \ref{figure:LSTM_interpolated_best_gif} and Figure \ref{figure:LSTM_interpolated_worst_gif} show 20\% of the two sprite sheets converted from the original animation files (Every 5th frame).
+Figures \ref{figure:LSTM_interpolated_best_gif} and \ref{figure:LSTM_interpolated_worst_gif} show 20\% of the two sprite sheets converted from the original animation files (Every 5th frame).
 
 \begin{figure}[H]
     \centering
@@ -633,7 +632,7 @@ Figure \ref{figure:LSTM_interpolated_best_gif} and Figure \ref{figure:LSTM_inter
     \label{figure:LSTM_interpolated_worst_gif}
 \end{figure}
 
-Figure \ref{figure:LSTM_interpolated_best_POD} and Figure \ref{figure:LSTM_interpolated_worst_POD} show the POD result in best case and the worst case:
+Figures \ref{figure:LSTM_interpolated_best_POD} and \ref{figure:LSTM_interpolated_worst_POD} show the POD results in best case and the worst case, respectively.
 
 \begin{figure}[H]
     \caption{Best case POD of LSTM trained with Interpolated Dataset.}
@@ -677,7 +676,7 @@ To compare against different values of S, POD are applied for each of the genera
     \label{figure:further_relative_POD}
 \end{figure}
 
-To further evaluate the performance, a series of box plots are drawn, including Figure \ref{figure:further_loss_Box} for the data loss, Figure \ref{figure:further_POD_Box} for the POD difference and Figure \ref{figure:further_relative_POD_Box} for the relative POD difference.
+To further evaluate the performance, a series of box plots are drawn, including Figure \ref{figure:further_loss_Box} for the data loss, and Figures \ref{figure:further_POD_Box} and \ref{figure:further_relative_POD_Box} for the POD difference and relative POD difference, respectively.
 
 \begin{figure}[H]
     \caption{Box Plot for data loss when FNN is used in S consecutive time steps before correction.}
