@@ -4,8 +4,7 @@ Geoid, in the field of geodynamics, represents the shape of a gravity equipotent
 
 As shown in Figure \ref{figure:geoid_factors}, geoid is generally related to both the 3D density field of the Earth and the radial viscosity profile of the Earth's mantle. However, research shows that modelling that treats the geoid as being purely based on density variation near the surface can poorly explain the accurately observed geoid measurements with a satellite. \citep{10.1098_rsta.1989.0038}
 
-Therefore, in this research, we aim to use Neural Networks as a way to forward model the geoid problem,
-assuming that viscosity varying in the radial direction with depth is the most important factor.
+Therefore, in this research, we aim to use Neural Networks as a way to forward model the geoid problem, assuming that viscosity varying in the radial direction with depth is the most important factor.
 
 \begin{figure}[H]
     \centering
@@ -14,7 +13,7 @@ assuming that viscosity varying in the radial direction with depth is the most i
     \label{figure:geoid_factors}
 \end{figure}
 
-To explore the usage of Earth's viscosity to model the geoid using NNs, we use a 1D spherically symmetric viscosity model to compute a geoid surface in terms of some spherical harmonics coefficients that can be used to construct the geoid surface. To further simplify this problem, the dataset used for this research uses a reduced prior such that the perturbations to the output are smaller.
+To explore the usage of Earth's viscosity to model the geoid using NNs, we use a 1D spherically symmetric viscosity model to compute a geoid surface in terms of some spherical harmonics coefficients that can be used to construct the geoid surface.\citep{10.1029_jb089ib07p05987} To further simplify this problem, the dataset used for this research uses a reduced prior such that the perturbations to the output are smaller.
 
 
 \section{Dataset of geoid prediction}
@@ -22,7 +21,7 @@ To explore the usage of Earth's viscosity to model the geoid using NNs, we use a
 The reduced dataset consists of 1,000 pairs of input and output. In the dataset, the input is a vector with 257 values indicating a 1D spherically symmetric viscosity model and the output is a vector with 60 values representing a set of spherical harmonic coefficients describing the geoid height on the surface of the Earth. Figure \ref{figure:geoid_sample} shows a sample geoid field constructed from a random set of 60 geoid coefficients from the output data, where the units of the geoid are in metres and represent values greater or less than some reference value.
 
 \begin{figure}[H]
-    \caption{Sample geoid field, where the units of the geoid are in metres and represent values greater or less than some reference value.}
+    \caption{Sample geoid field.}
     \label{figure:geoid_sample}
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_Sample_visualization.png}
 \end{figure}
@@ -47,11 +46,11 @@ From Figure \ref{figure:geoid_output} we can observe that the outputs in the dat
 
 After the output data is normalised, the entire dataset is randomly divided in a ratio of 8:1:1: 80 per cent of the dataset is used for training, 10 per cent for testing accuracy and the remaining 10 per cent to perform validation during training and prevent overfitting. For a dataset with 1,000 samples, this results in a train-test-validation split of 800-100-100.
 
-\section{Fully Connected Neural Network for Prediction}
+\section{Fully Connected Neural Network for prediction}
 
-To test the feed-forward fully connected neural network (FNN) with different configurations (e.g. different number of hidden layers and neurons per hidden layer) or other sets of hyperparameters (e.g. optimizer), a systematic testing method is applied. This method was implemented using three files: one text file to store all the different set of FNN configurations and hyperparameters in a text format\footnote{Link to the file: \url{https://github.com/GiteonCaulfied/COMP4560_stokes_ml_project/blob/main/ModelList.txt}}, one Jupyter Notebook file to fetch all these combinations of configurations and hyperparameters line by line, build them as FNN models and train these models\footnote{Link to the file: \url{https://github.com/GiteonCaulfied/COMP4560_stokes_ml_project/blob/main/Geoid_systematic_training.ipynb}}, and another Jupyter Notebook for evaluation and visualisation of the trained models by specifying the path of a trained model.\footnote{Link to the file: \url{https://github.com/GiteonCaulfied/COMP4560_stokes_ml_project/blob/main/Geoid_visualisation.ipynb}}
+To test the feed-forward fully connected neural network (FNN) with different configurations (e.g. different number of hidden layers and neurons per hidden layer) or other sets of hyperparameters (e.g. optimizer), a systematic testing method is applied. This method was implemented using three files: one text file to store all the different sets of FNN configurations and hyperparameters in a text format\footnote{Link to the file: \url{https://github.com/GiteonCaulfied/COMP4560_stokes_ml_project/blob/main/ModelList.txt}}, one Jupyter Notebook file to fetch all these combinations of configurations and hyperparameters line by line, build them as FNN models and train these models\footnote{Link to the file: \url{https://github.com/GiteonCaulfied/COMP4560_stokes_ml_project/blob/main/Geoid_systematic_training.ipynb}}, and another Jupyter Notebook for evaluation and visualisation of the trained models by specifying the path of a trained model.\footnote{Link to the file: \url{https://github.com/GiteonCaulfied/COMP4560_stokes_ml_project/blob/main/Geoid_visualisation.ipynb}}
 
-The trained FNN architecture (in the format of a light-weight file) along with another text file contains the training loss and validation loss during training stored in a specified path for further evaluation and visualisation. The name of these two files uniquely defines each experiment by including the values of hyperparameters used to generate this model in the file names. These files are also put in separate folders with the folder name associated with commit IDs to handle tracking of the process during the research in an educated or extensible way.
+The trained FNN architecture (in the format of a light-weight file) along with another text file contains the training loss and validation loss during training are stored in a specified path for further evaluation and visualisation. The name of these two files uniquely defines each experiment by including the values of hyperparameters used to generate this model in the file names. These files are also put in separate folders with the folder name associated with commit IDs to handle tracking of the process during the research in an educated or extensible way.
 
 In this way, one can open the same Jupyter Notebook in different browser tabs, and then visualize simultaneously different models in different tabs using a cell in which the paths to the FNN model and its training data are specified. 
 
@@ -63,9 +62,9 @@ After testing with NNs with different number of hidden layers and neurons per hi
 
 In the following figures, we present results from a FNN with 4 hidden layers with 200, 160, 120 and 80 neurons in each layer, respectively, ReLU as activation function, MSELoss as loss function, and trained for 200 epochs using Mini-Batch Gradient Descent (with a batch size of 16).
 
-Note that the loss value (error), which is back-propagated during the training process, is defined as the MSELoss between the prediction and the normalised ground truth. In this case, the best and worst cases shown below are also defined upon the value of this normalised loss, instead of the reconstructed loss which is defined as the MSELoss between the denormalised prediction and the ground truth.
+Note that the loss value (error), which is back-propagated during the training process, is defined as the MSELoss between the prediction and the normalised ground truth. In this case, the best and worst cases shown below are also defined upon the value of this normalised loss, instead of the reconstructed loss which is defined as the MSELoss between the inverse normalised prediction and the ground truth.
 
-We present the training loss and validation loss in Figure \ref{figure:geoid_losses}, the overall testing result in Figure \ref{figure:geoid_testing},  the most accurate geoid prediction in Figure \ref{figure:geoid_best} and the least accurate geoid prediction in Figure \ref{figure:geoid_worst}.
+We present the training loss and validation loss in Figure \ref{figure:geoid_losses} and the overall testing result in Figure \ref{figure:geoid_testing}.
 
 \begin{figure}[H]
     \caption{Training validation loss.}
@@ -79,14 +78,16 @@ We present the training loss and validation loss in Figure \ref{figure:geoid_los
     \label{figure:geoid_testing}
 \end{figure}
 
+The most accurate geoid prediction and the least accurate geoid prediction are presented in Figure \ref{figure:geoid_best} and Figure \ref{figure:geoid_worst}, respectively.
+
 \begin{figure}[H]
-    \caption{Most accurate geoid prediction.}
+    \caption{Most accurate geoid prediction, including the input viscosity model resulting in this prediction, the ground truth and prediction in the same plot, and the error plot calculated by the difference between prediction and the ground truth.}
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_Best.png}
     \label{figure:geoid_best}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Least accurate geoid prediction.}
+    \caption{Least accurate geoid prediction, including the input viscosity model resulting in this prediction, the ground truth and prediction in the same plot, and the error plot calculated by the difference between prediction and the ground truth.}
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_Worst.png}
     \label{figure:geoid_worst}
 \end{figure}
