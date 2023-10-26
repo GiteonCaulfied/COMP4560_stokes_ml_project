@@ -472,7 +472,7 @@ POD result for the best and worst cases are shown in Figure \ref{figure:LSTM_lar
 
 From the animations and the POD results, we can now confirmed that LSTM is able to capture most of characteristics of the simulations even in its worst case and the simulations predicted using LSTM are less accurate compared with those predicted using FNN. 
 
-There is also an interesting phenomenon where the difference between the POD coefficients of the prediction and the POD coefficients of the ground truth is actually smaller in the worst case, even though the data loss in the worst case is higher. This means that LSTM fails to accurately predict the simulation in its worse case, but somehow manages to capture the dynamic transient successfully in its worse case as well. This could provide some implications in using LSTM as surrogate models for future research when dynamic transient is considered to be more important than the accuracy.
+There is also an interesting behavior: the difference between the POD coefficients of the prediction and the POD coefficients of the ground truth is actually smaller in the worst case, even though the data loss in the worst case is higher. This means that LSTM fails to accurately predict the simulation in its worse case, but somehow manages to capture the dynamic transient successfully in its worse case as well. This could provide some implications in using LSTM as surrogate models for future research when dynamic transient is considered to be more important than the accuracy.
 
 
 \section{Mantle Convection simulation on interpolated dataset}
@@ -664,7 +664,7 @@ Figures \ref{figure:LSTM_interpolated_best_POD} and \ref{figure:LSTM_interpolate
 \end{figure}
 
 
-We can observe that the problem of predicted temperature evolution moving faster or slower than the actual simulations is gone, which is consistent with our conclusion in Section \ref{sec:mc_interpolated_fnn}. Also, the interesting phenomenon of the worst case capturing the main features better than the best case still exists, which can provided some avenues for the future research.
+We can observe that the problem of predicted temperature evolution moving faster or slower than the actual simulations is gone, which is consistent with our conclusion in Section \ref{sec:mc_interpolated_fnn}. Also, the unexpected behavior of the worst case capturing the main features better than the best case still exists, which can provided some avenues for the future research.
 
 \section{Further experiments with Fully Connected Neural Network}
 
