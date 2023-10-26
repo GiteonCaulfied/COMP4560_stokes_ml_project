@@ -2,7 +2,7 @@
 
 \section{Conclusion}
 
-In this research, we use Neural Networks (NN) to approximate the solution of the forward modelling problem of geoid as a set of spherical harmonic coefficients given a 1D spherically symmetric viscosity model. The dataset used to train the algorithms consists of 1,000 pairs of the above models and has a reduced prior such that the perturbations to the output are smaller to simplify the problem. The dataset is fed into different feed-forward Fully Connected Neural Network (FNN) architectures with different set of hyperparameters  to systematically find the model with the best performance. 
+In this research, we use Neural Networks (NN) to approximate the solution of the forward modelling problem of geoid as a set of spherical harmonic coefficients given a 1D spherically symmetric viscosity model. The dataset used to train the algorithms consists of 1,000 pairs of the above models and has a reduced prior such that the perturbations to the output are smaller to simplify the problem. The dataset is fed into different feed-forward Fully Connected Neural Network (FNN) architectures with different sets of hyperparameters to systematically find the model with the best performance. 
 
 We found that FNN architectures with a total of 3-4 hidden layers have the best mean accuracy. This could be presented as a proof showing that high-dimensional regression algorithms like neural networks can help with the forward modelling of the geoid problem when predicting a set of spherical harmonic coefficients given a reduced dataset with a fairly small number of 1D spherically symmetric viscosity models.
 

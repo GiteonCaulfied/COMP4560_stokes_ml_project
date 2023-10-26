@@ -12,7 +12,7 @@ A feed-forward Fully Connected Neural Network (FNN) using linear layers for conn
 \end{equation*}
 
 where $\theta$ represents the set of all trainable parameters. In general, the activation function $g$ can be
-different at each layer. However, for simplicity, we use the same activation function for all layers in this study.
+different at each layer. However, for simplicity, we use the same activation function for all layers.
 
 The affine maps can be defined as:
 \begin{equation*} 
@@ -24,19 +24,19 @@ Both $A_i$ and $b_i$ can be optimized through a technique called error backpropa
 
 By looping over the process of feeding the input data into NN to perform prediction, calculating the loss between the prediction and the actual data and eventually using the loss value to optimize the trainable parameters in each layer, the NN model is able to be adjusted to a state that best fits to the underlying pattern of the provided dataset.
 
-In this study, we use a Machine Learning library called PyTorch to implement the NN architecture, specifying the loss function and optimizer that minimize the loss function (Adam optimizer, in this case, is used throughout the study due to its broader adoption for deep learning) and systematically train and test the performance of the networks.
+In this study, we use a widely used Machine Learning library called PyTorch \citep{paszke2019pytorch} to implement the NN architecture, specifying the loss function and optimizer that minimize the loss function (Adam optimizer, in this case, is used throughout the study due to its broader adoption for deep learning) and systematically train and test the performance of the networks.
 
 Apart from FNNs, Convolutional Neural Networks (CNNs) are also one of the most commonly used NNs. They can identify 
-spatial patterns in matrix or image input better than the traditional FNN with linear layers. Instead of linear layers, they use convolutional layers that contain specified numbers of trainable filters, each of which is used to enhance or identify a particular feature in the input. Filters are convolved with the input image or the output of the previous layer, the results are summed together along with a trainable bias, and passed through an activation function to produce a feature map. Similar to FNNs, an activation function is also added to introduce non-linearity to the feature map.
+spatial patterns in 2D data better than the traditional FNN with linear layers. Instead of linear layers, they use convolutional layers that contain a specified number of trainable filters, each of which is used to enhance or identify a particular feature in the input. Filters are convolved with the input image or the output of the previous layer, the results are summed together along with a trainable bias, and passed through an activation function to produce a feature map. Similar to FNNs, an activation function is also added to introduce non-linearity to the feature map.
 
 In this study, a variation of CNNs is used as a way to compress the size of the input data in the mantle convection problem, which is called Convolutional AutoEncoder (ConvAE). It is constructed as two separate structures that are trained together: an encoder using convolution operation to reduce the size of the original input and output a latent space representation, and a decoder using deconvolution operation to transform the latent space representation back to its original size. By feeding the input into a ConvAE, the dimension of the original high-resolution input can be decreased with the main features captured (some information may be lost during the encoding process nevertheless), thus making it more computationally efficient to work with if we want to feed it into a prediction NN.
 
-Since the dataset in the mantle convection problem is a time sequence with adaptive timestamps, Long Short-Term Memory (LSTM) is used to predict a sequence of output apart from FNN. LSTM's architecture that use a sequence of input recurrently during prediction allows it to handle time-series data more accurately than other networks since it uses a set of inputs from previous time-steps to predict the outputs at the next set of time-steps, thus leading to a potential better result.
+Since the dataset in the mantle convection problem is a time sequence with adaptive timestamps, Long Short-Term Memory (LSTM) is used to predict a sequence of output apart from FNN. LSTM's architecture that use a sequence of input recurrently during prediction allows it to handle time-series data more accurately than other networks since it uses a set of inputs from previous time-steps to predict the outputs at the next set of time-steps, thus leading to a potential better result. \citep{10.1162_neco.1997.9.8.1735}
 
 
 \section{Related works on solving geoid and mantle convection using NNs}
 
-Neural networks have increasingly been used in the modelling of geodynamics problems nowadays, in particular, when it comes to geoid and mantle convection simulations. 
+Neural networks have increasingly been used in the modelling of geodynamics problems in recent years, in particular, when it comes to geoid and mantle convection simulations. 
 
 For example, Kerl, in his master thesis \citep{kerl2022geoid}, provides a bold attempt at using ML as a low-cost solution to the geoid inverse problem. In this work, two different solutions using a different number of CNNs are compared. He found that the single network solution where a radial viscosity profile is predicted directly from the geoid and density data allows to obtain a smooth, long-wavelength estimate of the Earth's radial viscosity profile. This provides us some implications on using only one NN to tackle the forward problem instead of a solution in which different NNs are used to predict intermediate results to be chained to produce the final result.
 
@@ -48,7 +48,7 @@ Overall, previous works have explored the usage of Convolutional Neural Networks
 
 In contrast to these works:
 \begin{itemize}
-    \item We use FNN on a 1D spherically symmetric viscosity model to solve the forward geoid problem as a first step to solve the inverse geoid problem.
+    \item We use a FNN on a 1D spherically symmetric viscosity model to solve the forward geoid problem as a first step to solve the inverse geoid problem.
     
     \item We aim to produce the complete mantle convection time-series from an initial temperature field, rather than the next time-step out of the previous ones for a given set of parameters of the mantle convection model.
 \end{itemize}
