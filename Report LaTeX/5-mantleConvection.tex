@@ -1,4 +1,4 @@
-\chapter{Mantle Convection problem}\label{chap:evaluation}
+\chapter{Mantle convection problem}\label{chap:evaluation}
 
 The mantle convection problem can be modelled using the Stokes system of Partial Differential Equations (PDEs).
 This system is derived from first-principle physics, namely, conservation equations of mass, momentum, and energy, in their simplest form of the Boussinesq approximation. Given an initial temperature, we can get a complete temperature time evolution predicted by the numerical finite element solver of the continuous equations, as shown below in Figure \ref{figure:MC_workflow}.
@@ -11,7 +11,7 @@ This system is derived from first-principle physics, namely, conservation equati
 
 To explore the usage of Neural Networks as surrogate models for the original mantle convection numerical solver with the aim of significantly reducing computational demands, three different datasets are tested, which we refer to as  ``Limited Dataset'', ``Larger Dataset'' and ``Interpolated Dataset''. Each dataset is composed of several temperature time-series with 100 timestamps each resulting from numerical simulations with randomly sampled initial conditions (except for the Interpolated Dataset, which is created from the Larger Dataset using interpolation).
 
-\section{Mantle Convection simulation on limited dataset}
+\section{Mantle convection simulation on limited dataset}
 
 The limited dataset consists of 100 files. Each of these files represents one mantle convection simulation with 100 time steps generated from an initial condition with random number of points and random amplitude and coordinates of Gaussian anomalies distributed in space. We thus have a total of 10,000 temperature fields in the Limited Dataset. Starting from each initial condition, we convect as long as there is meaningful change in the simulation (that is the temperature fields change enough after one time-step). The size of each temperature field is $201 \times 401$. For numerical reasons which are out of scopes for this project, it turns out that the time steps for the temperature fields have to be adaptive. However, these adaptive time steps lead to a problem, that is, the distance between each consecutive pairs of time steps might not be the same even within the same simulation file of the data set. This could lead to some uncommon behaviors when predicting a sequence of temperature fields using the ML architecture. This will be discussed in more detail when using ML architecture for predictions.
 
@@ -160,14 +160,14 @@ Figure \ref{figure:FNN_limited_best_gif} and \ref{figure:FNN_limited_worst_gif} 
 
 \begin{figure}[H]
     \centering
-    \caption{Best case animation sheet of FNN trained with Limited Dataset. From top to bottom are Ground Truth, One-for-All prediction and One-for-One prediction. Each row in the animation sheet has 4 time steps. (Link to animation: \url{https://drive.google.com/file/d/1Hmb4UlevBHMRw0jDScTwUzDFPbYNubKO/view?usp=sharing})}
+    \caption{Best case animation sheet of FNN trained with Limited Dataset. Each frame, from top to bottom, has Ground Truth, One-for-All prediction and One-for-One prediction. (Link to animation: \url{https://drive.google.com/file/d/1Hmb4UlevBHMRw0jDScTwUzDFPbYNubKO/view?usp=sharing})}
     \includegraphics[scale=0.23]{figures/mantle_convection_images/limited_dataset/FNN_Best_GIF_sheet.png}
     \label{figure:FNN_limited_best_gif}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \caption{Worst case animation sheet of FNN trained with Limited Dataset. From top to bottom are Ground Truth, One-for-All prediction and One-for-One prediction. Each row in the animation sheet has 4 time steps. (Link to animation: 
+    \caption{Worst case animation sheet of FNN trained with Limited Dataset. Each frame, from top to bottom, has Ground Truth, One-for-All prediction and One-for-One prediction. (Link to animation: 
     \url{https://drive.google.com/file/d/11jRFxq-XuIUvTk74OuxswDn3u031k_q7/view?usp=sharing})}
     \includegraphics[scale=0.23]{figures/mantle_convection_images/limited_dataset/FNN_Worst_GIF_sheet.png}
     \label{figure:FNN_limited_worst_gif}
@@ -255,7 +255,7 @@ Figure \ref{figure:LSTM_limited_best_gif} and Figure \ref{figure:LSTM_limited_wo
 
 \begin{figure}[H]
     \centering
-    \caption{Best case animation sheet of LSTM trained with Limited Dataset. From top to bottom are Ground Truth and LSTM prediction. Each row in the animation sheet has 4 time steps. (Link to animation: \url{https://drive.google.com/file/d/1zNJrZUB8XBAEWsUHPd2NANuWkE8yNg3z/view?usp=sharing})}
+    \caption{Best case animation sheet of LSTM trained with Limited Dataset. Each frame, from top to bottom, has Ground Truth and LSTM prediction. (Link to animation: \url{https://drive.google.com/file/d/1zNJrZUB8XBAEWsUHPd2NANuWkE8yNg3z/view?usp=sharing})}
     \includegraphics[scale=0.15]{figures/mantle_convection_images/limited_dataset/LSTM_Best_GIF_sheet.png}
     \label{figure:LSTM_limited_best_gif}
 \end{figure}
@@ -264,7 +264,7 @@ Figure \ref{figure:LSTM_limited_best_gif} and Figure \ref{figure:LSTM_limited_wo
 
 \begin{figure}[H]
     \centering
-    \caption{Worst case animation sheet of LSTM trained with Limited Dataset. From top to bottom are Ground Truth and LSTM prediction. Each row in the animation sheet has 4 time steps. (Link to animation: \url{https://drive.google.com/file/d/1nINRk2Oh8rgQBLWio_b6R6I7T18e7Zi-/view?usp=sharing})}
+    \caption{Worst case animation sheet of LSTM trained with Limited Dataset. Each frame, from top to bottom, has Ground Truth and LSTM prediction. (Link to animation: \url{https://drive.google.com/file/d/1nINRk2Oh8rgQBLWio_b6R6I7T18e7Zi-/view?usp=sharing})}
     \includegraphics[scale=0.15]{figures/mantle_convection_images/limited_dataset/LSTM_Worst_GIF_sheet.png}
     \label{figure:LSTM_limited_worst_gif}
 \end{figure}
@@ -288,7 +288,7 @@ To further evaluate the performance, we also applied POD to a sequence of predic
 From the animations and the POD results, we can conclude that LSTM is able to better capture the dynamics of the simulations than ``One-for-All'' even in its worst case. However, the simulations predicted using LSTM are less accurate and have more data loss compared with those predicted using FNN. There could be a potential underfitting problem due to the lack of training data since only 80 samples are used for training.
 
 
-\section{Mantle Convection simulation on larger dataset}
+\section{Mantle convection simulation on larger dataset}
 
 To confirm if the low accuracy of LSTM is caused by the scarceness of data, a larger dataset is tested, whose only difference with the limited dataset is that it now contains 903 simulations.
 
@@ -370,14 +370,14 @@ Figures \ref{figure:FNN_larger_best_gif} and \ref{figure:FNN_larger_worst_gif} s
 
 \begin{figure}[H]
     \centering
-    \caption{Best case animation sheet of FNN trained with Larger Dataset. From top to bottom are Ground Truth, One-for-All prediction and One-for-One prediction. Each row in the animation sheet has 4 time steps. (Link to animation: \url{https://drive.google.com/file/d/1LxuwXxEoG5xsYzLYn6n6-mUfoP8A3IC2/view?usp=sharing})}
+    \caption{Best case animation sheet of FNN trained with Larger Dataset. Each frame, from top to bottom, has Ground Truth, One-for-All prediction and One-for-One prediction. (Link to animation: \url{https://drive.google.com/file/d/1LxuwXxEoG5xsYzLYn6n6-mUfoP8A3IC2/view?usp=sharing})}
     \includegraphics[scale=0.23]{figures/mantle_convection_images/larger_dataset/FNN_Best_GIF_sheet.png}
     \label{figure:FNN_larger_best_gif}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \caption{Worst case animation sheet of FNN trained with Larger Dataset. From top to bottom are Ground Truth, One-for-All prediction and One-for-One prediction. Each row in the animation sheet has 4 time steps. (Link to animation: \url{https://drive.google.com/file/d/1vwfL_n6ANnkJEY3B8a024SF_yQ35Hkxu/view?usp=sharing})}
+    \caption{Worst case animation sheet of FNN trained with Larger Dataset. Each frame, from top to bottom, has Ground Truth, One-for-All prediction and One-for-One prediction. (Link to animation: \url{https://drive.google.com/file/d/1vwfL_n6ANnkJEY3B8a024SF_yQ35Hkxu/view?usp=sharing})}
     \includegraphics[scale=0.23]{figures/mantle_convection_images/larger_dataset/FNN_Worst_GIF_sheet.png}
     \label{figure:FNN_larger_worst_gif}
 \end{figure}
@@ -440,7 +440,7 @@ Figure \ref{figure:LSTM_larger_best_gif} and \ref{figure:LSTM_larger_worst_gif} 
 
 \begin{figure}[H]
     \centering
-    \caption{Best case animation sheet of LSTM trained with Larger Dataset. From top to bottom are Ground Truth and LSTM prediction. Each row in the animation sheet has 4 time steps. (Link to animation: \url{https://drive.google.com/file/d/1UFYSPVLT1wRsKM5GAdCz0JQLZF8OKNUc/view?usp=sharing})}
+    \caption{Best case animation sheet of LSTM trained with Larger Dataset. Each frame, from top to bottom, has Ground Truth and LSTM prediction. (Link to animation: \url{https://drive.google.com/file/d/1UFYSPVLT1wRsKM5GAdCz0JQLZF8OKNUc/view?usp=sharing})}
     \includegraphics[scale=0.15]{figures/mantle_convection_images/larger_dataset/LSTM_Best_GIF_sheet.png}
     \label{figure:LSTM_larger_best_gif}
 \end{figure}
@@ -449,7 +449,7 @@ Figure \ref{figure:LSTM_larger_best_gif} and \ref{figure:LSTM_larger_worst_gif} 
 
 \begin{figure}[H]
     \centering
-    \caption{Worst case animation sheet of LSTM trained with Larger Dataset. From top to bottom are Ground Truth and LSTM prediction. Each row in the animation sheet has 4 time steps. (Link to animation: \url{https://drive.google.com/file/d/1SbzjPwwe7FCu7JCJru8UYHOu9j6uVfZd/view?usp=sharing})}
+    \caption{Worst case animation sheet of LSTM trained with Larger Dataset. Each frame, from top to bottom, has Ground Truth and LSTM prediction. (Link to animation: \url{https://drive.google.com/file/d/1SbzjPwwe7FCu7JCJru8UYHOu9j6uVfZd/view?usp=sharing})}
     \includegraphics[scale=0.15]{figures/mantle_convection_images/larger_dataset/LSTM_Worst_GIF_sheet.png}
     \label{figure:LSTM_larger_worst_gif}
 \end{figure}
@@ -475,7 +475,7 @@ From the animations and the POD results, we can now confirmed that LSTM is able 
 There is also an interesting behavior: the difference between the POD coefficients of the prediction and the POD coefficients of the ground truth is actually smaller in the worst case, even though the data loss in the worst case is higher. This means that LSTM fails to accurately predict the simulation in its worse case, but somehow manages to capture the dynamic transient successfully in its worse case as well. This could provide some implications in using LSTM as surrogate models for future research when dynamic transient is considered to be more important than the accuracy.
 
 
-\section{Mantle Convection simulation on interpolated dataset}
+\section{Mantle convection simulation on interpolated dataset}
 \label{sec:mc_interpolated}
 
 To confirm if the problem of the predicted temperature time series moving too fast or too slow is caused by the varying distance between time steps, an interpolated dataset is created using the larger dataset in the last section.
@@ -565,14 +565,14 @@ Figures \ref{figure:FNN_interpolated_best_gif} and \ref{figure:FNN_interpolated_
 
 \begin{figure}[H]
     \centering
-    \caption{Best case animation sheet of FNN trained with Interpolated Dataset. From top to bottom are Ground Truth, One-for-All prediction and One-for-One prediction. Each row in the animation sheet has 4 time steps. (Link to animation: \url{https://drive.google.com/file/d/10znEe7q_A0rndmuivlbWBH8sZEH6Gv3p/view?usp=sharing})}
+    \caption{Best case animation sheet of FNN trained with Interpolated Dataset. Each frame, from top to bottom, has Ground Truth, One-for-All prediction and One-for-One prediction. (Link to animation: \url{https://drive.google.com/file/d/10znEe7q_A0rndmuivlbWBH8sZEH6Gv3p/view?usp=sharing})}
     \includegraphics[scale=0.23]{figures/mantle_convection_images/larger_dataset_interpolated/FNN_Best_GIF_sheet.png}
     \label{figure:FNN_interpolated_best_gif}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \caption{Worst case animation sheet of FNN trained with Interpolated Dataset. From top to bottom are Ground Truth, One-for-All prediction and One-for-One prediction. Each row in the animation sheet has 4 time steps. (Link to animation: \url{https://drive.google.com/file/d/1vIXrWn6emumszEy3VDArqdenj3FQeVVa/view?usp=sharing})}
+    \caption{Worst case animation sheet of FNN trained with Interpolated Dataset. Each frame, from top to bottom, has Ground Truth, One-for-All prediction and One-for-One prediction. (Link to animation: \url{https://drive.google.com/file/d/1vIXrWn6emumszEy3VDArqdenj3FQeVVa/view?usp=sharing})}
     \includegraphics[scale=0.23]{figures/mantle_convection_images/larger_dataset_interpolated/FNN_Worst_GIF_sheet.png}
     \label{figure:FNN_interpolated_worst_gif}
 \end{figure}
@@ -635,14 +635,14 @@ Figures \ref{figure:LSTM_interpolated_best_gif} and \ref{figure:LSTM_interpolate
 
 \begin{figure}[H]
     \centering
-    \caption{Best case animation sheet of LSTM trained with Interpolated Dataset. From top to bottom are Ground Truth and LSTM prediction. Each row in the animation sheet has 4 time steps.(Link to animation: \url{https://drive.google.com/file/d/1fNkJVHw3v8WzVz0IKcPfI9rwmwhYygWS/view?usp=sharing})}
+    \caption{Best case animation sheet of LSTM trained with Interpolated Dataset. Each frame, from top to bottom, has Ground Truth and LSTM prediction. (Link to animation: \url{https://drive.google.com/file/d/1fNkJVHw3v8WzVz0IKcPfI9rwmwhYygWS/view?usp=sharing})}
     \includegraphics[scale=0.15]{figures/mantle_convection_images/larger_dataset_interpolated/LSTM_Best_GIF_sheet.png}
      \label{figure:LSTM_interpolated_best_gif}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \caption{Worst case animation sheet of LSTM trained with Interpolated Dataset. From top to bottom are Ground Truth and LSTM prediction. Each row in the animation sheet has 4 time steps.(Link to animation: \url{https://drive.google.com/file/d/1JbhX4Zznv9YXHZi8IG811495_-YTOq9l/view?usp=sharing})}
+    \caption{Worst case animation sheet of LSTM trained with Interpolated Dataset. Each frame, from top to bottom, has Ground Truth and LSTM prediction. (Link to animation: \url{https://drive.google.com/file/d/1JbhX4Zznv9YXHZi8IG811495_-YTOq9l/view?usp=sharing})}
     \includegraphics[scale=0.15]{figures/mantle_convection_images/larger_dataset_interpolated/LSTM_Worst_GIF_sheet.png}
     \label{figure:LSTM_interpolated_worst_gif}
 \end{figure}
