@@ -60,14 +60,14 @@ Also, to prevent overfitting, a variation of the early-stopping method is used d
 
 After testing with NNs with different number of hidden layers and neurons per hidden layer, we found that FNNs with a total number 3-4 hidden layers performed the best.
 
-In the following figures, we present results from a FNN with 4 hidden layers with 200, 160, 120 and 80 neurons in each layer, respectively, ReLU as activation function, MSELoss as loss function, and trained for 200 epochs using Mini-Batch Gradient Descent (with a batch size of 16).
+In the following figures, we present results from a FNN with 4 hidden layers with 200, 160, 120 and 80 neurons in each layer, respectively, ReLU as activation function, mean squared error (MSE) as loss function, and trained for 200 epochs using Mini-Batch Gradient Descent (with a batch size of 16).
 
-Note that the loss value (error), which is back-propagated during the training process, is defined as the MSELoss between the prediction and the normalised ground truth. In this case, the best and worst cases shown below are also defined upon the value of this normalised loss, instead of the reconstructed loss which is defined as the MSELoss between the inverse normalised prediction and the ground truth.
+Note that the loss value (error), which is back-propagated during the training process, is defined as the MSE between the prediction and the normalised ground truth. In this case, the best and worst cases shown below are also defined upon the value of this normalised loss, instead of the reconstructed loss which is defined as the MSE between the inverse normalised prediction and the ground truth.
 
 We present the training loss and validation loss in Figure \ref{figure:geoid_losses} and the overall testing result in Figure \ref{figure:geoid_testing}.
 
 \begin{figure}[H]
-    \caption{Training validation loss.}
+    \caption{Training and validation loss.}
     \includegraphics[scale=0.6]{figures/geoid_images/Geoid_trainingData.png}
     \label{figure:geoid_losses}
 \end{figure}
